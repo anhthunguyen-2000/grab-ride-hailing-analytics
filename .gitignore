@@ -1,0 +1,44 @@
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*.key
+*.pem
+
+# Local development and Python caches
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Local databases and temporary exports
+*.mdf
+*.ldf
+*.bak
+*.bacpac
+*.sqlite
+*.sqlite3
+*.tmp
+*.log
+Thumbs.db
+.DS_Store
+
+# Power BI caches and machine-specific report artifacts
+*.pbix
+*.pbit
+*.pbi
+*.pbir.bak
+
+# Raw data and sensitive identity seeds (not part of public portfolio)
+data/
+raw_data/
+seed_users.csv
+seed_drivers.csv
+
+# Do NOT blanket-ignore committed aggregate evidence under evidence/

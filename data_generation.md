@@ -26,7 +26,7 @@ Real passenger, driver, and dispatch logs were unavailable for public portfolio 
 
 Business questions determined the entities and grain: customer and driver dimensions; booking requests; repeated dispatch offers; online sessions; continuous driver-state intervals; 15-minute zone/service exposure; hourly weather; and calendar/service/zone dimensions.
 
-The generation summary records seed **20261015**, period **[2026-04-01, 2026-10-01)**, and **Asia/Ho_Chi_Minh (UTC+7)**. There are 5,000 users, 1,000 drivers, seven zones and two services. The 11 CSVs contain 125,923 requests, 169,829 offers, 32,981 sessions, 689,936 state intervals, 245,952 supply cells, 30,744 weather observations, and 183 calendar days, plus entity rows. See [generation_summary.json](../evidence/generation_summary.json).
+The generation summary records seed **20261015**, period **[2026-04-01, 2026-10-01)**, and **Asia/Ho_Chi_Minh (UTC+7)**. There are 5,000 users, 1,000 drivers, seven zones and two services. The 11 CSVs contain 125,923 requests, 169,829 offers, 32,981 sessions, 689,936 state intervals, 245,952 supply cells, 30,744 weather observations, and 183 calendar days, plus entity rows. See [generation_summary.json](evidence/generation_summary.json).
 
 IDs relate events without collapsing grains. A retry has a separate `trip_id` and shares `request_group_id`; `parent_trip_id` points to the earlier failure. Open requests remain unresolved at the observation cutoff.
 
@@ -57,7 +57,7 @@ The validator checks counts, unique keys, references, event order, status-depend
 
 The historical regeneration record reports **96 passed checks** and byte-identical regenerated data. That is a historical artifact, not the current outcome. Rerunning the supplied validator against today's source CSVs produced **94 PASS / 2 FAIL**: accepted-offer timestamps no longer reconcile, and driver occupied intervals overlap. The current `trip_table.csv` has minute-precision date strings and differs from its recorded SHA-256; the other ten CSV hashes match. The discrepancy prevents certifying the present CSV bundle as the original reproducible dataset.
 
-See [current validation checks](../evidence/validation_checks.csv), [recorded original manifest](../evidence/file_manifest.csv), [historical reproducibility record](../evidence/reproducibility_check.json), and [validation report](validation.md). Read-only SQL Server checks verify the numerical findings independently; they do not repair or certify the changed CSV.
+See [current validation checks](evidence/validation_checks.csv), [recorded original manifest](evidence/file_manifest.csv), [historical reproducibility record](evidence/reproducibility_check.json), and [validation report](validation.md). Read-only SQL Server checks verify the numerical findings independently; they do not repair or certify the changed CSV.
 
 ## 8. Reproducibility
 
@@ -69,15 +69,15 @@ The generator can fall back to creating identities without seed files, which con
 
 The source schema/import scripts create typed tables and load UTF-8 CSVs using SQL Server CSV parsing. Column order must match the schema. Blank optional events are NULL; phones remain text. Import entity/calendar tables before event/exposure tables. The import checks expected row counts and skips already populated tables; it is not an update/merge pipeline.
 
-This package supplies [setup_database.sql](../reproducibility/setup_database.sql) with an intentionally unset data-directory variable. Select an empty review database and configure a directory accessible to the SQL Server service account. Load only a reconciled source dataset. The existing database was queried read-only; original import history was not rerun or independently reconstructed here.
+This package supplies [setup_database.sql](reproducibility/setup_database.sql) with an intentionally unset data-directory variable. Select an empty review database and configure a directory accessible to the SQL Server service account. Load only a reconciled source dataset. The existing database was queried read-only; original import history was not rerun or independently reconstructed here.
 
-SQL views then enrich events, preserve offer grain, aggregate supply, split driver days, and define retention eligibility. Power BI imports those views into facts and shared dimensions and computes the documented [DAX measures](../dashboard/measures.dax).
+SQL views then enrich events, preserve offer grain, aggregate supply, split driver days, and define retention eligibility. Power BI imports those views into facts and shared dimensions and computes the documented [DAX measures](dashboard/measures.dax).
 
 ## 10. Assumptions and Limitations
 
 The six-month micro-market omits real GPS/routing, competitive supply, prices, incentives, traffic feeds and operational policy complexity. Demand has a built-in trend. After failure or total wait >12 minutes, the generator applies a **0.58 multiplier** to subsequent daily request probability for **14 days**. This is an embedded simulation mechanism, not an independently discovered customer effect. Thirty-day return comparisons require full follow-up and exclude retries from the same journey.
 
-The model is not empirically calibrated and should not be described as representative of Grab, Ho Chi Minh City, or the ride-hailing industry. See [assumptions](assumptions.md) and [limitations](limitations.md).
+The model is not empirically calibrated and should not be described as representative of Grab, Ho Chi Minh City, or the ride-hailing industry. See documented simulation assumptions and [limitations](limitations.md).
 
 ## 11. Attribution and AI Disclosure
 

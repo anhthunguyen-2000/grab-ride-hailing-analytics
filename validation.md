@@ -1,20 +1,20 @@
 # Portfolio Validation and Review Items
 
-Prepared **29 October 2026**. **Status: Needs Additional Work before publication.** All work is local; no commit, push, upload, or online repository was created.
+Prepared **29 October 2026**. **Status: Published portfolio; source CSV provenance requires reconciliation before full reproduction.** This document was originally prepared during local packaging and is retained as an evidence record. The repository was subsequently published.
 
 ## Checks performed
 
 | Check | Result and scope |
 |---|---|
 | Source review | Reviewed the SQL analyses and views, corrected working copies, schema/import scripts, dictionaries, workbook and Power BI guide, assumptions, generator/validator, generation records, business reports/outputs, PBIX metadata, PBIP/TMDL, theme, DAX and existing captures. Earlier start-guide statements about a missing dashboard were superseded by the completed artifacts. |
-| SQL execution | All **67 nonempty batches** across eight portfolio scripts passed read-only execution checks after correcting a packaging extraction issue. The 12 reusable view definitions were exercised as their SELECT bodies; no CREATE/ALTER was deployed. Result row counts are recorded in [SQL checks](../evidence/sql_execution_checks.json). |
+| SQL execution | All **67 nonempty batches** across eight portfolio scripts passed read-only execution checks after correcting a packaging extraction issue. The 12 reusable view definitions were exercised as their SELECT bodies; no CREATE/ALTER was deployed. Result row counts are recorded in [SQL checks](evidence/sql_execution_checks.json). |
 | Full SQL syntax | All eight files were also parsed by SQL Server with PARSEONLY. This checks the full CREATE VIEW syntax without deploying it. The setup/import script is reviewed separately; it was not used to import or create tables. |
-| Findings | Main values were independently queried from SQL Server. Evidence includes populations, wait percentiles, exposure, offer decisions, return groups, and current column schema in [verified_metrics.json](../evidence/verified_metrics.json). |
+| Findings | Main values were independently queried from SQL Server. Evidence includes populations, wait percentiles, exposure, offer decisions, return groups, and current column schema in [verified_metrics.json](evidence/verified_metrics.json). |
 | Data dictionary | All 102 source-column type families and NULL rules were compared against current SQL Server metadata. Length/precision declarations were taken from the delivered schema and dictionary. Derived report fields were compared with the saved model and view definitions. |
 | KPI dictionary | Compared the delivered KPI CSV, analysis SQL, Power BI views and implemented DAX. SQL-only activation/monthly retention are explicitly separated from dashboard measures. |
 | Model | Native `relationships.tmdl` endpoints match all 23 exported relationships. All are active, single direction, dimension 1 → fact *. The diagram contains all five connected facts and all six disconnected analytical/helper tables. FactCohort is the sixth fact. Shared dimensions repeat visually for readability. |
-| Dashboard images | Updated on 29 October 2026 from the revised PBIX via native Power BI Desktop PDF export. The first four visible pages were rendered at **2,880 × 1,620** after excluding external PDF margins. All four were visually inspected. Latest labels, layout and original scrollable visual viewports are preserved; no editing interface or generated dashboard content is included. See [capture evidence](../evidence/dashboard_capture.json). |
-| CSV validation | Supplied validator rerun against the current original CSVs, redirecting only its output into this package: **94 PASS / 2 FAIL**. The failed checks are retained in [validation_checks.csv](../evidence/validation_checks.csv). |
+| Dashboard images | Updated on 29 October 2026 from the revised PBIX via native Power BI Desktop PDF export. The first four visible pages were rendered at **2,880 × 1,620** after excluding external PDF margins. All four were visually inspected. Latest labels, layout and original scrollable visual viewports are preserved; no editing interface or generated dashboard content is included. See [capture evidence](evidence/dashboard_capture.json). |
+| CSV validation | Supplied validator rerun against the current original CSVs, redirecting only its output into this package: **94 PASS / 2 FAIL**. The failed checks are retained in [validation_checks.csv](evidence/validation_checks.csv). |
 | Historical generation records | Seed 20261015, row counts and observation period agree with generator/summary. The historical record reports byte-identical regeneration and 96 passed checks; this task did not regenerate data and does not claim today's bundle meets that historical result. |
 | References | Four conceptual sources were readable. Grab Help Centre returned a JavaScript/error screen; its policy contents remain unverified. Links and attribution are in [methodology](data_generation.md). |
 
@@ -59,9 +59,9 @@ No raw datasets, personal-looking seed identities, full generator, PBIX or PBIP 
 
 ## Final package checks
 
-All local Markdown links and image paths resolve; code fences are balanced. A browser/GitHub-rendered visual preview of the README was not performed because no browser-control runtime or Markdown renderer was available. All four original dashboard captures and the generated model PNG were visually inspected. The README structure and tables were reviewed as Markdown.
+The initial local package check found Markdown links intact; the first GitHub upload placed documentation at repository root instead of `docs/`. A subsequent link-repair PR addresses that mismatch. code fences are balanced. A browser/GitHub-rendered visual preview of the README was not performed because no browser-control runtime or Markdown renderer was available. All four original dashboard captures and the generated model PNG were visually inspected. The README structure and tables were reviewed as Markdown.
 
-All eight SQL scripts and the setup/import scaffold passed SQL Server syntax parsing. Source files were hashed before and after preparation: **340 files unchanged**. A credential-pattern/local-path scan found no matches in public text assets. This is a targeted hygiene check, not a universal secret-detection guarantee. No raw identities, report caches or database files are included. [Package checks](../evidence/package_checks.json) and [provenance checks](../evidence/provenance_check.json) record the results. See the [complete file inventory](file_inventory.md).
+All eight SQL scripts and the setup/import scaffold passed SQL Server syntax parsing. Source files were hashed before and after preparation: **340 files unchanged**. A credential-pattern/local-path scan found no matches in public text assets. This is a targeted hygiene check, not a universal secret-detection guarantee. No raw identities, report caches or database files are included. [Package checks](evidence/package_checks.json) and [provenance checks](evidence/provenance_check.json) record the results. See the [complete file inventory](file_inventory.md).
 
 ### Current capture-task link check
 
