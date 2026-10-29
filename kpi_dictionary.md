@@ -39,4 +39,4 @@
 
 ## Implementation references
 
-[Analytical SQL](../sql/06_customer_analysis.sql), [business evidence SQL](../sql/07_business_insights.sql), [Power BI views](../sql/08_powerbi_preparation.sql), and [all implemented DAX](../dashboard/measures.dax). Activation, monthly retention, and the combined cancellation rate are documented from SQL; no absent dashboard measure is claimed.
+[Analytical SQL](sql/06_customer_analysis.sql), [business evidence SQL](sql/07_business_insights.sql), [Power BI views](sql/08_powerbi_preparation.sql), and [all implemented DAX](dashboard/measures.dax). Activation, monthly retention, and the combined cancellation rate are documented from SQL; no absent dashboard measure is claimed.
