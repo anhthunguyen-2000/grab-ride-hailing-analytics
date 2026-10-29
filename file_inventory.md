@@ -41,4 +41,4 @@
 | [sql/07_business_insights.sql](sql/07_business_insights.sql) | Ordered analytical SQL and reusable view definitions |
 | [sql/08_powerbi_preparation.sql](sql/08_powerbi_preparation.sql) | Ordered analytical SQL and reusable view definitions |
 
-**Original published inventory: 37 files; this review also adds `assumptions.md`.** No PBIX/PBIP, raw data, identity seeds or full generator is included. See [validation](validation.md) for reproduction requirements and open review items.
+**Total: 38 published files after the documentation-link repair.** No PBIX/PBIP, raw data, identity seeds or full generator is included. See [validation](validation.md) for reproduction requirements and open review items.
