@@ -77,7 +77,7 @@ SQL views then enrich events, preserve offer grain, aggregate supply, split driv
 
 The six-month micro-market omits real GPS/routing, competitive supply, prices, incentives, traffic feeds and operational policy complexity. Demand has a built-in trend. After failure or total wait >12 minutes, the generator applies a **0.58 multiplier** to subsequent daily request probability for **14 days**. This is an embedded simulation mechanism, not an independently discovered customer effect. Thirty-day return comparisons require full follow-up and exclude retries from the same journey.
 
-The model is not empirically calibrated and should not be described as representative of Grab, Ho Chi Minh City, or the ride-hailing industry. See [assumptions](assumptions.md) and [limitations](limitations.md).
+The model is not empirically calibrated and should not be described as representative of Grab, Ho Chi Minh City, or the ride-hailing industry. See documented simulation assumptions and [limitations](limitations.md).
 
 ## 11. Attribution and AI Disclosure
 
