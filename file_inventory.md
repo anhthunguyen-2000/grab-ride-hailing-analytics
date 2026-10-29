@@ -9,7 +9,6 @@
 | [dashboard/04_customer_retention.png](dashboard/04_customer_retention.png) | Four actual report captures, implemented DAX and theme |
 | [dashboard/measures.dax](dashboard/measures.dax) | Four actual report captures, implemented DAX and theme |
 | [dashboard/theme.json](dashboard/theme.json) | Four actual report captures, implemented DAX and theme |
-| [assumptions.md](assumptions.md) | Methodology, definitions, model, findings and review status |
 | [data_dictionary.md](data_dictionary.md) | Methodology, definitions, model, findings and review status |
 | [data_generation.md](data_generation.md) | Methodology, definitions, model, findings and review status |
 | [data_model.png](data_model.png) | Methodology, definitions, model, findings and review status |
@@ -41,4 +40,4 @@
 | [sql/07_business_insights.sql](sql/07_business_insights.sql) | Ordered analytical SQL and reusable view definitions |
 | [sql/08_powerbi_preparation.sql](sql/08_powerbi_preparation.sql) | Ordered analytical SQL and reusable view definitions |
 
-**Total: 38 published files after the documentation-link repair.** No PBIX/PBIP, raw data, identity seeds or full generator is included. See [validation](validation.md) for reproduction requirements and open review items.
+**Total: 37 published files after the documentation-link repair.** No PBIX/PBIP, raw data, identity seeds or full generator is included. See [validation](validation.md) for reproduction requirements and open review items.
