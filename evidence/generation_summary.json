@@ -1,0 +1,34 @@
+{
+  "seed": 20261015,
+  "period_start": "2026-04-01 00:00:00",
+  "observation_end_exclusive": "2026-10-01 00:00:00",
+  "timezone": "Asia/Ho_Chi_Minh (UTC+7)",
+  "rows": {
+    "user_table": 5000,
+    "driver_table": 1000,
+    "zone_table": 7,
+    "service_table": 2,
+    "trip_table": 125923,
+    "dispatch_offer_table": 169829,
+    "driver_session_table": 32981,
+    "driver_state_interval_table": 689936,
+    "supply_15min_table": 245952,
+    "weather_hourly_table": 30744,
+    "date_table": 183
+  },
+  "trip_status_counts": {
+    "7": 11359,
+    "4": 102931,
+    "5": 8696,
+    "6": 2928,
+    "3": 5,
+    "2": 3,
+    "1": 1
+  },
+  "offer_outcome_counts": {
+    "REJECTED": 48047,
+    "ACCEPTED": 111471,
+    "TIMEOUT": 10121,
+    "WITHDRAWN": 190
+  }
+}

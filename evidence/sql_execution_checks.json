@@ -1,0 +1,616 @@
+﻿[
+    {
+        "file":  "01_data_quality.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0,
+                            0,
+                            0
+                        ]
+    },
+    {
+        "file":  "01_data_quality.sql",
+        "batch":  2,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            1
+                        ]
+    },
+    {
+        "file":  "01_data_quality.sql",
+        "batch":  3,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            8
+                        ]
+    },
+    {
+        "file":  "01_data_quality.sql",
+        "batch":  4,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "01_data_quality.sql",
+        "batch":  5,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "01_data_quality.sql",
+        "batch":  6,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            1
+                        ]
+    },
+    {
+        "file":  "02_data_preparation.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "02_data_preparation.sql",
+        "batch":  2,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            125923
+                        ]
+    },
+    {
+        "file":  "02_data_preparation.sql",
+        "batch":  3,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            125923
+                        ]
+    },
+    {
+        "file":  "02_data_preparation.sql",
+        "batch":  4,
+        "status":  "PASS",
+        "view_select_only":  true,
+        "result_rows":  [
+                            5000
+                        ]
+    },
+    {
+        "file":  "02_data_preparation.sql",
+        "batch":  5,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            245952
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  2,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            183
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  3,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            6
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  4,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            6
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  5,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            10
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  6,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            7,
+                            10
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  7,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            4
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  8,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            672
+                        ]
+    },
+    {
+        "file":  "03_demand_analysis.sql",
+        "batch":  9,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            24
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  2,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            1
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  3,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            336
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  4,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            7
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  5,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            2
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  6,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            8
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  7,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            42
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  8,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            14
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  9,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            5
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  10,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            336
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  11,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            157
+                        ]
+    },
+    {
+        "file":  "04_fulfillment_analysis.sql",
+        "batch":  12,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            2
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  2,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            183
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  3,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            908
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  4,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            908
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  5,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            908
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  6,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            11665
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  7,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            48
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  8,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            336
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  9,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            336
+                        ]
+    },
+    {
+        "file":  "05_driver_analysis.sql",
+        "batch":  10,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            908
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  2,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            5
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  3,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            2
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  4,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            1
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  5,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            5000
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  6,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            6
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  7,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            36
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  8,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            4
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  9,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            28
+                        ]
+    },
+    {
+        "file":  "06_customer_analysis.sql",
+        "batch":  10,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            30
+                        ]
+    },
+    {
+        "file":  "07_business_insights.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "07_business_insights.sql",
+        "batch":  2,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            1,
+                            1,
+                            1,
+                            1
+                        ]
+    },
+    {
+        "file":  "07_business_insights.sql",
+        "batch":  3,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            3
+                        ]
+    },
+    {
+        "file":  "07_business_insights.sql",
+        "batch":  4,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            3
+                        ]
+    },
+    {
+        "file":  "07_business_insights.sql",
+        "batch":  5,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            6,
+                            168,
+                            18,
+                            3
+                        ]
+    },
+    {
+        "file":  "07_business_insights.sql",
+        "batch":  6,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            1,
+                            1,
+                            1
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  1,
+        "view_select_only":  false,
+        "status":  "PASS",
+        "result_rows":  [
+                            0
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  2,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            125923
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  3,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            169829
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  4,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            245952
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  5,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            34423
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  6,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            34423
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  7,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            4977
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  8,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            21
+                        ]
+    },
+    {
+        "file":  "08_powerbi_preparation.sql",
+        "batch":  9,
+        "view_select_only":  true,
+        "status":  "PASS",
+        "result_rows":  [
+                            5000
+                        ]
+    }
+]

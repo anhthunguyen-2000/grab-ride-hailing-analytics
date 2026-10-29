@@ -1,0 +1,2298 @@
+﻿{
+    "verified_on":  "2026-10-29",
+    "method":  "Read-only SQL Server execution; original tables and views unchanged",
+    "population":  [
+                       {
+                           "requests":  125923,
+                           "distinct_requests":  125923,
+                           "independent_journeys":  121297,
+                           "active_customers":  4977,
+                           "matched":  111471,
+                           "pickups":  102936,
+                           "completed":  102931,
+                           "failed":  22983,
+                           "open_requests":  9,
+                           "cancelled":  11624,
+                           "long_wait_completed":  22124,
+                           "expired":  11359,
+                           "post_match_cancelled":  8532
+                       }
+                   ],
+    "wait":  [
+                 {
+                     "p90_wait_min":  20.45,
+                     "median_allocation_min":  0.183333
+                 }
+             ],
+    "supply":  [
+                   {
+                       "online_hours":  183703.127051,
+                       "available_hours":  125738.085290,
+                       "occupied_utilization_pct":  31.364769,
+                       "on_trip_utilization_pct":  24.145835
+                   }
+               ],
+    "offers":  [
+                   {
+                       "offers":  169829,
+                       "accepted":  111471,
+                       "decision_offers":  169639
+                   }
+               ],
+    "retention":  [
+                      {
+                          "outcome_group":  "completed_long_wait",
+                          "eligible":  826,
+                          "returned":  728
+                      },
+                      {
+                          "outcome_group":  "completed_good",
+                          "eligible":  3260,
+                          "returned":  2947
+                      },
+                      {
+                          "outcome_group":  "expired_no_driver",
+                          "eligible":  408,
+                          "returned":  372
+                      },
+                      {
+                          "outcome_group":  "cancelled",
+                          "eligible":  383,
+                          "returned":  334
+                      }
+                  ],
+    "schema":  [
+                   {
+                       "TABLE_NAME":  "date_table",
+                       "COLUMN_NAME":  "date",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "date_table",
+                       "COLUMN_NAME":  "year",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "date_table",
+                       "COLUMN_NAME":  "month",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "date_table",
+                       "COLUMN_NAME":  "month_start",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "date_table",
+                       "COLUMN_NAME":  "day_of_week_no",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "date_table",
+                       "COLUMN_NAME":  "day_of_week_name",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "date_table",
+                       "COLUMN_NAME":  "is_weekend",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "offer_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "session_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "attempt_no",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "pickup_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "sent_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "response_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "resolved_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "outcome",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "estimated_pickup_distance_km",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "estimated_pickup_eta_min",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "dispatch_offer_table",
+                       "COLUMN_NAME":  "eligible_driver_count_at_send",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_session_table",
+                       "COLUMN_NAME":  "session_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_session_table",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_session_table",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_session_table",
+                       "COLUMN_NAME":  "online_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_session_table",
+                       "COLUMN_NAME":  "offline_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_session_table",
+                       "COLUMN_NAME":  "observation_end_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_session_table",
+                       "COLUMN_NAME":  "start_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "state_interval_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "session_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "state",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "started_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_state_interval_table",
+                       "COLUMN_NAME":  "ended_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "driver_name",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "phone_number",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  10,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "joined_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "home_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "status_as_of",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "driver_table",
+                       "COLUMN_NAME":  "status_as_of_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "service_table",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "service_table",
+                       "COLUMN_NAME":  "service_name",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "service_table",
+                       "COLUMN_NAME":  "description",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "interval_start_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "interval_end_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "online_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "available_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "offer_pending_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "to_pickup_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "waiting_pickup_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "on_trip_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "supply_15min_table",
+                       "COLUMN_NAME":  "occupied_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "user_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "created_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "accepted_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "arrived_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "pickup_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "finished_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "cancelled_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "expired_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "status",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "cancelled_by",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "cancel_reason",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "pickup_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "dropoff_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "pickup_latitude",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "pickup_longitude",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "dropoff_latitude",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "dropoff_longitude",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "estimated_trip_distance_km",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "actual_trip_distance_km",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "quoted_trip_duration_min",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "quoted_pickup_eta_min",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "weather_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "request_group_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "parent_trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "trip_table",
+                       "COLUMN_NAME":  "driver_id_refused",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  2000,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "user_table",
+                       "COLUMN_NAME":  "user_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "user_table",
+                       "COLUMN_NAME":  "user_name",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "user_table",
+                       "COLUMN_NAME":  "phone_number",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  10,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "user_table",
+                       "COLUMN_NAME":  "registered_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "user_table",
+                       "COLUMN_NAME":  "home_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "user_table",
+                       "COLUMN_NAME":  "acquisition_channel",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_cohort_monthly",
+                       "COLUMN_NAME":  "cohort_month",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_cohort_monthly",
+                       "COLUMN_NAME":  "age_month",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_cohort_monthly",
+                       "COLUMN_NAME":  "cohort_size",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_cohort_monthly",
+                       "COLUMN_NAME":  "active_users",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_customer_summary",
+                       "COLUMN_NAME":  "user_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_customer_summary",
+                       "COLUMN_NAME":  "total_request",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_customer_summary",
+                       "COLUMN_NAME":  "total_completed",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_demand_dow_hour",
+                       "COLUMN_NAME":  "week_day",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_demand_dow_hour",
+                       "COLUMN_NAME":  "is_weekend",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_demand_dow_hour",
+                       "COLUMN_NAME":  "trip_hour",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_demand_dow_hour",
+                       "COLUMN_NAME":  "n_requests",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_demand_dow_hour",
+                       "COLUMN_NAME":  "observed_days",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_demand_dow_hour",
+                       "COLUMN_NAME":  "requests_per_day",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  24,
+                       "NUMERIC_SCALE":  12
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "activity_date",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "online_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "available_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "offer_pending_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "to_pickup_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "waiting_pickup_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "on_trip_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "occupied_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_day",
+                       "COLUMN_NAME":  "completed_trips",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "activity_date",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "online_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "available_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "offer_pending_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "to_pickup_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "waiting_pickup_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "on_trip_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_driver_time_day",
+                       "COLUMN_NAME":  "occupied_minutes",
+                       "DATA_TYPE":  "numeric",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  26,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "offer_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "session_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "attempt_no",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "pickup_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "sent_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "response_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "resolved_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "outcome",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "estimated_pickup_distance_km",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "estimated_pickup_eta_min",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "eligible_driver_count_at_send",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "SentDate",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "SentHour",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "response_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_enriched",
+                       "COLUMN_NAME":  "resolution_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_per_trip",
+                       "COLUMN_NAME":  "trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_per_trip",
+                       "COLUMN_NAME":  "offers",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_per_trip",
+                       "COLUMN_NAME":  "accepted",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_per_trip",
+                       "COLUMN_NAME":  "rejected",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_per_trip",
+                       "COLUMN_NAME":  "timeout",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_per_trip",
+                       "COLUMN_NAME":  "withdrawn",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_offer_per_trip",
+                       "COLUMN_NAME":  "pending",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_customer_profile",
+                       "COLUMN_NAME":  "user_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_customer_profile",
+                       "COLUMN_NAME":  "requests",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_customer_profile",
+                       "COLUMN_NAME":  "completed",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_customer_profile",
+                       "COLUMN_NAME":  "last_completed_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_customer_profile",
+                       "COLUMN_NAME":  "frequency_band",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  16,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_customer_profile",
+                       "COLUMN_NAME":  "recency_group",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  15,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_customer_profile",
+                       "COLUMN_NAME":  "completion_frequency",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  15,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "interval_start_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "RequestDate",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "RequestHour",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "requests",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "matched",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "completed",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "failed",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "online_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "available_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "occupied_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "offer_pending_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "to_pickup_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "waiting_pickup_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_supply",
+                       "COLUMN_NAME":  "on_trip_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "user_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "driver_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "created_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "accepted_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "arrived_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "pickup_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "finished_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "cancelled_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "expired_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "status",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "cancelled_by",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "cancel_reason",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "pickup_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "dropoff_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "quoted_pickup_eta_min",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "request_group_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "parent_trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "RequestDate",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "RequestHour",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "Request15Min",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "allocation_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "approach_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "pickup_dwell_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "total_wait_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "ride_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "end_to_end_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "cancellation_stage",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  33,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_pbi_trip",
+                       "COLUMN_NAME":  "eta_band",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  14,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "user_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "index_trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "index_created_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "index_date",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "index_service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "index_pickup_zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "index_end_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "outcome_group",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  22,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "eligible_30d",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_retention30_user",
+                       "COLUMN_NAME":  "returned_30d_new_journey",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "trip_id",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  36,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "created_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "trip_date",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "start_month",
+                       "DATA_TYPE":  "date",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "trip_day",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "trip_month",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "trip_hour",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "week_day",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "is_weekend",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "bucket_15min_start",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "allocation_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "approach_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "pickup_dwell_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "total_wait_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "ride_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "end_to_end_sec",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_trip_enriched",
+                       "COLUMN_NAME":  "cancellation_stage",
+                       "DATA_TYPE":  "varchar",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  33,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_zone_service_15min",
+                       "COLUMN_NAME":  "interval_start_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_zone_service_15min",
+                       "COLUMN_NAME":  "zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_zone_service_15min",
+                       "COLUMN_NAME":  "service_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "v_zone_service_15min",
+                       "COLUMN_NAME":  "total_request",
+                       "DATA_TYPE":  "int",
+                       "IS_NULLABLE":  "YES",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  10,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "v_zone_service_15min",
+                       "COLUMN_NAME":  "online_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_zone_service_15min",
+                       "COLUMN_NAME":  "available_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "v_zone_service_15min",
+                       "COLUMN_NAME":  "occupied_driver_minutes",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "weather_hourly_table",
+                       "COLUMN_NAME":  "weather_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "weather_hourly_table",
+                       "COLUMN_NAME":  "zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "weather_hourly_table",
+                       "COLUMN_NAME":  "hour_start_at",
+                       "DATA_TYPE":  "datetime2",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "weather_hourly_table",
+                       "COLUMN_NAME":  "rainfall_mm",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "weather_hourly_table",
+                       "COLUMN_NAME":  "is_raining",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "zone_table",
+                       "COLUMN_NAME":  "zone_id",
+                       "DATA_TYPE":  "bigint",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  19,
+                       "NUMERIC_SCALE":  0
+                   },
+                   {
+                       "TABLE_NAME":  "zone_table",
+                       "COLUMN_NAME":  "zone_name",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   },
+                   {
+                       "TABLE_NAME":  "zone_table",
+                       "COLUMN_NAME":  "center_latitude",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "zone_table",
+                       "COLUMN_NAME":  "center_longitude",
+                       "DATA_TYPE":  "decimal",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  null,
+                       "NUMERIC_PRECISION":  18,
+                       "NUMERIC_SCALE":  6
+                   },
+                   {
+                       "TABLE_NAME":  "zone_table",
+                       "COLUMN_NAME":  "zone_type",
+                       "DATA_TYPE":  "nvarchar",
+                       "IS_NULLABLE":  "NO",
+                       "CHARACTER_MAXIMUM_LENGTH":  200,
+                       "NUMERIC_PRECISION":  null,
+                       "NUMERIC_SCALE":  null
+                   }
+               ]
+}

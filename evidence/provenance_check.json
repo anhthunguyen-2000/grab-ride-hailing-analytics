@@ -1,0 +1,74 @@
+{
+  "checked_on": "2026-10-29",
+  "files": [
+    {
+      "file": "data/date_table.csv",
+      "recorded_sha256": "64e9dbfd2a8349bb17d780a0283cae902a6287dd4500a5a8eb82d4739d6fc609",
+      "current_sha256": "64e9dbfd2a8349bb17d780a0283cae902a6287dd4500a5a8eb82d4739d6fc609",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/dispatch_offer_table.csv",
+      "recorded_sha256": "a211a6707177e2406fb63d92a0106378ba01bcebea4630c9863f09978f766fb1",
+      "current_sha256": "a211a6707177e2406fb63d92a0106378ba01bcebea4630c9863f09978f766fb1",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/driver_session_table.csv",
+      "recorded_sha256": "56a73edd231c4e1bbe4b1df5be569d30e11daad65d97dc9ce271ad129cc72065",
+      "current_sha256": "56a73edd231c4e1bbe4b1df5be569d30e11daad65d97dc9ce271ad129cc72065",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/driver_state_interval_table.csv",
+      "recorded_sha256": "58c275291ca32651d53e96c987fce3b36ccc281b4af2e75cb982d14604212148",
+      "current_sha256": "58c275291ca32651d53e96c987fce3b36ccc281b4af2e75cb982d14604212148",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/driver_table.csv",
+      "recorded_sha256": "ef81b824956054fbd3b9cdb60482084588a09b9ac85c476af992c77e6c0080ed",
+      "current_sha256": "ef81b824956054fbd3b9cdb60482084588a09b9ac85c476af992c77e6c0080ed",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/service_table.csv",
+      "recorded_sha256": "3b69d76bac79ebf0dd8755b2e848694ac894d33af08c0196ddde5c64e550536c",
+      "current_sha256": "3b69d76bac79ebf0dd8755b2e848694ac894d33af08c0196ddde5c64e550536c",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/supply_15min_table.csv",
+      "recorded_sha256": "7de58adcd23c20eed0a13fd09cda1dd530cb03bf03ff5c7032d50e7ba8eb1cdd",
+      "current_sha256": "7de58adcd23c20eed0a13fd09cda1dd530cb03bf03ff5c7032d50e7ba8eb1cdd",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/trip_table.csv",
+      "recorded_sha256": "b84cadd505c6bfc7020b23d4a0a020367ac3cf0aa11028e5e79b73d89669743a",
+      "current_sha256": "228d29a4b33b74067087d5c3bdb5e4fe2097d2f9bfc6b8f6442b6c974461ef62",
+      "matches_recorded": false
+    },
+    {
+      "file": "data/user_table.csv",
+      "recorded_sha256": "cd02273bdd4550245c8b111892723af8ef89214c8ed3380d5a0d4f047d4b0bec",
+      "current_sha256": "cd02273bdd4550245c8b111892723af8ef89214c8ed3380d5a0d4f047d4b0bec",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/weather_hourly_table.csv",
+      "recorded_sha256": "67702660ed0592635ffc4b46418f59e54aa27140a381abf74ed08ec545523e1c",
+      "current_sha256": "67702660ed0592635ffc4b46418f59e54aa27140a381abf74ed08ec545523e1c",
+      "matches_recorded": true
+    },
+    {
+      "file": "data/zone_table.csv",
+      "recorded_sha256": "d33b2e335243cae6697022498ea0aedf31cbcee51a7ab0c7b110fbefeaaa40eb",
+      "current_sha256": "d33b2e335243cae6697022498ea0aedf31cbcee51a7ab0c7b110fbefeaaa40eb",
+      "matches_recorded": true
+    }
+  ],
+  "source_files_hashed_before_and_after": 340,
+  "original_files_unchanged": true,
+  "generator_rerun": false
+}

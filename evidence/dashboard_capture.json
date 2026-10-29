@@ -1,0 +1,70 @@
+{
+  "captured_on": "2026-10-29",
+  "source_pbix": "powerbi/Grab_Mobility_Analytics.pbix (in the original local project; not distributed)",
+  "source_sha256": "9e04f63d0eb195bb16114ca5e33bd8d41ec425be895c78c6ab19dc1d393da91d",
+  "source_bytes": 31484994,
+  "source_modified_local": "2026-10-29 11:18:32 UTC+7",
+  "source_unchanged_after_export": true,
+  "method": "Power BI Desktop native Export to PDF; first four visible analytical pages rasterized from vector PDF at 3x; only the 18-point external page margins excluded",
+  "pdf_total_visible_pages": 5,
+  "report_canvas_pdf_points": [
+    18,
+    18,
+    978,
+    558
+  ],
+  "output_dimensions": [
+    2880,
+    1620
+  ],
+  "aspect_ratio": "16:9",
+  "upscaled_from_previous_screenshots": false,
+  "source_layout_modified": false,
+  "data_refreshed": false,
+  "visual_inspection": "PASS; all four pages inspected; original scrollable viewports and abbreviated labels retained",
+  "disclaimer_visibility": {
+    "demand": false,
+    "fulfillment": false,
+    "drivers": false,
+    "retention": true
+  },
+  "pages": [
+    {
+      "pdf_page": 1,
+      "title": "Grab | Demand Overview",
+      "file": "dashboard/01_demand_overview.png",
+      "sha256": "712926b280e829585c893c413c1eaefd51389e5a955a6b8a159f178afa7b51f3",
+      "replaces_different_image": true
+    },
+    {
+      "pdf_page": 2,
+      "title": "Grab | Booking Fulfillment",
+      "file": "dashboard/02_fulfillment.png",
+      "sha256": "1186e0df905d17fb481a44b3c4b2fdedb0b18dce1b7940dce0cf556e0c682d1b",
+      "replaces_different_image": true
+    },
+    {
+      "pdf_page": 3,
+      "title": "Grab | Driver Operations",
+      "file": "dashboard/03_driver_operations.png",
+      "sha256": "f89cb6eea9c91efae39aeecd5f4c45bcedc05a594f5ea27396c9737d0127fac1",
+      "replaces_different_image": true
+    },
+    {
+      "pdf_page": 4,
+      "title": "Grab | Customer Retention",
+      "file": "dashboard/04_customer_retention.png",
+      "sha256": "827735d61410b358a0629150110a112fe80d4ab455255ce8e5bd33ce832c9b1a",
+      "replaces_different_image": true,
+      "post_capture_edit": "Removed only the two footer text lines at the owner request; dashboard charts and 2880x1620 canvas preserved. PBIX not modified."
+    }
+  ],
+  "readme_image_links": "PASS",
+  "other_document_read_issue": "docs/assumptions.md is listed as zero bytes but cannot be opened; not modified in capture task",
+  "final_png_disclaimer_visibility": {
+    "demand": false,
+    "fulfillment": false,
+    "drivers": false,
+    "retention": false
+  }
+}

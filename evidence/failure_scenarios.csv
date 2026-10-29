@@ -1,0 +1,4 @@
+﻿"baseline_failed_requests","assumed_reduction_rate","estimated_avoided_failed_requests","remaining_failed_requests","period_start","period_end_exclusive","assumptions"
+"22983","0.05","1149.15","21833.85","2026-04-01","2026-10-01","Relative failure reduction; fixed request cohort; fractional scenario expectation; avoided failures are not additional completions"
+"22983","0.10","2298.30","20684.70","2026-04-01","2026-10-01","Relative failure reduction; fixed request cohort; fractional scenario expectation; avoided failures are not additional completions"
+"22983","0.15","3447.45","19535.55","2026-04-01","2026-10-01","Relative failure reduction; fixed request cohort; fractional scenario expectation; avoided failures are not additional completions"

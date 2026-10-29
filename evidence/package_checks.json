@@ -1,0 +1,35 @@
+{
+  "checked_on": "2026-10-29",
+  "sql_files": 8,
+  "sql_batches_readonly_passed": 67,
+  "sql_full_script_parse": "PASS",
+  "setup_script_parse": "PASS",
+  "view_definitions_deployed": false,
+  "dashboard_png_count": 4,
+  "dashboard_native_dimensions": [
+    2880,
+    1620
+  ],
+  "model_native_dimensions": [
+    3840,
+    2240
+  ],
+  "relationships_verified": 23,
+  "source_columns_checked": 102,
+  "markdown_local_links": "PASS",
+  "markdown_fences": "PASS",
+  "credential_and_local_path_pattern_scan": "PASS",
+  "raw_identity_values_included": false,
+  "source_files_unchanged": true,
+  "readme_browser_render": "NOT PERFORMED; structural checks only",
+  "current_csv_validation": {
+    "PASS": 94,
+    "FAIL": 2
+  },
+  "manifest_files_matching": 10,
+  "manifest_files_mismatching": 1,
+  "publication_status": "Needs Additional Work",
+  "dashboard_capture_method": "Native Power BI PDF export of updated PBIX; rendered report canvas at 3x",
+  "dashboard_recaptured_on": "2026-10-29",
+  "dashboard_source_unchanged": true
+}
