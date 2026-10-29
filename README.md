@@ -14,7 +14,7 @@ The dataset is entirely synthetic. Results describe this simulation and are not 
 
 Public sources informed concepts such as booking entities, driver matching, cancellation experiments, and dimensional modeling. Transaction records were simulated locally; they were not downloaded from those sources or empirically calibrated to Grab operations.
 
-AI assisted development of the Python generator. Read the [Data Generation Methodology](docs/data_generation.md) for sources, code examples, validation results, and the AI disclosure.
+AI assisted development of the Python generator. Read the [Data Generation Methodology](data_generation.md) for sources, code examples, validation results, and the AI disclosure.
 
 ## Business Questions
 
@@ -44,7 +44,7 @@ Requests cover **1 April–30 September 2026**, with an exclusive cutoff of **1 
 
 Requests represent 121,297 independent journeys and 4,977 requesting customers. Offers are kept separate from requests. Demand is aggregated before joining supply exposure. Driver intervals are split at midnight. The report uses 18 tables and 23 active, single-direction dimension-to-fact relationships, plus deliberately disconnected analytical/helper tables.
 
-See the [verified model diagram](docs/data_model.png), [data dictionary](docs/data_dictionary.md), and [KPI dictionary](docs/kpi_dictionary.md).
+See the [verified model diagram](data_model.png), [data dictionary](data_dictionary.md), and [KPI dictionary](kpi_dictionary.md).
 
 ## Analytical Workflow
 
@@ -74,7 +74,7 @@ These 4 pages were exported directly from the updated PBIX through Power BI Desk
 
 ## Key Findings
 
-The following values were checked through read-only SQL Server. [Evidence](evidence/verified_metrics.json) and the [executive findings](docs/key_findings.md) provide denominators and interpretation.
+The following values were checked through read-only SQL Server. [Evidence](evidence/verified_metrics.json) and the [executive findings](key_findings.md) provide denominators and interpretation.
 
 | Finding | Verified result | Business interpretation and next step |
 |---|---|---|
@@ -95,16 +95,16 @@ A 10% relative reduction in the fixed baseline of 22,983 failures gives **2,298.
 ## How to Reproduce
 
 1. Use SQL Server 2017+ and SSMS. Create/select a **new review database** with permission to create views. The scripts use the selected database; they do not create one.
-2. Obtain the original reviewed V2 dataset separately. Raw CSVs, identity seeds, and the generator are not distributed in this package. **Do not load the current minute-precision trip CSV as a verified substitute for the database snapshot.** Resolve the discrepancy in [validation](docs/validation.md) first.
+2. Obtain the original reviewed V2 dataset separately. Raw CSVs, identity seeds, and the generator are not distributed in this package. **Do not load the current minute-precision trip CSV as a verified substitute for the database snapshot.** Resolve the discrepancy in [validation](validation.md) first.
 3. Review [setup_database.sql](reproducibility/setup_database.sql). Set its `@DataFolder` to a SQL Server-readable CSV directory, including the trailing separator. Run its schema section, then the import section. Use UTF-8 CSV parsing; preserve blank fields as NULL and phone fields as text. Nonempty tables are skipped; this is not an incremental loader.
 4. Run [01_data_quality.sql](sql/01_data_quality.sql), then [02_data_preparation.sql](sql/02_data_preparation.sql). The latter creates/updates four views, including the corrected customer summary. Deploy only in the review database.
 5. Run scripts **03 → 04 → 05 → 06 → 07** for demand, fulfillment, drivers, customers, and business scenarios. Run [08_powerbi_preparation.sql](sql/08_powerbi_preparation.sql) for eight dashboard preparation views. Script 07 also contains calendar normalization and sensitivity analysis. All scripts expect only this six-month V2 dataset; some original demand queries intentionally retain that full-dataset scope.
 6. This package includes screenshots, DAX, theme, and model documentation. The original local project has a PBIX and PBIP. 
-7. The imported report uses `v_pbi_trip`, `v_offer_enriched`, `v_pbi_supply`, `v_driver_day`, `v_retention30_user`, `v_cohort_monthly`, and `v_pbi_customer_profile`, plus dimensions. Use the [model](docs/data_dictionary.md) and [implemented DAX](dashboard/measures.dax) when rebuilding. Reconcile unfiltered and sliced counts before export.
+7. The imported report uses `v_pbi_trip`, `v_offer_enriched`, `v_pbi_supply`, `v_driver_day`, `v_retention30_user`, `v_cohort_monthly`, and `v_pbi_customer_profile`, plus dimensions. Use the [model](data_dictionary.md) and [implemented DAX](dashboard/measures.dax) when rebuilding. Reconcile unfiltered and sliced counts before export.
 
 ## Project Limitations
 
-The simulation uses approximate locations, synthetic weather, simplified dispatch decisions, and built-in demand/experience rules. It has no real GPS, pricing, costs, or competing-platform data. Six months limit retention follow-up and seasonal interpretation. Associations do not establish causal effects or generalize to real Grab operations. See [limitations](docs/limitations.md).
+The simulation uses approximate locations, synthetic weather, simplified dispatch decisions, and built-in demand/experience rules. It has no real GPS, pricing, costs, or competing-platform data. Six months limit retention follow-up and seasonal interpretation. Associations do not establish causal effects or generalize to real Grab operations. See [limitations](limitations.md).
 
 ## Disclaimer
 
