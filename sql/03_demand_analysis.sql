@@ -55,9 +55,11 @@ SELECT
         , 2) AS completion_rate
 FROM monthly_trip_comparison;
 GO
--- Identify peak booking hours on weekdays and weekends
+-- Identify peak booking hours on weekdays and weekends.
+-- Keep ranking by total requests; add calendar-day-normalized demand for fair day-type comparison.
+-- Observed days include calendar dates without requests (date_table: UTC+7).
 WITH booking AS (
-    SELECT 
+    SELECT
         trip_hour,
         SUM(CASE WHEN is_weekend = 0 THEN 1 ELSE 0 END) AS weekdays_booking,
         SUM(CASE WHEN is_weekend = 1 THEN 1 ELSE 0 END) AS weekends_booking
@@ -72,24 +74,39 @@ ranked_booking AS (
         ROW_NUMBER() OVER (ORDER BY weekdays_booking DESC, trip_hour) AS weekdays_rank,
         ROW_NUMBER() OVER (ORDER BY weekends_booking DESC, trip_hour) AS weekends_rank
     FROM booking
+),
+observed_days AS (
+    SELECT
+        is_weekend,
+        COUNT(*) AS observed_days
+    FROM date_table
+    WHERE [date] >= '20260401' AND [date] < '20261001'
+    GROUP BY is_weekend
 )
-SELECT 
+SELECT
     'Weekdays' AS day_type,
-    weekdays_rank AS booking_rank,
-    trip_hour,
-    weekdays_booking AS peak_booking
-FROM ranked_booking
-WHERE weekdays_rank <= 5 AND weekdays_booking > 0
+    rb.weekdays_rank AS booking_rank,
+    rb.trip_hour,
+    rb.weekdays_booking AS peak_booking,
+    d.observed_days,
+    ROUND(rb.weekdays_booking * 1.0 / NULLIF(d.observed_days, 0), 2) AS average_requests_per_day
+FROM ranked_booking rb
+CROSS JOIN (SELECT observed_days FROM observed_days WHERE is_weekend = 0) d
+WHERE rb.weekdays_rank <= 5 AND rb.weekdays_booking > 0
 UNION ALL
-SELECT 
+SELECT
     'Weekends' AS day_type,
-    weekends_rank AS booking_rank,
-    trip_hour,
-    weekends_booking AS peak_booking
-FROM ranked_booking
-WHERE weekends_rank <= 5 AND weekends_booking > 0
+    rb.weekends_rank AS booking_rank,
+    rb.trip_hour,
+    rb.weekends_booking AS peak_booking,
+    d.observed_days,
+    ROUND(rb.weekends_booking * 1.0 / NULLIF(d.observed_days, 0), 2) AS average_requests_per_day
+FROM ranked_booking rb
+CROSS JOIN (SELECT observed_days FROM observed_days WHERE is_weekend = 1) d
+WHERE rb.weekends_rank <= 5 AND rb.weekends_booking > 0
 ORDER BY day_type, booking_rank;
 GO
+
 -- Compare booking demand and service preferences by zone.
 SELECT 
     t.pickup_zone_id,
