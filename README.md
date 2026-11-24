@@ -92,6 +92,12 @@ The following values were checked through read-only SQL Server. [Evidence](evide
 
 A 10% relative reduction in the fixed baseline of 22,983 failures gives **2,298.30 assumed avoided failures**. 
 
+## Fulfillment ETA & Waiting-Time Extension
+
+The extended [Fulfillment SQL](sql/04_fulfillment_analysis.sql) includes average wait by stage, ETA distribution percentiles, one-minute cancellation behavior, and comparison of proposed ETA time cutoffs. [DAX source](dashboard/measures.dax) adds Average Total Wait Min and supporting waiting measures. See the [Power BI implementation guide](dashboard/eta_waiting_update_guide.md) for the requested Average Total Wait card and detail visuals.
+
+The original dashboard exports remain unchanged. The new SQL and DAX have not yet been executed against the reviewed database or deployed to the PBIX. Do not infer a numerical average from P90, or change ETA bands before reviewing actual results.
+
 ## How to Reproduce
 
 1. Use SQL Server 2017+ and SSMS. Create/select a **new review database** with permission to create views. The scripts use the selected database; they do not create one.
