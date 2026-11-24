@@ -202,6 +202,186 @@ SELECT DISTINCT
 FROM eta_summary
 ORDER BY pickup_zone_id, service_type;
 GO
+-- =========================================================
+-- [NEW] Average waiting time by operational stage
+-- Population: requests with a recorded pickup and valid stage durations.
+-- Do not interpret missing waits on cancelled/expired bookings as zero.
+-- =========================================================
+SELECT
+    COUNT(*) AS pickup_requests,
+    ROUND(AVG(te.allocation_sec / 60.0), 2) AS avg_allocation_min,
+    ROUND(AVG(te.approach_sec / 60.0), 2) AS avg_approach_min,
+    ROUND(AVG(te.pickup_dwell_sec / 60.0), 2) AS avg_pickup_dwell_min,
+    ROUND(AVG(te.total_wait_sec / 60.0), 2) AS avg_total_wait_min
+FROM dbo.trip_table t
+JOIN dbo.v_trip_enriched te ON t.trip_id = te.trip_id
+WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
+  AND t.pickup_at IS NOT NULL
+  AND te.allocation_sec >= 0
+  AND te.approach_sec >= 0
+  AND te.pickup_dwell_sec >= 0
+  AND te.total_wait_sec >= 0;
+GO
+
+-- =========================================================
+-- [NEW 1] ETA distribution | Distribution-based analysis
+-- Same matched-request ETA population as the existing cancellation query.
+-- =========================================================
+WITH eta_base AS (
+    SELECT t.quoted_pickup_eta_min AS eta_min
+    FROM dbo.trip_table t
+    WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
+      AND t.accepted_at IS NOT NULL
+      AND t.quoted_pickup_eta_min >= 0
+),
+eta_stats AS (
+    SELECT COUNT(*) OVER () AS eta_sample_size,
+           MIN(eta_min) OVER () AS min_eta_min,
+           MAX(eta_min) OVER () AS max_eta_min,
+           AVG(eta_min) OVER () AS avg_eta_min,
+           PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p25_eta_min,
+           PERCENTILE_CONT(0.50) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p50_eta_min,
+           PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p75_eta_min,
+           PERCENTILE_CONT(0.90) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p90_eta_min
+    FROM eta_base
+)
+SELECT DISTINCT eta_sample_size,
+    ROUND(min_eta_min, 2) AS min_eta_min,
+    ROUND(avg_eta_min, 2) AS avg_eta_min,
+    ROUND(p25_eta_min, 2) AS p25_eta_min,
+    ROUND(p50_eta_min, 2) AS p50_eta_min,
+    ROUND(p75_eta_min, 2) AS p75_eta_min,
+    ROUND(p90_eta_min, 2) AS p90_eta_min,
+    ROUND(max_eta_min, 2) AS max_eta_min
+FROM eta_stats;
+GO
+
+-- =========================================================
+-- [NEW 2] ETA by one-minute buckets | Behavior-based analysis
+-- Values >=20 minutes share the final open-ended bucket.
+-- Use sample size, not cancellation percentage alone, to judge extremes.
+-- =========================================================
+WITH eta_base AS (
+    SELECT t.status,
+           CASE WHEN t.quoted_pickup_eta_min >= 20 THEN 20
+                ELSE FLOOR(t.quoted_pickup_eta_min) END AS eta_bucket_start
+    FROM dbo.trip_table t
+    WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
+      AND t.accepted_at IS NOT NULL
+      AND t.quoted_pickup_eta_min >= 0
+),
+eta_summary AS (
+    SELECT eta_bucket_start,
+           COUNT(*) AS matched_requests,
+           SUM(CASE WHEN status IN (5,6) THEN 1 ELSE 0 END)
+               AS post_match_cancellations,
+           SUM(CASE WHEN status = 5 THEN 1 ELSE 0 END)
+               AS customer_cancellations,
+           SUM(CASE WHEN status = 6 THEN 1 ELSE 0 END)
+               AS driver_cancellations
+    FROM eta_base
+    GROUP BY eta_bucket_start
+)
+SELECT CASE WHEN eta_bucket_start = 20 THEN '20+ min'
+            ELSE CONCAT(eta_bucket_start, '-<', eta_bucket_start + 1, ' min')
+       END AS eta_bucket,
+       eta_bucket_start AS eta_bucket_order,
+       matched_requests,
+       post_match_cancellations,
+       customer_cancellations,
+       driver_cancellations,
+       ROUND(post_match_cancellations * 100.0
+           / NULLIF(matched_requests, 0), 2) AS cancellation_rate_pct,
+       ROUND(customer_cancellations * 100.0
+           / NULLIF(matched_requests, 0), 2) AS customer_cancel_rate_pct,
+       ROUND(driver_cancellations * 100.0
+           / NULLIF(matched_requests, 0), 2) AS driver_cancel_rate_pct,
+       CASE WHEN matched_requests < 30 THEN 1 ELSE 0 END AS small_sample
+FROM eta_summary
+ORDER BY eta_bucket_order;
+GO
+
+-- =========================================================
+-- [NEW 3] Compare proposed ETA time cutoffs
+-- Distribution-based P25/P50/P75/P90 vs existing dashboard 3/6/12 min.
+-- A large rate gap is descriptive, NOT proof of a causal threshold.
+-- =========================================================
+WITH eta_base AS (
+    SELECT t.quoted_pickup_eta_min AS eta_min,
+           CASE WHEN t.status IN (5,6) THEN 1 ELSE 0 END AS is_cancelled
+    FROM dbo.trip_table t
+    WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
+      AND t.accepted_at IS NOT NULL
+      AND t.quoted_pickup_eta_min >= 0
+),
+percentile_rows AS (
+    SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p25,
+           PERCENTILE_CONT(0.50) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p50,
+           PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p75,
+           PERCENTILE_CONT(0.90) WITHIN GROUP (ORDER BY eta_min)
+               OVER () AS p90
+    FROM eta_base
+),
+percentiles AS (
+    SELECT DISTINCT p25, p50, p75, p90 FROM percentile_rows
+),
+eta_cutoffs AS (
+    SELECT v.cutoff_name, v.eta_cutoff_min,
+           'Distribution' AS cutoff_source
+    FROM percentiles p
+    CROSS APPLY (VALUES ('P25', p.p25), ('P50', p.p50),
+                        ('P75', p.p75), ('P90', p.p90))
+        v(cutoff_name, eta_cutoff_min)
+    UNION ALL
+    SELECT v.cutoff_name, CAST(v.eta_cutoff_min AS FLOAT),
+           'Current dashboard'
+    FROM (VALUES ('3 min', 3), ('6 min', 6), ('12 min', 12))
+        v(cutoff_name, eta_cutoff_min)
+),
+cutoff_summary AS (
+    SELECT c.cutoff_name, c.cutoff_source, c.eta_cutoff_min,
+           SUM(CASE WHEN b.eta_min < c.eta_cutoff_min THEN 1 ELSE 0 END)
+               AS requests_below,
+           SUM(CASE WHEN b.eta_min >= c.eta_cutoff_min THEN 1 ELSE 0 END)
+               AS requests_above,
+           SUM(CASE WHEN b.eta_min < c.eta_cutoff_min
+                    THEN b.is_cancelled ELSE 0 END) AS cancellations_below,
+           SUM(CASE WHEN b.eta_min >= c.eta_cutoff_min
+                    THEN b.is_cancelled ELSE 0 END) AS cancellations_above
+    FROM eta_cutoffs c
+    CROSS JOIN eta_base b
+    GROUP BY c.cutoff_name, c.cutoff_source, c.eta_cutoff_min
+),
+cutoff_rates AS (
+    SELECT *,
+           cancellations_below * 100.0 / NULLIF(requests_below, 0)
+               AS cancellation_rate_below_pct,
+           cancellations_above * 100.0 / NULLIF(requests_above, 0)
+               AS cancellation_rate_above_pct
+    FROM cutoff_summary
+)
+SELECT cutoff_name, cutoff_source,
+       ROUND(eta_cutoff_min, 2) AS eta_cutoff_min,
+       requests_below, requests_above,
+       ROUND(cancellation_rate_below_pct, 2)
+           AS cancellation_rate_below_pct,
+       ROUND(cancellation_rate_above_pct, 2)
+           AS cancellation_rate_above_pct,
+       ROUND(cancellation_rate_above_pct - cancellation_rate_below_pct, 2)
+           AS cancellation_rate_difference_pp,
+       CASE WHEN requests_below >= 30 AND requests_above >= 30
+            THEN 1 ELSE 0 END AS sufficient_sample_flag
+FROM cutoff_rates
+ORDER BY eta_cutoff_min, cutoff_source;
+GO
+
 -- Analyze cancellation rates by quoted pickup ETA
 WITH eta_booking AS (
     SELECT

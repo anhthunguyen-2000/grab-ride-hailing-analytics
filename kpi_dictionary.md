@@ -40,3 +40,17 @@
 ## Implementation references
 
 [Analytical SQL](sql/06_customer_analysis.sql), [business evidence SQL](sql/07_business_insights.sql), [Power BI views](sql/08_powerbi_preparation.sql), and [all implemented DAX](dashboard/measures.dax). Activation, monthly retention, and the combined cancellation rate are documented from SQL; no absent dashboard measure is claimed.
+
+## [NEW] Waiting and ETA exploration
+
+| KPI | Definition | Population |
+|---|---|---|
+| Average Total Wait Min | Mean nonnegative total_wait_sec / 60 | Observed pickup waits, including ongoing pickups; exclude missing waits |
+| Median Total Wait Min | Median nonnegative total_wait_sec / 60 | Same as average |
+| Average Allocation / Approach / Pickup Dwell Min | Mean stage duration in minutes | Common sample with all four nonnegative recorded wait durations |
+| Average Quoted ETA Min | Mean quoted pickup ETA in minutes | Matched requests with known nonnegative ETA |
+| ETA distribution | P25, P50, P75, P90 | Matched requests with known nonnegative ETA |
+| Post-match cancellation rate by minute | Cancelled matched requests / matched requests in ETA bucket | Matched requests with valid ETA; 20+ bucket is open-ended |
+| Proposed ETA time cutoff comparison | Rate at/above cutoff minus rate below cutoff (percentage points) | Matched requests with valid ETA; both sample sizes shown |
+
+The cutoff comparison is exploratory, not a causal threshold or SLA. The SQL average-stage breakdown uses a complete-stage sample; compare like populations before reconciling with overall Average Total Wait. The new DAX definitions are source code, not yet deployed to PBIX.
