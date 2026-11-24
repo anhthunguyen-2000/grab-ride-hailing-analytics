@@ -42,6 +42,74 @@ DIVIDE([Failed Requests], [Requests])
 Closed Completion Rate =
 DIVIDE([Completed Requests], [Completed Requests] + [Failed Requests])
 
+// [NEW] Operations | 0.00" min"
+Average Total Wait Min =
+AVERAGEX(
+    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
+        && FactTrips[total_wait_sec] >= 0),
+    FactTrips[total_wait_sec] / 60.0
+)
+
+// [NEW] Operations | 0.00" min"
+Median Total Wait Min =
+MEDIANX(
+    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
+        && FactTrips[total_wait_sec] >= 0),
+    FactTrips[total_wait_sec] / 60.0
+)
+
+// [NEW] Operations | 0.00" min"
+// Use the same valid pickup cohort for all three stage measures.
+Average Allocation Min =
+AVERAGEX(
+    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
+        && NOT ISBLANK(FactTrips[allocation_sec])
+        && NOT ISBLANK(FactTrips[approach_sec])
+        && NOT ISBLANK(FactTrips[pickup_dwell_sec])
+        && FactTrips[total_wait_sec] >= 0
+        && FactTrips[allocation_sec] >= 0
+        && FactTrips[approach_sec] >= 0
+        && FactTrips[pickup_dwell_sec] >= 0),
+    FactTrips[allocation_sec] / 60.0
+)
+
+// [NEW] Operations | 0.00" min"
+Average Approach Min =
+AVERAGEX(
+    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
+        && NOT ISBLANK(FactTrips[allocation_sec])
+        && NOT ISBLANK(FactTrips[approach_sec])
+        && NOT ISBLANK(FactTrips[pickup_dwell_sec])
+        && FactTrips[total_wait_sec] >= 0
+        && FactTrips[allocation_sec] >= 0
+        && FactTrips[approach_sec] >= 0
+        && FactTrips[pickup_dwell_sec] >= 0),
+    FactTrips[approach_sec] / 60.0
+)
+
+// [NEW] Operations | 0.00" min"
+Average Pickup Dwell Min =
+AVERAGEX(
+    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
+        && NOT ISBLANK(FactTrips[allocation_sec])
+        && NOT ISBLANK(FactTrips[approach_sec])
+        && NOT ISBLANK(FactTrips[pickup_dwell_sec])
+        && FactTrips[total_wait_sec] >= 0
+        && FactTrips[allocation_sec] >= 0
+        && FactTrips[approach_sec] >= 0
+        && FactTrips[pickup_dwell_sec] >= 0),
+    FactTrips[pickup_dwell_sec] / 60.0
+)
+
+// [NEW] Operations | 0.00" min"
+Average Quoted ETA Min =
+AVERAGEX(
+    FILTER(FactTrips, NOT ISBLANK(FactTrips[quoted_pickup_eta_min])
+        && FactTrips[quoted_pickup_eta_min] >= 0
+        && NOT ISBLANK(FactTrips[accepted_at])),
+    FactTrips[quoted_pickup_eta_min]
+)
+
 // Operations | 0.00" min"
 P90 Total Wait Min =
 PERCENTILEX.INC(FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])), FactTrips[total_wait_sec] / 60.0, 0.9)
