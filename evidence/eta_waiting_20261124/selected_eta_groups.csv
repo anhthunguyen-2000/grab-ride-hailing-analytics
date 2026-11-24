@@ -1,0 +1,216 @@
+scope_type,scope_name,group_set,eta_band_order,eta_band,matched_requests,post_match_cancellations,customer_cancellations,driver_cancellations,open_requests,post_match_cancellation_rate_pct,customer_cancellation_rate_pct,driver_cancellation_rate_pct,small_sample_flag
+Month,2026-04,Selected Power BI 3/6/12,1,01 | <3 min,9915,314,177,137,0,3.166918809884,1.785173978819,1.381744831064,0
+Month,2026-04,Selected Power BI 3/6/12,2,02 | 3-<6 min,834,31,19,12,0,3.717026378896,2.278177458033,1.438848920863,0
+Month,2026-04,Selected Power BI 3/6/12,3,03 | 6-<12 min,1057,83,54,29,0,7.852412488174,5.108798486281,2.743614001892,0
+Month,2026-04,Selected Power BI 3/6/12,4,04 | 12+ min,3169,588,421,167,0,18.554749132218,13.284947933101,5.269801199116,0
+Month,2026-05,Selected Power BI 3/6/12,1,01 | <3 min,10595,347,189,158,0,3.275129778197,1.783860311467,1.491269466729,0
+Month,2026-05,Selected Power BI 3/6/12,2,02 | 3-<6 min,1040,40,23,17,0,3.846153846153,2.211538461538,1.634615384615,0
+Month,2026-05,Selected Power BI 3/6/12,3,03 | 6-<12 min,1107,98,67,31,0,8.852755194218,6.052393857271,2.800361336946,0
+Month,2026-05,Selected Power BI 3/6/12,4,04 | 12+ min,3462,650,456,194,0,18.775274407856,13.17157712305,5.603697284806,0
+Month,2026-06,Selected Power BI 3/6/12,1,01 | <3 min,11197,417,231,186,0,3.724211842457,2.063052603375,1.661159239081,0
+Month,2026-06,Selected Power BI 3/6/12,2,02 | 3-<6 min,1061,52,29,23,0,4.901036757775,2.733270499528,2.167766258246,0
+Month,2026-06,Selected Power BI 3/6/12,3,03 | 6-<12 min,1200,94,62,32,0,7.833333333333,5.166666666666,2.666666666666,0
+Month,2026-06,Selected Power BI 3/6/12,4,04 | 12+ min,4022,816,589,227,0,20.288413724515,14.644455494778,5.643958229736,0
+Month,2026-07,Selected Power BI 3/6/12,1,01 | <3 min,12436,433,224,209,0,3.481826954004,1.80122225796,1.680604696043,0
+Month,2026-07,Selected Power BI 3/6/12,2,02 | 3-<6 min,1117,48,35,13,0,4.297224709042,3.133393017009,1.163831692032,0
+Month,2026-07,Selected Power BI 3/6/12,3,03 | 6-<12 min,1369,135,94,41,0,9.861212563915,6.866325785244,2.99488677867,0
+Month,2026-07,Selected Power BI 3/6/12,4,04 | 12+ min,4790,985,706,279,0,20.563674321503,14.73903966597,5.824634655532,0
+Month,2026-08,Selected Power BI 3/6/12,1,01 | <3 min,13186,480,276,204,0,3.640224480509,2.093129076293,1.547095404216,0
+Month,2026-08,Selected Power BI 3/6/12,2,02 | 3-<6 min,1373,64,36,28,0,4.661325564457,2.621995630007,2.03932993445,0
+Month,2026-08,Selected Power BI 3/6/12,3,03 | 6-<12 min,1447,138,92,46,0,9.536973047684,6.357982031789,3.178991015894,0
+Month,2026-08,Selected Power BI 3/6/12,4,04 | 12+ min,5198,1020,748,272,0,19.622931896883,14.390150057714,5.232781839168,0
+Month,2026-09,Selected Power BI 3/6/12,1,01 | <3 min,13645,467,261,206,6,3.422499083913,1.91278856724,1.509710516672,0
+Month,2026-09,Selected Power BI 3/6/12,2,02 | 3-<6 min,1225,63,38,25,0,5.142857142857,3.102040816326,2.04081632653,0
+Month,2026-09,Selected Power BI 3/6/12,3,03 | 6-<12 min,1608,141,92,49,1,8.768656716417,5.721393034825,3.047263681592,0
+Month,2026-09,Selected Power BI 3/6/12,4,04 | 12+ min,5418,1028,685,343,1,18.973791066814,12.643041712809,6.330749354005,0
+Overall,All,Selected Power BI 3/6/12,1,01 | <3 min,70974,2458,1358,1100,6,3.46324005974,1.913376729506,1.549863330233,0
+Overall,All,Selected Power BI 3/6/12,2,02 | 3-<6 min,6650,298,180,118,0,4.481203007518,2.706766917293,1.774436090225,0
+Overall,All,Selected Power BI 3/6/12,3,03 | 6-<12 min,7788,689,461,228,1,8.846944016435,5.919363122752,2.927580893682,0
+Overall,All,Selected Power BI 3/6/12,4,04 | 12+ min,26059,5087,3605,1482,1,19.521086764649,13.833992094861,5.687094669787,0
+Peak Period,evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,13902,501,288,213,0,3.603798014674,2.071644367716,1.532153646957,0
+Peak Period,evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,3064,154,100,54,0,5.026109660574,3.263707571801,1.762402088772,0
+Peak Period,evening_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,1656,157,108,49,0,9.480676328502,6.521739130434,2.958937198067,0
+Peak Period,evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,8469,1875,1329,546,0,22.139567835635,15.692525681898,6.447042153737,0
+Peak Period,morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,10471,346,168,178,0,3.304364435106,1.60443128641,1.699933148696,0
+Peak Period,morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,1713,60,35,25,0,3.502626970227,2.043199065966,1.459427904261,0
+Peak Period,morning_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,1191,124,84,40,0,10.41141897565,7.05289672544,3.358522250209,0
+Peak Period,morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,3816,806,567,239,0,21.121593291404,14.858490566037,6.263102725366,0
+Peak Period,off_peak,Selected Power BI 3/6/12,1,01 | <3 min,46601,1611,902,709,6,3.457007360357,1.935580781528,1.521426578828,0
+Peak Period,off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,1873,84,45,39,0,4.484783769353,2.402562733582,2.082221035771,0
+Peak Period,off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,4941,408,269,139,1,8.257437765634,5.444242056263,2.81319570937,0
+Peak Period,off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,13774,2406,1709,697,1,17.467692754464,12.4074342965,5.060258457964,0
+Pickup Zone,Airport_access,Selected Power BI 3/6/12,1,01 | <3 min,10038,328,179,149,0,3.267583183901,1.78322374975,1.48435943415,0
+Pickup Zone,Airport_access,Selected Power BI 3/6/12,2,02 | 3-<6 min,1151,53,30,23,0,4.604691572545,2.606429192006,1.998262380538,0
+Pickup Zone,Airport_access,Selected Power BI 3/6/12,3,03 | 6-<12 min,3839,344,235,109,0,8.960666840323,6.121385777546,2.839281062776,0
+Pickup Zone,Airport_access,Selected Power BI 3/6/12,4,04 | 12+ min,3198,556,382,174,1,17.385866166353,11.944965603502,5.440900562851,0
+Pickup Zone,Central,Selected Power BI 3/6/12,1,01 | <3 min,17767,637,354,283,1,3.585298587268,1.992457927618,1.592840659649,0
+Pickup Zone,Central,Selected Power BI 3/6/12,2,02 | 3-<6 min,1462,58,36,22,0,3.967168262653,2.462380300957,1.504787961696,0
+Pickup Zone,Central,Selected Power BI 3/6/12,3,03 | 6-<12 min,212,27,19,8,0,12.735849056603,8.962264150943,3.77358490566,0
+Pickup Zone,Central,Selected Power BI 3/6/12,4,04 | 12+ min,10622,2155,1539,616,0,20.288081340613,14.488796836753,5.799284503859,0
+Pickup Zone,East,Selected Power BI 3/6/12,1,01 | <3 min,12542,420,255,165,2,3.348748206027,2.033168553659,1.315579652368,0
+Pickup Zone,East,Selected Power BI 3/6/12,2,02 | 3-<6 min,1100,45,27,18,0,4.090909090909,2.454545454545,1.636363636363,0
+Pickup Zone,East,Selected Power BI 3/6/12,4,04 | 12+ min,1961,425,273,152,0,21.672616012238,13.921468638449,7.751147373788,0
+Pickup Zone,North,Selected Power BI 3/6/12,1,01 | <3 min,5237,177,90,87,1,3.379797594042,1.718541149513,1.661256444529,0
+Pickup Zone,North,Selected Power BI 3/6/12,2,02 | 3-<6 min,585,35,23,12,0,5.982905982905,3.931623931623,2.051282051282,0
+Pickup Zone,North,Selected Power BI 3/6/12,3,03 | 6-<12 min,3555,299,194,105,1,8.410689170182,5.457102672292,2.95358649789,0
+Pickup Zone,North,Selected Power BI 3/6/12,4,04 | 12+ min,1513,319,221,98,0,21.083939193654,14.606741573033,6.477197620621,0
+Pickup Zone,Northeast,Selected Power BI 3/6/12,1,01 | <3 min,5056,183,96,87,1,3.619462025316,1.898734177215,1.720727848101,0
+Pickup Zone,Northeast,Selected Power BI 3/6/12,2,02 | 3-<6 min,498,16,11,5,0,3.212851405622,2.208835341365,1.004016064257,0
+Pickup Zone,Northeast,Selected Power BI 3/6/12,4,04 | 12+ min,653,170,122,48,0,26.033690658499,18.683001531393,7.350689127105,0
+Pickup Zone,South,Selected Power BI 3/6/12,1,01 | <3 min,5535,206,108,98,1,3.721770551038,1.951219512195,1.770551038843,0
+Pickup Zone,South,Selected Power BI 3/6/12,2,02 | 3-<6 min,504,22,12,10,0,4.365079365079,2.380952380952,1.984126984126,0
+Pickup Zone,South,Selected Power BI 3/6/12,4,04 | 12+ min,4077,781,567,214,0,19.15624233505,13.907284768211,5.248957566838,0
+Pickup Zone,West,Selected Power BI 3/6/12,1,01 | <3 min,14799,507,276,231,0,3.425907155888,1.864990877762,1.560916278126,0
+Pickup Zone,West,Selected Power BI 3/6/12,2,02 | 3-<6 min,1350,69,41,28,0,5.111111111111,3.037037037037,2.074074074074,0
+Pickup Zone,West,Selected Power BI 3/6/12,3,03 | 6-<12 min,182,19,13,6,0,10.43956043956,7.142857142857,3.296703296703,0
+Pickup Zone,West,Selected Power BI 3/6/12,4,04 | 12+ min,4035,681,501,180,0,16.877323420074,12.416356877323,4.46096654275,0
+Service,BIKE,Selected Power BI 3/6/12,1,01 | <3 min,52539,1841,1026,815,4,3.504063647956,1.952835036829,1.551228611126,0
+Service,BIKE,Selected Power BI 3/6/12,2,02 | 3-<6 min,4860,232,134,98,0,4.77366255144,2.75720164609,2.016460905349,0
+Service,BIKE,Selected Power BI 3/6/12,3,03 | 6-<12 min,5206,456,309,147,1,8.759124087591,5.93545908567,2.82366500192,0
+Service,BIKE,Selected Power BI 3/6/12,4,04 | 12+ min,17107,3474,2476,998,1,20.307476471619,14.473607295259,5.83386917636,0
+Service,CAR,Selected Power BI 3/6/12,1,01 | <3 min,18435,617,332,285,2,3.346894494168,1.800922158936,1.545972335231,0
+Service,CAR,Selected Power BI 3/6/12,2,02 | 3-<6 min,1790,66,46,20,0,3.687150837988,2.569832402234,1.117318435754,0
+Service,CAR,Selected Power BI 3/6/12,3,03 | 6-<12 min,2582,233,152,81,0,9.024012393493,5.886909372579,3.137103020914,0
+Service,CAR,Selected Power BI 3/6/12,4,04 | 12+ min,8952,1613,1129,484,0,18.018319928507,12.611706881143,5.406613047363,0
+Zone Service Peak,Airport_access | BIKE | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,1565,57,24,33,0,3.642172523961,1.533546325878,2.108626198083,0
+Zone Service Peak,Airport_access | BIKE | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,419,18,11,7,0,4.295942720763,2.625298329355,1.670644391408,0
+Zone Service Peak,Airport_access | BIKE | evening_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,1011,92,64,28,0,9.099901088031,6.330365974282,2.769535113748,0
+Zone Service Peak,Airport_access | BIKE | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,838,134,101,33,0,15.99045346062,12.052505966587,3.937947494033,0
+Zone Service Peak,Airport_access | BIKE | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,881,21,11,10,0,2.38365493757,1.248581157775,1.135073779795,0
+Zone Service Peak,Airport_access | BIKE | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,160,10,6,4,0,6.25,3.75,2.5,0
+Zone Service Peak,Airport_access | BIKE | morning_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,74,10,8,2,0,13.513513513513,10.81081081081,2.702702702702,0
+Zone Service Peak,Airport_access | BIKE | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,231,59,44,15,0,25.541125541125,19.047619047619,6.493506493506,0
+Zone Service Peak,Airport_access | BIKE | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,4913,162,100,62,0,3.297374313047,2.035416242621,1.261958070425,0
+Zone Service Peak,Airport_access | BIKE | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,281,15,7,8,0,5.338078291814,2.491103202846,2.846975088967,0
+Zone Service Peak,Airport_access | BIKE | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,1470,133,87,46,0,9.047619047619,5.918367346938,3.12925170068,0
+Zone Service Peak,Airport_access | BIKE | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,983,174,116,58,1,17.700915564598,11.800610376398,5.900305188199,0
+Zone Service Peak,Airport_access | CAR | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,589,23,14,9,0,3.90492359932,2.376910016977,1.528013582342,0
+Zone Service Peak,Airport_access | CAR | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,147,7,5,2,0,4.761904761904,3.401360544217,1.360544217687,0
+Zone Service Peak,Airport_access | CAR | evening_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,527,51,35,16,0,9.677419354838,6.641366223908,3.036053130929,0
+Zone Service Peak,Airport_access | CAR | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,326,65,45,20,0,19.938650306748,13.803680981595,6.134969325153,0
+Zone Service Peak,Airport_access | CAR | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,336,18,4,14,0,5.357142857142,1.190476190476,4.166666666666,0
+Zone Service Peak,Airport_access | CAR | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,58,0,0,0,0,0.0,0.0,0.0,0
+Zone Service Peak,Airport_access | CAR | morning_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,55,9,4,5,0,16.363636363636,7.272727272727,9.090909090909,0
+Zone Service Peak,Airport_access | CAR | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,110,20,13,7,0,18.181818181818,11.818181818181,6.363636363636,0
+Zone Service Peak,Airport_access | CAR | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,1754,47,26,21,0,2.679589509692,1.482326111744,1.197263397947,0
+Zone Service Peak,Airport_access | CAR | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,86,3,1,2,0,3.488372093023,1.162790697674,2.325581395348,0
+Zone Service Peak,Airport_access | CAR | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,702,49,37,12,0,6.980056980056,5.270655270655,1.709401709401,0
+Zone Service Peak,Airport_access | CAR | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,710,104,63,41,0,14.647887323943,8.873239436619,5.774647887323,0
+Zone Service Peak,Central | BIKE | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,2863,114,74,40,0,3.98183723367,2.584701362207,1.397135871463,0
+Zone Service Peak,Central | BIKE | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,659,34,19,15,0,5.159332321699,2.88315629742,2.276176024279,0
+Zone Service Peak,Central | BIKE | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,3883,922,656,266,0,23.744527427246,16.894154004635,6.850373422611,0
+Zone Service Peak,Central | BIKE | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,1636,52,24,28,0,3.178484107579,1.466992665036,1.711491442542,0
+Zone Service Peak,Central | BIKE | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,139,3,3,0,0,2.158273381294,2.158273381294,0.0,0
+Zone Service Peak,Central | BIKE | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,173,38,24,14,0,21.965317919075,13.872832369942,8.092485549132,0
+Zone Service Peak,Central | BIKE | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,8584,313,175,138,0,3.646318732525,2.038676607642,1.607642124883,0
+Zone Service Peak,Central | BIKE | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,245,7,5,2,0,2.857142857142,2.04081632653,0.816326530612,0
+Zone Service Peak,Central | BIKE | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,89,12,9,3,0,13.483146067415,10.112359550561,3.370786516853,0
+Zone Service Peak,Central | BIKE | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,2957,520,372,148,0,17.585390598579,12.580317889753,5.005072708826,0
+Zone Service Peak,Central | CAR | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,1064,33,14,19,0,3.101503759398,1.315789473684,1.785714285714,0
+Zone Service Peak,Central | CAR | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,258,12,8,4,0,4.651162790697,3.100775193798,1.550387596899,0
+Zone Service Peak,Central | CAR | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,1647,362,262,100,0,21.979356405585,15.907710989678,6.071645415907,0
+Zone Service Peak,Central | CAR | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,601,20,11,9,0,3.32778702163,1.830282861896,1.497504159733,0
+Zone Service Peak,Central | CAR | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,83,1,0,1,0,1.204819277108,0.0,1.204819277108,0
+Zone Service Peak,Central | CAR | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,187,32,23,9,0,17.11229946524,12.299465240641,4.812834224598,0
+Zone Service Peak,Central | CAR | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,3019,105,56,49,1,3.477972838688,1.8549188473,1.623053991387,0
+Zone Service Peak,Central | CAR | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,78,1,1,0,0,1.282051282051,1.282051282051,0.0,0
+Zone Service Peak,Central | CAR | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,123,15,10,5,0,12.195121951219,8.130081300813,4.065040650406,0
+Zone Service Peak,Central | CAR | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,1775,281,202,79,0,15.830985915492,11.38028169014,4.450704225352,0
+Zone Service Peak,East | BIKE | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,2509,79,46,33,0,3.148664806695,1.83339976086,1.315265045834,0
+Zone Service Peak,East | BIKE | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,413,23,13,10,0,5.569007263922,3.147699757869,2.421307506053,0
+Zone Service Peak,East | BIKE | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,301,78,54,24,0,25.913621262458,17.940199335548,7.97342192691,0
+Zone Service Peak,East | BIKE | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,1583,58,33,25,0,3.663929248262,2.084649399873,1.579279848389,0
+Zone Service Peak,East | BIKE | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,213,7,2,5,0,3.286384976525,0.93896713615,2.347417840375,0
+Zone Service Peak,East | BIKE | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,231,54,37,17,0,23.376623376623,16.017316017316,7.359307359307,0
+Zone Service Peak,East | BIKE | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,5292,172,109,63,2,3.250188964474,2.059712773998,1.190476190476,0
+Zone Service Peak,East | BIKE | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,164,7,6,1,0,4.268292682926,3.658536585365,0.60975609756,0
+Zone Service Peak,East | BIKE | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,554,105,73,32,0,18.953068592057,13.176895306859,5.776173285198,0
+Zone Service Peak,East | CAR | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,810,30,23,7,0,3.703703703703,2.839506172839,0.864197530864,0
+Zone Service Peak,East | CAR | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,167,7,5,2,0,4.191616766467,2.994011976047,1.197604790419,0
+Zone Service Peak,East | CAR | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,190,51,23,28,0,26.842105263157,12.105263157894,14.736842105263,0
+Zone Service Peak,East | CAR | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,475,19,11,8,0,4.0,2.315789473684,1.684210526315,0
+Zone Service Peak,East | CAR | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,92,1,1,0,0,1.086956521739,1.086956521739,0.0,0
+Zone Service Peak,East | CAR | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,177,50,25,25,0,28.248587570621,14.12429378531,14.12429378531,0
+Zone Service Peak,East | CAR | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,1873,62,33,29,0,3.310197544046,1.76187933796,1.548318206086,0
+Zone Service Peak,East | CAR | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,51,0,0,0,0,0.0,0.0,0.0,0
+Zone Service Peak,East | CAR | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,508,87,61,26,0,17.125984251968,12.007874015748,5.11811023622,0
+Zone Service Peak,North | BIKE | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,361,17,11,6,0,4.709141274238,3.047091412742,1.662049861495,0
+Zone Service Peak,North | BIKE | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,81,8,6,2,0,9.876543209876,7.407407407407,2.469135802469,0
+Zone Service Peak,North | BIKE | evening_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,78,10,6,4,0,12.820512820512,7.692307692307,5.128205128205,0
+Zone Service Peak,North | BIKE | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,83,19,14,5,0,22.89156626506,16.867469879518,6.024096385542,0
+Zone Service Peak,North | BIKE | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,636,23,8,15,0,3.616352201257,1.25786163522,2.358490566037,0
+Zone Service Peak,North | BIKE | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,163,10,5,5,0,6.134969325153,3.067484662576,3.067484662576,0
+Zone Service Peak,North | BIKE | morning_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,753,80,56,24,0,10.624169986719,7.436918990703,3.187250996015,0
+Zone Service Peak,North | BIKE | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,558,113,84,29,0,20.250896057347,15.05376344086,5.197132616487,0
+Zone Service Peak,North | BIKE | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,2957,100,50,50,1,3.381805884342,1.690902942171,1.690902942171,0
+Zone Service Peak,North | BIKE | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,172,8,5,3,0,4.651162790697,2.906976744186,1.744186046511,0
+Zone Service Peak,North | BIKE | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,1656,115,76,39,1,6.944444444444,4.589371980676,2.355072463768,0
+Zone Service Peak,North | BIKE | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,515,106,67,39,0,20.582524271844,13.009708737864,7.57281553398,0
+Zone Service Peak,North | CAR | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,137,7,4,3,0,5.109489051094,2.919708029197,2.189781021897,0
+Zone Service Peak,North | CAR | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,34,0,0,0,0,0.0,0.0,0.0,0
+Zone Service Peak,North | CAR | evening_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,40,4,3,1,0,10.0,7.5,2.5,0
+Zone Service Peak,North | CAR | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,19,2,1,1,0,10.526315789473,5.263157894736,5.263157894736,1
+Zone Service Peak,North | CAR | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,233,7,4,3,0,3.004291845493,1.716738197424,1.287553648068,0
+Zone Service Peak,North | CAR | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,75,4,4,0,0,5.333333333333,5.333333333333,0.0,0
+Zone Service Peak,North | CAR | morning_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,309,25,16,9,0,8.090614886731,5.177993527508,2.912621359223,0
+Zone Service Peak,North | CAR | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,144,33,21,12,0,22.916666666666,14.583333333333,8.333333333333,0
+Zone Service Peak,North | CAR | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,913,23,13,10,0,2.519167579408,1.423877327491,1.095290251916,0
+Zone Service Peak,North | CAR | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,60,5,3,2,0,8.333333333333,5.0,3.333333333333,0
+Zone Service Peak,North | CAR | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,719,65,37,28,0,9.04033379694,5.146036161335,3.894297635605,0
+Zone Service Peak,North | CAR | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,194,46,34,12,0,23.711340206185,17.525773195876,6.185567010309,0
+Zone Service Peak,Northeast | BIKE | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,308,14,11,3,0,4.545454545454,3.571428571428,0.974025974025,0
+Zone Service Peak,Northeast | BIKE | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,81,2,1,1,0,2.469135802469,1.234567901234,1.234567901234,0
+Zone Service Peak,Northeast | BIKE | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,30,5,4,1,0,16.666666666666,13.333333333333,3.333333333333,0
+Zone Service Peak,Northeast | BIKE | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,447,14,5,9,0,3.131991051454,1.118568232662,2.013422818791,0
+Zone Service Peak,Northeast | BIKE | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,166,2,2,0,0,1.204819277108,1.204819277108,0.0,0
+Zone Service Peak,Northeast | BIKE | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,130,49,38,11,0,37.692307692307,29.230769230769,8.461538461538,0
+Zone Service Peak,Northeast | BIKE | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,2914,109,51,58,0,3.740562800274,1.750171585449,1.990391214824,0
+Zone Service Peak,Northeast | BIKE | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,132,7,5,2,0,5.30303030303,3.787878787878,1.515151515151,0
+Zone Service Peak,Northeast | BIKE | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,345,87,58,29,0,25.217391304347,16.811594202898,8.405797101449,0
+Zone Service Peak,Northeast | CAR | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,112,2,2,0,0,1.785714285714,1.785714285714,0.0,0
+Zone Service Peak,Northeast | CAR | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,31,0,0,0,0,0.0,0.0,0.0,0
+Zone Service Peak,Northeast | CAR | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,7,1,1,0,0,14.285714285714,14.285714285714,0.0,1
+Zone Service Peak,Northeast | CAR | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,218,10,6,4,0,4.587155963302,2.752293577981,1.834862385321,0
+Zone Service Peak,Northeast | CAR | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,52,2,1,1,0,3.846153846153,1.923076923076,1.923076923076,0
+Zone Service Peak,Northeast | CAR | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,25,8,4,4,0,32.0,16.0,16.0,1
+Zone Service Peak,Northeast | CAR | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,1057,34,21,13,1,3.21665089877,1.986754966887,1.229895931882,0
+Zone Service Peak,Northeast | CAR | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,36,3,2,1,0,8.333333333333,5.555555555555,2.777777777777,0
+Zone Service Peak,Northeast | CAR | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,116,20,17,3,0,17.241379310344,14.655172413793,2.586206896551,0
+Zone Service Peak,South | BIKE | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,362,12,6,6,0,3.314917127071,1.657458563535,1.657458563535,0
+Zone Service Peak,South | BIKE | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,67,1,1,0,0,1.492537313432,1.492537313432,0.0,0
+Zone Service Peak,South | BIKE | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,84,26,19,7,0,30.95238095238,22.619047619047,8.333333333333,0
+Zone Service Peak,South | BIKE | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,628,15,6,9,0,2.388535031847,0.955414012738,1.433121019108,0
+Zone Service Peak,South | BIKE | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,154,7,4,3,0,4.545454545454,2.597402597402,1.948051948051,0
+Zone Service Peak,South | BIKE | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,967,205,149,56,0,21.199586349534,15.408479834539,5.791106514994,0
+Zone Service Peak,South | BIKE | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,3196,122,70,52,1,3.817271589486,2.190237797246,1.62703379224,0
+Zone Service Peak,South | BIKE | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,153,7,3,4,0,4.575163398692,1.960784313725,2.614379084967,0
+Zone Service Peak,South | BIKE | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,1762,340,250,90,0,19.296254256526,14.188422247446,5.10783200908,0
+Zone Service Peak,South | CAR | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,134,7,3,4,0,5.223880597014,2.238805970149,2.985074626865,0
+Zone Service Peak,South | CAR | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,28,2,2,0,0,7.142857142857,7.142857142857,0.0,1
+Zone Service Peak,South | CAR | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,57,11,7,4,0,19.298245614035,12.280701754385,7.017543859649,0
+Zone Service Peak,South | CAR | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,223,7,1,6,0,3.139013452914,0.448430493273,2.690582959641,0
+Zone Service Peak,South | CAR | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,53,3,1,2,0,5.66037735849,1.88679245283,3.77358490566,0
+Zone Service Peak,South | CAR | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,392,63,37,26,0,16.071428571428,9.438775510204,6.632653061224,0
+Zone Service Peak,South | CAR | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,992,43,22,21,0,4.334677419354,2.217741935483,2.11693548387,0
+Zone Service Peak,South | CAR | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,49,2,1,1,0,4.081632653061,2.04081632653,2.04081632653,0
+Zone Service Peak,South | CAR | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,815,136,105,31,0,16.687116564417,12.883435582822,3.803680981595,0
+Zone Service Peak,West | BIKE | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,2249,79,42,37,0,3.512672298799,1.867496665184,1.645175633614,0
+Zone Service Peak,West | BIKE | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,502,30,19,11,0,5.976095617529,3.784860557768,2.19123505976,0
+Zone Service Peak,West | BIKE | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,619,134,95,39,0,21.647819063004,15.347334410339,6.300484652665,0
+Zone Service Peak,West | BIKE | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,1897,70,36,34,0,3.690036900369,1.897733263046,1.792303637322,0
+Zone Service Peak,West | BIKE | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,217,9,6,3,0,4.147465437788,2.764976958525,1.382488479262,0
+Zone Service Peak,West | BIKE | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,285,49,40,9,0,17.19298245614,14.035087719298,3.157894736842,0
+Zone Service Peak,West | BIKE | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,6758,238,134,104,0,3.521751997632,1.98283515833,1.538916839301,0
+Zone Service Peak,West | BIKE | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,279,17,5,12,0,6.093189964157,1.79211469534,4.301075268817,0
+Zone Service Peak,West | BIKE | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,75,4,3,1,0,5.333333333333,4.0,1.333333333333,0
+Zone Service Peak,West | BIKE | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,1578,257,181,76,0,16.286438529784,11.47021546261,4.816223067173,0
+Zone Service Peak,West | CAR | evening_peak,Selected Power BI 3/6/12,1,01 | <3 min,839,27,14,13,0,3.218116805721,1.668653158522,1.549463647199,0
+Zone Service Peak,West | CAR | evening_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,177,10,10,0,0,5.649717514124,5.649717514124,0.0,0
+Zone Service Peak,West | CAR | evening_peak,Selected Power BI 3/6/12,4,04 | 12+ min,385,65,47,18,0,16.883116883116,12.207792207792,4.675324675324,0
+Zone Service Peak,West | CAR | morning_peak,Selected Power BI 3/6/12,1,01 | <3 min,677,12,8,4,0,1.772525849335,1.181683899556,0.590841949778,0
+Zone Service Peak,West | CAR | morning_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,88,1,0,1,0,1.136363636363,0.0,1.136363636363,0
+Zone Service Peak,West | CAR | morning_peak,Selected Power BI 3/6/12,4,04 | 12+ min,206,33,28,5,0,16.019417475728,13.592233009708,2.427184466019,0
+Zone Service Peak,West | CAR | off_peak,Selected Power BI 3/6/12,1,01 | <3 min,2379,81,42,39,0,3.404791929382,1.765447667087,1.639344262295,0
+Zone Service Peak,West | CAR | off_peak,Selected Power BI 3/6/12,2,02 | 3-<6 min,87,2,1,1,0,2.298850574712,1.149425287356,1.149425287356,0
+Zone Service Peak,West | CAR | off_peak,Selected Power BI 3/6/12,3,03 | 6-<12 min,107,15,10,5,0,14.018691588785,9.345794392523,4.672897196261,0
+Zone Service Peak,West | CAR | off_peak,Selected Power BI 3/6/12,4,04 | 12+ min,962,143,110,33,0,14.864864864864,11.434511434511,3.430353430353,0

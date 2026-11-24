@@ -31,3 +31,31 @@ A fixed baseline of 22,983 failures gives 1,149.15 / 2,298.30 / 3,447.45 assumed
 [Verified metrics](evidence/verified_metrics.json) support population, waits, supply, acceptance and return values. [Business priorities](evidence/business_priorities.csv) support the ranked counts and target cells; [scenario evidence](evidence/failure_scenarios.csv) supports the arithmetic. Reproduce with [business-insights SQL](sql/07_business_insights.sql), [fulfillment SQL](sql/04_fulfillment_analysis.sql), and [customer SQL](sql/06_customer_analysis.sql). [SQL execution checks](evidence/sql_execution_checks.json) record executed batches; view bodies were tested as SELECTs, not deployed.
 
 The generator imposes demand, ETA, acceptance, weather and experience mechanisms. Findings demonstrate an analytical workflow, not real-world causal effects. The current trip CSV fails two supplied validation checks after timestamp precision loss; the database evidence remains the basis for reported findings. See [validation](validation.md) before attempting reproduction or publication.
+
+
+
+## ETA and waiting experience — verified SQL update, 24 November 2026
+
+Actual execution on the reviewed database, requests created in **[1 April, 1 October 2026)**, local UTC+7. [Validation evidence](evidence/eta_waiting_20261124/sql_validation.json) reconciles request counts and accepted-offer timestamps with the previously verified database. The changed minute-precision trip CSV remains unsuitable for replacing that database; no CSV was reimported.
+
+Among **102,936 pickups**, average actual total wait is **7.41 min**, median **3.55 min**, P90 **20.45 min**. All 102,936 also have complete valid stages: allocation **0.32**, approach **6.08**, pickup dwell **1.00 min**. Approach accounts for **82.2%** of the average. Stage components use the same cohort. The unrounded SQL averages sum within 0.00001 min because SQL decimal AVG retains six fractional digits.
+
+Quoted ETA is a different measure: **111,471 matched requests**, mean **6.70**, P25 **1.64**, P50 **2.29**, P75 **10.66**, P90 **20.37**, range **1.00–36.16 min**. BIKE P75 is **9.1825 min**, CAR P75 **14.12 min**; a common percentile boundary has different operational meaning across services. Exact values are retained in [distribution output](evidence/eta_waiting_20261124/eta_distribution.csv).
+
+| Selected ETA group | Matched n | Customer cancellations | Driver cancellations | Post-match cancellation rate |
+|---|---:|---:|---:|---:|
+| 01 | <3 min | 70,974 | 1,358 | 1,100 | 3.46% |
+| 02 | 3-<6 min | 6,650 | 180 | 118 | 4.48% |
+| 03 | 6-<12 min | 7,788 | 461 | 228 | 8.85% |
+| 04 | 12+ min | 26,059 | 3,605 | 1,482 | 19.52% |
+
+
+**Selected ETA groups: retain 3/6/12 minutes**, with lower-inclusive, upper-exclusive bins and a separate Unknown category. SQL now agrees with the existing dashboard. The four groups have adequate overall and service samples; rates increase across the groups for both BIKE and CAR and separately in each of six months and three peak periods. This supports retaining an understandable reporting scheme, not claiming a universal operational or causal threshold.
+
+The minute analysis uses an explicitly exploratory screen: an increase of at least **1 percentage point** from the immediately preceding minute, with at least **30 matched requests in each**. Rises occur at several different minutes and differ by service. The 5–<6 minute bucket has only **99** observations overall (55 BIKE, 44 CAR), making a split around five minutes fragile after further slicing. Empty minute buckets remain in the output; the 20+ bucket is open-ended, so its comparison to 19–<20 is not an equal-width minute comparison.
+
+The complete group-set evaluation covers service, zone, peak period, month, and all 42 zone/service/peak cells. Some cells have no observations in a particular ETA group, and **four populated cells have n<30** (minimum n=7). Northeast's marginal <3 and 3–<6 rates are not monotone; several fine-grained cells also reverse the overall pattern. Do not apply these cutoffs as universal service guarantees or use small cells to drive operational changes. [Group-set results](evidence/eta_waiting_20261124/eta_group_set_evaluation.csv) and [cutoff comparison](evidence/eta_waiting_20261124/proposed_eta_cutoff_comparison.csv) retain those limitations.
+
+All cutoff comparisons retain exact continuous-percentile values and report both cancellation counts, both denominators, rates and percentage-point differences. Choosing the largest gap alone would favor extreme cutoffs without establishing a useful intervention. n≥30 is only a screening condition, not evidence of statistical significance. The data are synthetic, and observed association does not establish causation.
+
+The snapshot has **nine open requests**, including **eight matched** requests; they remain in matched denominators and are reported separately. No recorded event occurs at or after the exclusive observation cutoff. The existing full-period versus excluding-last-24-hours sensitivity analysis is preserved.

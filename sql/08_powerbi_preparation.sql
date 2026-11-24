@@ -4,7 +4,7 @@ SET NOCOUNT ON;
 GO
 -- Grab portfolio preparation only. Existing analytical views and raw tables remain unchanged.
 -- Execute in Ride_Hailing, in file order. Period is local UTC+7, [2026-04-01,2026-10-01).
--- Trip grain: one request. Reuse existing enrichment; restore raw attributes by unique trip_id.
+-- [MODIFIED] Trip grain: one request. Reuse existing enrichment; restore raw attributes by unique trip_id.
 CREATE OR ALTER VIEW dbo.v_pbi_trip AS
 SELECT t.trip_id,t.user_id,t.driver_id,t.created_at,t.accepted_at,t.arrived_at,t.pickup_at,
  t.finished_at,t.cancelled_at,t.expired_at,t.status,t.cancelled_by,t.cancel_reason,
@@ -13,10 +13,21 @@ SELECT t.trip_id,t.user_id,t.driver_id,t.created_at,t.accepted_at,t.arrived_at,t
  e.trip_date AS RequestDate,e.trip_hour AS RequestHour,e.bucket_15min_start AS Request15Min,
  e.allocation_sec,e.approach_sec,e.pickup_dwell_sec,e.total_wait_sec,e.ride_sec,e.end_to_end_sec,
  CASE WHEN t.status=7 THEN 'Expired / no driver' ELSE e.cancellation_stage END AS cancellation_stage,
- CASE WHEN t.quoted_pickup_eta_min IS NULL THEN 'Unknown'
+ CASE WHEN t.quoted_pickup_eta_min IS NULL OR t.quoted_pickup_eta_min<0 THEN 'Unknown'
  WHEN t.quoted_pickup_eta_min<3 THEN '01 | <3 min'
  WHEN t.quoted_pickup_eta_min<6 THEN '02 | 3-<6 min'
- WHEN t.quoted_pickup_eta_min<12 THEN '03 | 6-<12 min' ELSE '04 | 12+ min' END AS eta_band
+ WHEN t.quoted_pickup_eta_min<12 THEN '03 | 6-<12 min' ELSE '04 | 12+ min' END AS eta_band,
+ -- [NEW] Explicit sort keys and one-minute ETA bins; invalid ETA remains Unknown.
+ CASE WHEN t.quoted_pickup_eta_min IS NULL OR t.quoted_pickup_eta_min<0 THEN 99
+ WHEN t.quoted_pickup_eta_min<3 THEN 1 WHEN t.quoted_pickup_eta_min<6 THEN 2
+ WHEN t.quoted_pickup_eta_min<12 THEN 3 ELSE 4 END AS eta_band_order,
+ CASE WHEN t.quoted_pickup_eta_min IS NULL OR t.quoted_pickup_eta_min<0 THEN 99
+ WHEN t.quoted_pickup_eta_min>=20 THEN 20 ELSE CAST(FLOOR(t.quoted_pickup_eta_min) AS int) END AS eta_minute_order,
+ CASE WHEN t.quoted_pickup_eta_min IS NULL OR t.quoted_pickup_eta_min<0 THEN 'Unknown'
+ WHEN t.quoted_pickup_eta_min>=20 THEN '20+ min'
+ ELSE CONCAT(CAST(FLOOR(t.quoted_pickup_eta_min) AS int),'-<',CAST(FLOOR(t.quoted_pickup_eta_min) AS int)+1,' min') END AS eta_minute_bucket,
+ CASE WHEN e.trip_hour BETWEEN 7 AND 8 THEN 'morning_peak'
+ WHEN e.trip_hour BETWEEN 16 AND 18 THEN 'evening_peak' ELSE 'off_peak' END AS peak_period
 FROM dbo.trip_table t JOIN dbo.v_trip_enriched e ON t.trip_id=e.trip_id
 WHERE t.created_at>='20260401' AND t.created_at<'20261001';
 GO
@@ -114,3 +125,4 @@ SELECT *,CASE WHEN requests=0 THEN '00 | No requests' WHEN requests=1 THEN '01 |
  CASE WHEN completed=0 THEN 'No completions' WHEN completed=1 THEN 'One completion' WHEN completed<5 THEN '2-4 completions' ELSE '5+ completions' END AS completion_frequency
 FROM profile;
 GO
+

@@ -1,0 +1,338 @@
+﻿[
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  0,
+        "[Requests]":  1383,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  10.557251908396946
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  0,
+        "[Requests]":  473,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  9.0961538461538467
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  1,
+        "[Requests]":  847,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  6.4656488549618318
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  1,
+        "[Requests]":  293,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  5.634615384615385
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  2,
+        "[Requests]":  529,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  4.0381679389312977
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  2,
+        "[Requests]":  201,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  3.8653846153846154
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  3,
+        "[Requests]":  453,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  3.4580152671755724
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  3,
+        "[Requests]":  141,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  2.7115384615384617
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  4,
+        "[Requests]":  550,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  4.1984732824427482
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  4,
+        "[Requests]":  189,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  3.6346153846153846
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  5,
+        "[Requests]":  1545,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  11.793893129770993
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  5,
+        "[Requests]":  539,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  10.365384615384615
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  6,
+        "[Requests]":  3970,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  30.305343511450381
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  6,
+        "[Requests]":  1532,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  29.46153846153846
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  7,
+        "[Requests]":  7794,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  59.496183206106871
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  7,
+        "[Requests]":  2764,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  53.153846153846153
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  8,
+        "[Requests]":  6840,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  52.213740458015266
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  8,
+        "[Requests]":  2497,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  48.019230769230766
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  9,
+        "[Requests]":  4171,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  31.83969465648855
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  9,
+        "[Requests]":  1431,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  27.51923076923077
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  10,
+        "[Requests]":  3353,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  25.595419847328245
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  10,
+        "[Requests]":  1151,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  22.134615384615383
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  11,
+        "[Requests]":  4349,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  33.198473282442748
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  11,
+        "[Requests]":  1547,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  29.75
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  12,
+        "[Requests]":  4665,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  35.610687022900763
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  12,
+        "[Requests]":  1572,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  30.23076923076923
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  13,
+        "[Requests]":  3786,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  28.900763358778626
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  13,
+        "[Requests]":  1299,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  24.98076923076923
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  14,
+        "[Requests]":  3670,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  28.015267175572518
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  14,
+        "[Requests]":  1360,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  26.153846153846153
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  15,
+        "[Requests]":  4324,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  33.007633587786259
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  15,
+        "[Requests]":  1553,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  29.865384615384617
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  16,
+        "[Requests]":  5929,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  45.259541984732827
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  16,
+        "[Requests]":  2062,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  39.653846153846153
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  17,
+        "[Requests]":  8841,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  67.4885496183206
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  17,
+        "[Requests]":  3031,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  58.28846153846154
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  18,
+        "[Requests]":  7917,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  60.435114503816791
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  18,
+        "[Requests]":  2672,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  51.384615384615387
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  19,
+        "[Requests]":  5779,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  44.114503816793892
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  19,
+        "[Requests]":  2020,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  38.846153846153847
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  20,
+        "[Requests]":  4744,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  36.213740458015266
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  20,
+        "[Requests]":  1695,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  32.596153846153847
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  21,
+        "[Requests]":  3407,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  26.007633587786259
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  21,
+        "[Requests]":  1125,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  21.634615384615383
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  22,
+        "[Requests]":  2461,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  18.786259541984734
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  22,
+        "[Requests]":  946,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  18.192307692307693
+    },
+    {
+        "DimDate[Day Type]":  "Weekday",
+        "DimHour[Hour]":  23,
+        "[Requests]":  1863,
+        "[Observed Days]":  131,
+        "[Average Requests per Day]":  14.221374045801527
+    },
+    {
+        "DimDate[Day Type]":  "Weekend",
+        "DimHour[Hour]":  23,
+        "[Requests]":  660,
+        "[Observed Days]":  52,
+        "[Average Requests per Day]":  12.692307692307692
+    }
+]

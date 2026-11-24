@@ -1,0 +1,5 @@
+eta_group,accepted_requests,post_match_cancellations,customer_cancellations,driver_cancellations,open_requests,post_match_cancellation_rate,small_sample,eta_group_order
+01 | <3 min,70974,2458,1358,1100,6,3.46,0,1
+02 | 3-<6 min,6650,298,180,118,0,4.48,0,2
+03 | 6-<12 min,7788,689,461,228,1,8.85,0,3
+04 | 12+ min,26059,5087,3605,1482,1,19.52,0,4

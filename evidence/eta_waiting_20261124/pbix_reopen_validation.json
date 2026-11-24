@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-24",
+  "native_pbix_bytes": 31760936,
+  "native_pbix_sha256": "a75ed1ea3d659a10c6cb5a67ae2dfa3aa23e173443aa9f3f81f065532f904ba1",
+  "data_model_sha256": "bdac499c5ab440a01a78f05ea34d41801eb4c63c1df68c5c562ba68fa14873bd",
+  "native_pbix_archive_valid": true,
+  "all_pages": 11,
+  "visible_pages": 6,
+  "has_eta_waiting_page": true,
+  "no_optional_empty_navigation_button": true,
+  "reopened_tables_ready": 20,
+  "reopened_measures": 80,
+  "relationships_preserved": 23,
+  "reopened_kpis_match_sql_reconciled_model": true,
+  "original_backup_hash_verified": true,
+  "save_method": "Power BI Desktop native Save As under a new filename, followed by filesystem copy to the original target after closing the prior instance. PBIX binary structure was never edited.",
+  "dashboard_images_visually_inspected": true,
+  "tables_in_pdf_have_actual_data": true,
+  "screenshot_note": "Scrollable tables show their current viewport; full SQL comparison output remains in CSV evidence."
+}

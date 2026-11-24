@@ -54,3 +54,24 @@
 | Proposed ETA time cutoff comparison | Rate at/above cutoff minus rate below cutoff (percentage points) | Matched requests with valid ETA; both sample sizes shown |
 
 The cutoff comparison is exploratory, not a causal threshold or SLA. The SQL average-stage breakdown uses a complete-stage sample; compare like populations before reconciling with overall Average Total Wait. The new DAX definitions are source code, not yet deployed to PBIX.
+
+
+
+## ETA and waiting update — 24 November 2026
+
+| KPI | Definition and population | Unit / format |
+|---|---|---|
+| Average Requests per Day | Requests / selected rows of DimDate in [2026-04-01,2026-10-01); dimension calendar includes dates without bookings. SQL Top 5 ranking still uses total requests. | requests/day |
+| Average / Median / P90 Total Wait | Recorded pickup and non-NULL, nonnegative total_wait_sec, divided by 60.0. Total wait does not require all three component durations to be present. | 0.00 min |
+| Waiting Sample Size | Requests in the valid observed total-wait population. | integer |
+| Average Allocation / Approach / Pickup Dwell | Same complete-stage population for every component: recorded pickup, all four durations non-NULL and nonnegative, chronological event times, exact stage-sum identity. | 0.00 min |
+| Breakdown Sample Size / Total Wait | Size / mean total wait of that complete-stage population; distinguish from overall valid-wait population. | integer / 0.00 min |
+| Average Quoted ETA / ETA P25/P50/P75/P90 | Matched requests (accepted_at present) with non-NULL nonnegative quoted_pickup_eta_min. Continuous SQL percentiles match PERCENTILEX.INC in DAX. | 0.00 min |
+| ETA Sample Size | Matched requests with valid ETA in current filter context. | integer |
+| ETA Post-match Cancellation Rate | Status 5 or 6 / ETA Sample Size. Open matched requests remain in denominator. | 0.00% |
+| Customer / Driver Post-match Cancellation Rate | Status 5 / status 6 within valid matched ETA population, each divided by the same ETA Sample Size. Their sum equals the combined rate. | 0.00% |
+| ETA Small Sample Flag | ETA Sample Size <30; a screening flag only. | text |
+| Proposed ETA Cutoff Min | Contextual P25/P50/P75/P90, an existing fixed SQL/dashboard cutoff, or a fixed boundary screened by full-period minute behavior. Never round before assigning rows. | 0.00 min display |
+| Cutoff rates | ETA < exact cutoff versus ETA >= exact cutoff, valid matched ETA population. Difference = (rate above − rate below) ×100. | percent / percentage points |
+
+All new model measures retain Date, Service and Pickup Zone filter context. ETACutoff and WaitStage are disconnected helper tables; they do not filter FactTrips through relationships. Existing general Matched Requests and Post-match Cancellation Rate remain available for the broader matched population; ETA-specific measures explicitly exclude invalid ETA.

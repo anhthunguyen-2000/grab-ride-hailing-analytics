@@ -1,0 +1,8 @@
+outcome_group,total_request,all_requests,request_share
+completed,102931,125923,81.74
+expired_no_driver,11359,125923,9.02
+cancel_after_match,8532,125923,6.78
+cancel_before_match,3092,125923,2.46
+open_on_trip,5,125923,0.0
+open_matched,3,125923,0.0
+open_searching,1,125923,0.0

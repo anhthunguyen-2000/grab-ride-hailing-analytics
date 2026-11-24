@@ -66,3 +66,11 @@ All eight SQL scripts and the setup/import scaffold passed SQL Server syntax par
 ### Current capture-task link check
 
 The four README image links resolve and the PNGs open successfully. During the wider link check, `docs/assumptions.md` was listed as a zero-byte entry and could not be read by the filesystem. This unrelated document was not modified as part of recapture; a complete current Markdown-link validation could not be confirmed. The earlier package-wide link result above records the initial packaging check.
+
+
+
+## Completed model verification — 24 November 2026
+
+Full SQL source refresh completed in Power BI Desktop. After reopening the saved PBIP, **20/20 tables are Ready**, with **80 measures** and the original **23 relationships**. **1,029 actual SQL/DAX comparisons passed**, covering overall, 42 zone/service/peak cells, minute buckets, 25 exact cutoff alternatives, calendar denominators and a combined date/service/zone context. Overall KPIs after the full refresh match the independently reconciled results. See [refresh evidence](evidence/eta_waiting_20261124/powerbi_refresh_validation.json) and [SQL/DAX reconciliation](evidence/eta_waiting_20261124/powerbi_reconciliation.json).
+
+The local model uses calculated DAX helper columns and two calculated helper tables, preserving the FactTrips SQL projection. Source query grants are capped at 1% with MAXDOP 1 because SQL Express reported physical-memory pressure and RESOURCE_SEMAPHORE waits; query predicates and KPI semantics are unchanged. Native SELECT approvals were completed in Desktop. No server configuration, source rows, raw CSVs or credentials were changed.

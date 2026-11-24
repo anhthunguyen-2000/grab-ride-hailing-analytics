@@ -41,3 +41,17 @@
 | [sql/08_powerbi_preparation.sql](sql/08_powerbi_preparation.sql) | Ordered analytical SQL and reusable view definitions |
 
 **Total: 37 published files after the documentation-link repair.** No PBIX/PBIP, raw data, identity seeds or full generator is included. See [validation](validation.md) for reproduction requirements and open review items.
+
+
+
+## ETA and waiting update — 24 November 2026
+
+| File or folder | Purpose |
+|---|---|
+| [Change log](CHANGELOG_20261124.md) | Changes by file, reasons and validation status |
+| [Helper DAX](dashboard/eta_helpers.dax) | Actual calculated columns and two disconnected helper tables |
+| [Implementation guide](dashboard/eta_waiting_update_guide.md) | Report pages, population rules, filter context and refresh |
+| [ETA page screenshot](dashboard/05_eta_waiting_experience.png) | Native refreshed report export |
+| [SQL and model evidence](evidence/eta_waiting_20261124/) | Actual SQL CSVs, 265 SQL checks, 1,029 SQL/DAX comparisons, refresh/reopen and capture evidence |
+
+The local PBIX and PBIP are updated and backed up; imported caches, raw data and credentials are excluded from the public repository.

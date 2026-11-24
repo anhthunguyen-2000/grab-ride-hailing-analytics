@@ -1,0 +1,11 @@
+day_type,booking_rank,trip_hour,peak_booking,observed_days,average_requests_per_day
+Weekdays,1,17,8841,131,67.49
+Weekdays,2,18,7917,131,60.44
+Weekdays,3,7,7794,131,59.5
+Weekdays,4,8,6840,131,52.21
+Weekdays,5,16,5929,131,45.26
+Weekends,1,17,3031,52,58.29
+Weekends,2,7,2764,52,53.15
+Weekends,3,18,2672,52,51.38
+Weekends,4,8,2497,52,48.02
+Weekends,5,16,2062,52,39.65
