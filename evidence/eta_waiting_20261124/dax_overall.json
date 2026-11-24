@@ -1,0 +1,27 @@
+﻿[
+    {
+        "[Requests]":  125923,
+        "[Matched Requests]":  111471,
+        "[Waiting Sample Size]":  102936,
+        "[Breakdown Sample Size]":  102936,
+        "[Average Total Wait Min]":  7.4054872283101512,
+        "[Median Total Wait Min]":  3.55,
+        "[P90 Total Wait Min]":  20.45,
+        "[Average Allocation Min]":  0.32236179114530433,
+        "[Average Approach Min]":  6.0838062809253577,
+        "[Average Pickup Dwell Min]":  0.99931915623947609,
+        "[Breakdown Total Wait Min]":  7.4054872283101592,
+        "[ETA Sample Size]":  111471,
+        "[Average Quoted ETA Min]":  6.7027469924913108,
+        "[ETA P25]":  1.64,
+        "[ETA P50]":  2.29,
+        "[ETA P75]":  10.66,
+        "[ETA P90]":  20.37,
+        "[ETA Post-match Cancellations]":  8532,
+        "[Customer Post-match Cancellations]":  5604,
+        "[Driver Post-match Cancellations]":  2928,
+        "[ETA Open Requests]":  8,
+        "[Observed Calendar Days]":  183,
+        "[Average Requests per Day]":  688.103825136612
+    }
+]

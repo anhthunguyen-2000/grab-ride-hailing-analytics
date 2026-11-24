@@ -1,0 +1,162 @@
+﻿[
+    {
+        "FactTrips[eta_minute_order]":  1,
+        "[ETA Sample Size]":  44854,
+        "[ETA Post-match Cancellations]":  1549,
+        "[Customer Post-match Cancellations]":  859,
+        "[Driver Post-match Cancellations]":  690,
+        "[ETA Open Requests]":  5
+    },
+    {
+        "FactTrips[eta_minute_order]":  2,
+        "[ETA Sample Size]":  26120,
+        "[ETA Post-match Cancellations]":  909,
+        "[Customer Post-match Cancellations]":  499,
+        "[Driver Post-match Cancellations]":  410,
+        "[ETA Open Requests]":  1
+    },
+    {
+        "FactTrips[eta_minute_order]":  20,
+        "[ETA Sample Size]":  11745,
+        "[ETA Post-match Cancellations]":  2790,
+        "[Customer Post-match Cancellations]":  1975,
+        "[Driver Post-match Cancellations]":  815,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  18,
+        "[ETA Sample Size]":  2717,
+        "[ETA Post-match Cancellations]":  458,
+        "[Customer Post-match Cancellations]":  328,
+        "[Driver Post-match Cancellations]":  130,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  19,
+        "[ETA Sample Size]":  1937,
+        "[ETA Post-match Cancellations]":  379,
+        "[Customer Post-match Cancellations]":  271,
+        "[Driver Post-match Cancellations]":  108,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  16,
+        "[ETA Sample Size]":  1658,
+        "[ETA Post-match Cancellations]":  286,
+        "[Customer Post-match Cancellations]":  217,
+        "[Driver Post-match Cancellations]":  69,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  17,
+        "[ETA Sample Size]":  2362,
+        "[ETA Post-match Cancellations]":  394,
+        "[Customer Post-match Cancellations]":  266,
+        "[Driver Post-match Cancellations]":  128,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  15,
+        "[ETA Sample Size]":  1592,
+        "[ETA Post-match Cancellations]":  225,
+        "[Customer Post-match Cancellations]":  164,
+        "[Driver Post-match Cancellations]":  61,
+        "[ETA Open Requests]":  1
+    },
+    {
+        "FactTrips[eta_minute_order]":  14,
+        "[ETA Sample Size]":  1633,
+        "[ETA Post-match Cancellations]":  239,
+        "[Customer Post-match Cancellations]":  169,
+        "[Driver Post-match Cancellations]":  70,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  13,
+        "[ETA Sample Size]":  1155,
+        "[ETA Post-match Cancellations]":  160,
+        "[Customer Post-match Cancellations]":  111,
+        "[Driver Post-match Cancellations]":  49,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  12,
+        "[ETA Sample Size]":  1260,
+        "[ETA Post-match Cancellations]":  156,
+        "[Customer Post-match Cancellations]":  104,
+        "[Driver Post-match Cancellations]":  52,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  9,
+        "[ETA Sample Size]":  1587,
+        "[ETA Post-match Cancellations]":  145,
+        "[Customer Post-match Cancellations]":  102,
+        "[Driver Post-match Cancellations]":  43,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  7,
+        "[ETA Sample Size]":  1284,
+        "[ETA Post-match Cancellations]":  81,
+        "[Customer Post-match Cancellations]":  51,
+        "[Driver Post-match Cancellations]":  30,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  11,
+        "[ETA Sample Size]":  1341,
+        "[ETA Post-match Cancellations]":  140,
+        "[Customer Post-match Cancellations]":  94,
+        "[Driver Post-match Cancellations]":  46,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  8,
+        "[ETA Sample Size]":  1672,
+        "[ETA Post-match Cancellations]":  136,
+        "[Customer Post-match Cancellations]":  82,
+        "[Driver Post-match Cancellations]":  54,
+        "[ETA Open Requests]":  1
+    },
+    {
+        "FactTrips[eta_minute_order]":  6,
+        "[ETA Sample Size]":  512,
+        "[ETA Post-match Cancellations]":  28,
+        "[Customer Post-match Cancellations]":  17,
+        "[Driver Post-match Cancellations]":  11,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  10,
+        "[ETA Sample Size]":  1392,
+        "[ETA Post-match Cancellations]":  159,
+        "[Customer Post-match Cancellations]":  115,
+        "[Driver Post-match Cancellations]":  44,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  3,
+        "[ETA Sample Size]":  6023,
+        "[ETA Post-match Cancellations]":  261,
+        "[Customer Post-match Cancellations]":  156,
+        "[Driver Post-match Cancellations]":  105,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  5,
+        "[ETA Sample Size]":  99,
+        "[ETA Post-match Cancellations]":  7,
+        "[Customer Post-match Cancellations]":  5,
+        "[Driver Post-match Cancellations]":  2,
+        "[ETA Open Requests]":  null
+    },
+    {
+        "FactTrips[eta_minute_order]":  4,
+        "[ETA Sample Size]":  528,
+        "[ETA Post-match Cancellations]":  30,
+        "[Customer Post-match Cancellations]":  19,
+        "[Driver Post-match Cancellations]":  11,
+        "[ETA Open Requests]":  null
+    }
+]

@@ -1,0 +1,21 @@
+// Create these calculated columns on FactTrips; SQL exposes equivalent derived fields.
+
+eta_band_order =
+SWITCH(TRUE(), ISBLANK(FactTrips[quoted_pickup_eta_min]) || FactTrips[quoted_pickup_eta_min]<0, 99, FactTrips[quoted_pickup_eta_min]<3, 1, FactTrips[quoted_pickup_eta_min]<6, 2, FactTrips[quoted_pickup_eta_min]<12, 3, 4)
+
+eta_minute_order =
+SWITCH(TRUE(), ISBLANK(FactTrips[quoted_pickup_eta_min]) || FactTrips[quoted_pickup_eta_min]<0, 99, FactTrips[quoted_pickup_eta_min]>=20, 20, INT(FactTrips[quoted_pickup_eta_min]))
+
+eta_minute_bucket =
+SWITCH(TRUE(), ISBLANK(FactTrips[quoted_pickup_eta_min]) || FactTrips[quoted_pickup_eta_min]<0, "Unknown", FactTrips[quoted_pickup_eta_min]>=20, "20+ min", FORMAT(INT(FactTrips[quoted_pickup_eta_min]),"0") & "-<" & FORMAT(INT(FactTrips[quoted_pickup_eta_min])+1,"0") & " min")
+
+peak_period =
+SWITCH(TRUE(), FactTrips[RequestHour]>=7 && FactTrips[RequestHour]<=8, "morning_peak", FactTrips[RequestHour]>=16 && FactTrips[RequestHour]<=18, "evening_peak", "off_peak")
+
+// Disconnected calculated table; do not add relationships.
+WaitStage =
+DATATABLE("Stage", STRING, "Order", INTEGER, {{"Allocation",1},{"Approach",2},{"Pickup dwell",3}})
+
+// Disconnected calculated table; do not add relationships.
+ETACutoff =
+DATATABLE("cutoff_name", STRING, "cutoff_source", STRING, "fixed_cutoff_min", DOUBLE, {{"P25","Distribution",BLANK()},{"P50","Distribution",BLANK()},{"P75","Distribution",BLANK()},{"P90","Distribution",BLANK()},{"3 min","Existing Power BI",3},{"6 min","Existing Power BI",6},{"12 min","Existing Power BI",12},{"3 min","Existing SQL",3},{"5 min","Existing SQL",5},{"8 min","Existing SQL",8},{"12 min","Existing SQL",12},{"3 min","Behavior: adjacent rise",3},{"4 min","Behavior: adjacent rise",4},{"5 min","Behavior: adjacent rise",5},{"7 min","Behavior: adjacent rise",7},{"8 min","Behavior: adjacent rise",8},{"9 min","Behavior: adjacent rise",9},{"10 min","Behavior: adjacent rise",10},{"12 min","Behavior: adjacent rise",12},{"13 min","Behavior: adjacent rise",13},{"16 min","Behavior: adjacent rise",16},{"17 min","Behavior: adjacent rise",17},{"18 min","Behavior: adjacent rise",18},{"19 min","Behavior: adjacent rise",19},{"20 min","Behavior: adjacent rise",20}})

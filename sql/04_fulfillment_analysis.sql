@@ -103,7 +103,7 @@ GROUP BY COALESCE(t.cancelled_by, 'unknown'), COALESCE(t.cancel_reason, 'unknown
     te.cancellation_stage
 ORDER BY cancelled_requests DESC;
 GO
--- Compare driver allocation and customer waiting times
+-- [MODIFIED] Compare allocation and waiting; exclude invalid durations without zero imputation.
 WITH waiting_time AS (
     SELECT
         t.pickup_zone_id,
@@ -114,8 +114,8 @@ WITH waiting_time AS (
             WHEN te.trip_hour BETWEEN 16 AND 18 THEN 'evening_peak'
             ELSE 'off_peak'
         END AS peak_period,
-        te.allocation_sec / 60.0 AS allocation_min,
-        te.total_wait_sec / 60.0 AS total_wait_min
+        CASE WHEN te.allocation_sec >= 0 THEN te.allocation_sec / 60.0 END AS allocation_min,
+        CASE WHEN t.pickup_at IS NOT NULL AND te.total_wait_sec >= 0 THEN te.total_wait_sec / 60.0 END AS total_wait_min
     FROM trip_table t
     INNER JOIN v_trip_enriched te ON t.trip_id = te.trip_id
     LEFT JOIN zone_table z ON t.pickup_zone_id = z.zone_id
@@ -202,196 +202,17 @@ SELECT DISTINCT
 FROM eta_summary
 ORDER BY pickup_zone_id, service_type;
 GO
--- =========================================================
--- [NEW] Average waiting time by operational stage
--- Population: requests with a recorded pickup and valid stage durations.
--- Do not interpret missing waits on cancelled/expired bookings as zero.
--- =========================================================
-SELECT
-    COUNT(*) AS pickup_requests,
-    ROUND(AVG(te.allocation_sec / 60.0), 2) AS avg_allocation_min,
-    ROUND(AVG(te.approach_sec / 60.0), 2) AS avg_approach_min,
-    ROUND(AVG(te.pickup_dwell_sec / 60.0), 2) AS avg_pickup_dwell_min,
-    ROUND(AVG(te.total_wait_sec / 60.0), 2) AS avg_total_wait_min
-FROM dbo.trip_table t
-JOIN dbo.v_trip_enriched te ON t.trip_id = te.trip_id
-WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
-  AND t.pickup_at IS NOT NULL
-  AND te.allocation_sec >= 0
-  AND te.approach_sec >= 0
-  AND te.pickup_dwell_sec >= 0
-  AND te.total_wait_sec >= 0;
-GO
-
--- =========================================================
--- [NEW 1] ETA distribution | Distribution-based analysis
--- Same matched-request ETA population as the existing cancellation query.
--- =========================================================
-WITH eta_base AS (
-    SELECT t.quoted_pickup_eta_min AS eta_min
-    FROM dbo.trip_table t
-    WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
-      AND t.accepted_at IS NOT NULL
-      AND t.quoted_pickup_eta_min >= 0
-),
-eta_stats AS (
-    SELECT COUNT(*) OVER () AS eta_sample_size,
-           MIN(eta_min) OVER () AS min_eta_min,
-           MAX(eta_min) OVER () AS max_eta_min,
-           AVG(eta_min) OVER () AS avg_eta_min,
-           PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p25_eta_min,
-           PERCENTILE_CONT(0.50) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p50_eta_min,
-           PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p75_eta_min,
-           PERCENTILE_CONT(0.90) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p90_eta_min
-    FROM eta_base
-)
-SELECT DISTINCT eta_sample_size,
-    ROUND(min_eta_min, 2) AS min_eta_min,
-    ROUND(avg_eta_min, 2) AS avg_eta_min,
-    ROUND(p25_eta_min, 2) AS p25_eta_min,
-    ROUND(p50_eta_min, 2) AS p50_eta_min,
-    ROUND(p75_eta_min, 2) AS p75_eta_min,
-    ROUND(p90_eta_min, 2) AS p90_eta_min,
-    ROUND(max_eta_min, 2) AS max_eta_min
-FROM eta_stats;
-GO
-
--- =========================================================
--- [NEW 2] ETA by one-minute buckets | Behavior-based analysis
--- Values >=20 minutes share the final open-ended bucket.
--- Use sample size, not cancellation percentage alone, to judge extremes.
--- =========================================================
-WITH eta_base AS (
-    SELECT t.status,
-           CASE WHEN t.quoted_pickup_eta_min >= 20 THEN 20
-                ELSE FLOOR(t.quoted_pickup_eta_min) END AS eta_bucket_start
-    FROM dbo.trip_table t
-    WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
-      AND t.accepted_at IS NOT NULL
-      AND t.quoted_pickup_eta_min >= 0
-),
-eta_summary AS (
-    SELECT eta_bucket_start,
-           COUNT(*) AS matched_requests,
-           SUM(CASE WHEN status IN (5,6) THEN 1 ELSE 0 END)
-               AS post_match_cancellations,
-           SUM(CASE WHEN status = 5 THEN 1 ELSE 0 END)
-               AS customer_cancellations,
-           SUM(CASE WHEN status = 6 THEN 1 ELSE 0 END)
-               AS driver_cancellations
-    FROM eta_base
-    GROUP BY eta_bucket_start
-)
-SELECT CASE WHEN eta_bucket_start = 20 THEN '20+ min'
-            ELSE CONCAT(eta_bucket_start, '-<', eta_bucket_start + 1, ' min')
-       END AS eta_bucket,
-       eta_bucket_start AS eta_bucket_order,
-       matched_requests,
-       post_match_cancellations,
-       customer_cancellations,
-       driver_cancellations,
-       ROUND(post_match_cancellations * 100.0
-           / NULLIF(matched_requests, 0), 2) AS cancellation_rate_pct,
-       ROUND(customer_cancellations * 100.0
-           / NULLIF(matched_requests, 0), 2) AS customer_cancel_rate_pct,
-       ROUND(driver_cancellations * 100.0
-           / NULLIF(matched_requests, 0), 2) AS driver_cancel_rate_pct,
-       CASE WHEN matched_requests < 30 THEN 1 ELSE 0 END AS small_sample
-FROM eta_summary
-ORDER BY eta_bucket_order;
-GO
-
--- =========================================================
--- [NEW 3] Compare proposed ETA time cutoffs
--- Distribution-based P25/P50/P75/P90 vs existing dashboard 3/6/12 min.
--- A large rate gap is descriptive, NOT proof of a causal threshold.
--- =========================================================
-WITH eta_base AS (
-    SELECT t.quoted_pickup_eta_min AS eta_min,
-           CASE WHEN t.status IN (5,6) THEN 1 ELSE 0 END AS is_cancelled
-    FROM dbo.trip_table t
-    WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
-      AND t.accepted_at IS NOT NULL
-      AND t.quoted_pickup_eta_min >= 0
-),
-percentile_rows AS (
-    SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p25,
-           PERCENTILE_CONT(0.50) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p50,
-           PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p75,
-           PERCENTILE_CONT(0.90) WITHIN GROUP (ORDER BY eta_min)
-               OVER () AS p90
-    FROM eta_base
-),
-percentiles AS (
-    SELECT DISTINCT p25, p50, p75, p90 FROM percentile_rows
-),
-eta_cutoffs AS (
-    SELECT v.cutoff_name, v.eta_cutoff_min,
-           'Distribution' AS cutoff_source
-    FROM percentiles p
-    CROSS APPLY (VALUES ('P25', p.p25), ('P50', p.p50),
-                        ('P75', p.p75), ('P90', p.p90))
-        v(cutoff_name, eta_cutoff_min)
-    UNION ALL
-    SELECT v.cutoff_name, CAST(v.eta_cutoff_min AS FLOAT),
-           'Current dashboard'
-    FROM (VALUES ('3 min', 3), ('6 min', 6), ('12 min', 12))
-        v(cutoff_name, eta_cutoff_min)
-),
-cutoff_summary AS (
-    SELECT c.cutoff_name, c.cutoff_source, c.eta_cutoff_min,
-           SUM(CASE WHEN b.eta_min < c.eta_cutoff_min THEN 1 ELSE 0 END)
-               AS requests_below,
-           SUM(CASE WHEN b.eta_min >= c.eta_cutoff_min THEN 1 ELSE 0 END)
-               AS requests_above,
-           SUM(CASE WHEN b.eta_min < c.eta_cutoff_min
-                    THEN b.is_cancelled ELSE 0 END) AS cancellations_below,
-           SUM(CASE WHEN b.eta_min >= c.eta_cutoff_min
-                    THEN b.is_cancelled ELSE 0 END) AS cancellations_above
-    FROM eta_cutoffs c
-    CROSS JOIN eta_base b
-    GROUP BY c.cutoff_name, c.cutoff_source, c.eta_cutoff_min
-),
-cutoff_rates AS (
-    SELECT *,
-           cancellations_below * 100.0 / NULLIF(requests_below, 0)
-               AS cancellation_rate_below_pct,
-           cancellations_above * 100.0 / NULLIF(requests_above, 0)
-               AS cancellation_rate_above_pct
-    FROM cutoff_summary
-)
-SELECT cutoff_name, cutoff_source,
-       ROUND(eta_cutoff_min, 2) AS eta_cutoff_min,
-       requests_below, requests_above,
-       ROUND(cancellation_rate_below_pct, 2)
-           AS cancellation_rate_below_pct,
-       ROUND(cancellation_rate_above_pct, 2)
-           AS cancellation_rate_above_pct,
-       ROUND(cancellation_rate_above_pct - cancellation_rate_below_pct, 2)
-           AS cancellation_rate_difference_pp,
-       CASE WHEN requests_below >= 30 AND requests_above >= 30
-            THEN 1 ELSE 0 END AS sufficient_sample_flag
-FROM cutoff_rates
-ORDER BY eta_cutoff_min, cutoff_source;
-GO
-
--- Analyze cancellation rates by quoted pickup ETA
+-- [MODIFIED] PR #3 exploratory batches are expanded below to report sample sizes,
+-- service/zone/period stability, exact cutoffs, and a common valid-stage cohort.
+-- [MODIFIED] Selected ETA groups: retain dashboard 3/6/12 until evidence warrants a change.
 WITH eta_booking AS (
     SELECT
         CASE
-            WHEN t.quoted_pickup_eta_min IS NULL OR t.quoted_pickup_eta_min < 0 THEN 'unknown'
-            WHEN t.quoted_pickup_eta_min < 3 THEN '0-<3 min'
-            WHEN t.quoted_pickup_eta_min < 5 THEN '3-<5 min'
-            WHEN t.quoted_pickup_eta_min < 8 THEN '5-<8 min'
-            WHEN t.quoted_pickup_eta_min < 12 THEN '8-<12 min'
-            ELSE '>=12 min'
+            WHEN t.quoted_pickup_eta_min IS NULL OR t.quoted_pickup_eta_min < 0 THEN 'Unknown'
+            WHEN t.quoted_pickup_eta_min < 3 THEN '01 | <3 min'
+            WHEN t.quoted_pickup_eta_min < 6 THEN '02 | 3-<6 min'
+            WHEN t.quoted_pickup_eta_min < 12 THEN '03 | 6-<12 min'
+            ELSE '04 | 12+ min'
         END AS eta_group,
         t.status
     FROM trip_table t
@@ -409,12 +230,11 @@ SELECT
         / COUNT(*), 2) AS post_match_cancellation_rate,
     CASE WHEN COUNT(*) < 30 THEN 1 ELSE 0 END AS small_sample,
     CASE eta_group
-        WHEN '0-<3 min' THEN 1
-        WHEN '3-<5 min' THEN 2
-        WHEN '5-<8 min' THEN 3
-        WHEN '8-<12 min' THEN 4
-        WHEN '>=12 min' THEN 5
-        ELSE 6
+        WHEN '01 | <3 min' THEN 1
+        WHEN '02 | 3-<6 min' THEN 2
+        WHEN '03 | 6-<12 min' THEN 3
+        WHEN '04 | 12+ min' THEN 4
+        ELSE 99
     END AS eta_group_order
 FROM eta_booking
 GROUP BY eta_group
@@ -502,7 +322,7 @@ WHERE a.total_request >= 30
     AND a.failure_rate >= o.overall_failure_rate
 ORDER BY priority_rank;
 GO
--- Test whether end-of-period requests affect KPI results
+-- [MODIFIED] End-of-period sensitivity; keep open requests and valid wait populations explicit.
 WITH period_booking AS (
     SELECT
         'full_period' AS analysis_period,
@@ -512,8 +332,8 @@ WITH period_booking AS (
         t.accepted_at,
         t.pickup_at,
         t.finished_at,
-        te.allocation_sec / 60.0 AS allocation_min,
-        te.total_wait_sec / 60.0 AS total_wait_min
+        CASE WHEN te.allocation_sec >= 0 THEN te.allocation_sec / 60.0 END AS allocation_min,
+        CASE WHEN t.pickup_at IS NOT NULL AND te.total_wait_sec >= 0 THEN te.total_wait_sec / 60.0 END AS total_wait_min
     FROM trip_table t
     INNER JOIN v_trip_enriched te ON t.trip_id = te.trip_id
     WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
@@ -528,8 +348,8 @@ WITH period_booking AS (
         t.accepted_at,
         t.pickup_at,
         t.finished_at,
-        te.allocation_sec / 60.0 AS allocation_min,
-        te.total_wait_sec / 60.0 AS total_wait_min
+        CASE WHEN te.allocation_sec >= 0 THEN te.allocation_sec / 60.0 END AS allocation_min,
+        CASE WHEN t.pickup_at IS NOT NULL AND te.total_wait_sec >= 0 THEN te.total_wait_sec / 60.0 END AS total_wait_min
     FROM trip_table t
     INNER JOIN v_trip_enriched te ON t.trip_id = te.trip_id
     WHERE t.created_at >= '20260401' AND t.created_at < '20260930'
@@ -612,4 +432,184 @@ SELECT
     ROUND(p90_total_wait_min - LAG(p90_total_wait_min) OVER (ORDER BY period_order), 2) AS p90_wait_change_min
 FROM period_kpi
 ORDER BY period_order;
+GO
+
+
+-- [NEW] Reusable session-local request population. No source data is changed.
+-- Overall total wait only needs observed pickup + nonnegative total duration.
+-- Breakdown needs all stages, chronological timestamps, and exact additive identity.
+DROP TABLE IF EXISTS #eta_request;
+SELECT t.trip_id,t.status,t.service_type,t.pickup_zone_id,z.zone_name AS pickup_zone,
+       CONVERT(char(7),t.created_at,126) AS request_month,
+       CASE WHEN e.trip_hour BETWEEN 7 AND 8 THEN 'morning_peak'
+            WHEN e.trip_hour BETWEEN 16 AND 18 THEN 'evening_peak' ELSE 'off_peak' END AS peak_period,
+       t.accepted_at,t.pickup_at,t.quoted_pickup_eta_min AS eta_min,
+       CASE WHEN t.pickup_at IS NOT NULL AND e.total_wait_sec >= 0
+            THEN e.total_wait_sec/60.0 END AS total_wait_min,
+       CASE WHEN t.pickup_at IS NOT NULL AND e.allocation_sec >= 0 AND e.approach_sec >= 0
+                  AND e.pickup_dwell_sec >= 0 AND e.total_wait_sec >= 0
+                  AND t.created_at<=t.accepted_at AND t.accepted_at<=t.arrived_at
+                  AND t.arrived_at<=t.pickup_at
+                  AND e.total_wait_sec=e.allocation_sec+e.approach_sec+e.pickup_dwell_sec
+            THEN 1 ELSE 0 END AS complete_stage_flag,
+       e.allocation_sec/60.0 AS allocation_min,e.approach_sec/60.0 AS approach_min,
+       e.pickup_dwell_sec/60.0 AS pickup_dwell_min
+INTO #eta_request
+FROM dbo.trip_table t JOIN dbo.v_trip_enriched e ON t.trip_id=e.trip_id
+LEFT JOIN dbo.zone_table z ON t.pickup_zone_id=z.zone_id
+WHERE t.created_at>='20260401' AND t.created_at<'20261001';
+CREATE UNIQUE CLUSTERED INDEX ix_eta_request ON #eta_request(trip_id);
+GO
+-- [NEW] Wait scopes include marginal groups and the full zone/service/peak cells.
+-- result: waiting_summary
+WITH scoped AS (
+ SELECT s.scope_type,s.scope_name,r.*
+ FROM #eta_request r CROSS APPLY (VALUES
+ ('Overall','All'),('Service',r.service_type),('Pickup Zone',r.pickup_zone),
+ ('Peak Period',r.peak_period),
+ ('Zone Service Peak',CONCAT(r.pickup_zone,' | ',r.service_type,' | ',r.peak_period))) s(scope_type,scope_name)
+), stats AS (
+ SELECT scope_type,scope_name,
+ COUNT(*) OVER(PARTITION BY scope_type,scope_name) AS requests,
+ COUNT(total_wait_min) OVER(PARTITION BY scope_type,scope_name) AS waiting_sample_size,
+ SUM(complete_stage_flag) OVER(PARTITION BY scope_type,scope_name) AS breakdown_sample_size,
+ AVG(total_wait_min) OVER(PARTITION BY scope_type,scope_name) AS average_total_wait_min,
+ PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY total_wait_min) OVER(PARTITION BY scope_type,scope_name) AS median_total_wait_min,
+ PERCENTILE_CONT(0.9) WITHIN GROUP(ORDER BY total_wait_min) OVER(PARTITION BY scope_type,scope_name) AS p90_total_wait_min,
+ AVG(CASE WHEN complete_stage_flag=1 THEN total_wait_min END) OVER(PARTITION BY scope_type,scope_name) AS breakdown_total_wait_min,
+ AVG(CASE WHEN complete_stage_flag=1 THEN allocation_min END) OVER(PARTITION BY scope_type,scope_name) AS average_allocation_min,
+ AVG(CASE WHEN complete_stage_flag=1 THEN approach_min END) OVER(PARTITION BY scope_type,scope_name) AS average_approach_min,
+ AVG(CASE WHEN complete_stage_flag=1 THEN pickup_dwell_min END) OVER(PARTITION BY scope_type,scope_name) AS average_pickup_dwell_min
+ FROM scoped
+)
+SELECT DISTINCT *,average_allocation_min+average_approach_min+average_pickup_dwell_min-breakdown_total_wait_min AS stage_identity_residual_min
+FROM stats ORDER BY scope_type,scope_name;
+GO
+-- [NEW] Matched valid ETA population; each request appears once in each scope type.
+DROP TABLE IF EXISTS #eta_scoped;
+SELECT s.scope_type,s.scope_name,r.eta_min,r.status,
+ CASE WHEN r.eta_min>=20 THEN 20 ELSE CAST(FLOOR(r.eta_min) AS int) END AS eta_bucket_order
+INTO #eta_scoped
+FROM #eta_request r CROSS APPLY (VALUES
+ ('Overall','All'),('Service',r.service_type),('Pickup Zone',r.pickup_zone),
+ ('Peak Period',r.peak_period),('Month',r.request_month),
+ ('Zone Service Peak',CONCAT(r.pickup_zone,' | ',r.service_type,' | ',r.peak_period))) s(scope_type,scope_name)
+WHERE r.accepted_at IS NOT NULL AND r.eta_min>=0;
+CREATE CLUSTERED INDEX ix_eta_scope ON #eta_scoped(scope_type,scope_name,eta_min);
+GO
+-- [NEW] Continuous percentiles remain unrounded, including when used as cutoffs.
+-- result: eta_distribution
+SELECT DISTINCT scope_type,scope_name,
+ COUNT(*) OVER(PARTITION BY scope_type,scope_name) AS eta_sample_size,
+ MIN(eta_min) OVER(PARTITION BY scope_type,scope_name) AS minimum_eta_min,
+ AVG(eta_min) OVER(PARTITION BY scope_type,scope_name) AS average_eta_min,
+ PERCENTILE_CONT(0.25) WITHIN GROUP(ORDER BY eta_min) OVER(PARTITION BY scope_type,scope_name) AS p25_eta_min,
+ PERCENTILE_CONT(0.50) WITHIN GROUP(ORDER BY eta_min) OVER(PARTITION BY scope_type,scope_name) AS p50_eta_min,
+ PERCENTILE_CONT(0.75) WITHIN GROUP(ORDER BY eta_min) OVER(PARTITION BY scope_type,scope_name) AS p75_eta_min,
+ PERCENTILE_CONT(0.90) WITHIN GROUP(ORDER BY eta_min) OVER(PARTITION BY scope_type,scope_name) AS p90_eta_min,
+ MAX(eta_min) OVER(PARTITION BY scope_type,scope_name) AS maximum_eta_min
+INTO #eta_distribution
+FROM #eta_scoped;
+SELECT * FROM #eta_distribution ORDER BY scope_type,scope_name;
+GO
+-- [NEW] All 21 minute buckets are retained, including empty buckets.
+-- Adjacency requires the immediately preceding minute, never skipping empty buckets.
+-- result: eta_cancellation_by_minute
+WITH buckets AS (SELECT b.n AS eta_bucket_order FROM (VALUES(0),(1),(2),(3),(4),(5),(6),(7),(8),(9),(10),(11),(12),(13),(14),(15),(16),(17),(18),(19),(20)) b(n)),
+scopes AS (SELECT DISTINCT scope_type,scope_name FROM #eta_scoped),
+counts AS (
+ SELECT scope_type,scope_name,eta_bucket_order,COUNT(*) AS matched_requests,
+ SUM(CASE WHEN status IN(5,6) THEN 1 ELSE 0 END) AS post_match_cancellations,
+ SUM(CASE WHEN status=5 THEN 1 ELSE 0 END) AS customer_cancellations,
+ SUM(CASE WHEN status=6 THEN 1 ELSE 0 END) AS driver_cancellations,
+ SUM(CASE WHEN status IN(1,2,3) THEN 1 ELSE 0 END) AS open_requests
+ FROM #eta_scoped GROUP BY scope_type,scope_name,eta_bucket_order
+), rates AS (
+ SELECT s.scope_type,s.scope_name,b.eta_bucket_order,
+ CASE WHEN b.eta_bucket_order=20 THEN '20+ min' ELSE CONCAT(b.eta_bucket_order,'-<',b.eta_bucket_order+1,' min') END AS eta_bucket,
+ COALESCE(c.matched_requests,0) AS matched_requests,COALESCE(c.post_match_cancellations,0) AS post_match_cancellations,
+ COALESCE(c.customer_cancellations,0) AS customer_cancellations,COALESCE(c.driver_cancellations,0) AS driver_cancellations,
+ COALESCE(c.open_requests,0) AS open_requests,
+ c.post_match_cancellations*100.0/NULLIF(c.matched_requests,0) AS post_match_cancellation_rate_pct,
+ c.customer_cancellations*100.0/NULLIF(c.matched_requests,0) AS customer_cancellation_rate_pct,
+ c.driver_cancellations*100.0/NULLIF(c.matched_requests,0) AS driver_cancellation_rate_pct,
+ CASE WHEN COALESCE(c.matched_requests,0)<30 THEN 1 ELSE 0 END AS small_sample_flag
+ FROM scopes s CROSS JOIN buckets b LEFT JOIN counts c ON c.scope_type=s.scope_type AND c.scope_name=s.scope_name AND c.eta_bucket_order=b.eta_bucket_order
+), adjacent AS (
+ SELECT *,LAG(matched_requests) OVER(PARTITION BY scope_type,scope_name ORDER BY eta_bucket_order) AS previous_minute_requests,
+ post_match_cancellation_rate_pct-LAG(post_match_cancellation_rate_pct) OVER(PARTITION BY scope_type,scope_name ORDER BY eta_bucket_order) AS adjacent_rate_change_pp
+ FROM rates
+)
+SELECT *,CASE WHEN matched_requests>=30 AND previous_minute_requests>=30 AND adjacent_rate_change_pp>=1.0 THEN 1 ELSE 0 END AS exploratory_rise_flag
+INTO #eta_behavior FROM adjacent;
+SELECT * FROM #eta_behavior ORDER BY scope_type,scope_name,eta_bucket_order;
+GO
+-- [NEW] Compare exact distribution cutoffs, current SQL/dashboard cutoffs, and
+-- exploratory rises >=1 percentage point between adjacent well-populated minutes.
+-- This screening rule does not test statistical significance or prove causation.
+-- Overall/service rise boundaries are evaluated in ALL scopes for stability.
+-- result: proposed_eta_cutoff_comparison
+WITH proposed AS (
+ SELECT v.cutoff_name,'Distribution' AS cutoff_source,CAST(v.eta_cutoff_min AS float) AS eta_cutoff_min
+ FROM #eta_distribution d CROSS APPLY(VALUES('P25',d.p25_eta_min),('P50',d.p50_eta_min),('P75',d.p75_eta_min),('P90',d.p90_eta_min)) v(cutoff_name,eta_cutoff_min)
+ WHERE d.scope_type='Overall'
+ UNION ALL SELECT v.cutoff_name,'Existing Power BI',CAST(v.eta_cutoff_min AS float) FROM (VALUES('3 min',3),('6 min',6),('12 min',12)) v(cutoff_name,eta_cutoff_min)
+ UNION ALL SELECT v.cutoff_name,'Existing SQL',CAST(v.eta_cutoff_min AS float) FROM (VALUES('3 min',3),('5 min',5),('8 min',8),('12 min',12)) v(cutoff_name,eta_cutoff_min)
+ UNION ALL SELECT DISTINCT CONCAT(eta_bucket_order,' min'),'Behavior: adjacent rise',CAST(eta_bucket_order AS float)
+ FROM #eta_behavior WHERE exploratory_rise_flag=1 AND scope_type IN('Overall','Service')
+), counts AS (
+ SELECT b.scope_type,b.scope_name,c.cutoff_name,c.cutoff_source,c.eta_cutoff_min,
+ SUM(CASE WHEN b.eta_min<c.eta_cutoff_min THEN 1 ELSE 0 END) AS requests_below,
+ SUM(CASE WHEN b.eta_min>=c.eta_cutoff_min THEN 1 ELSE 0 END) AS requests_above,
+ SUM(CASE WHEN b.eta_min<c.eta_cutoff_min AND b.status IN(5,6) THEN 1 ELSE 0 END) AS cancellations_below,
+ SUM(CASE WHEN b.eta_min>=c.eta_cutoff_min AND b.status IN(5,6) THEN 1 ELSE 0 END) AS cancellations_above
+ FROM #eta_scoped b CROSS JOIN proposed c GROUP BY b.scope_type,b.scope_name,c.cutoff_name,c.cutoff_source,c.eta_cutoff_min
+), rates AS (
+ SELECT *,cancellations_below*100.0/NULLIF(requests_below,0) AS cancellation_rate_below_pct,
+ cancellations_above*100.0/NULLIF(requests_above,0) AS cancellation_rate_above_pct FROM counts
+)
+SELECT *,cancellation_rate_above_pct-cancellation_rate_below_pct AS cancellation_rate_difference_pp,
+ CASE WHEN requests_below>=30 AND requests_above>=30 THEN 1 ELSE 0 END AS sufficient_sample_flag
+FROM rates ORDER BY scope_type,scope_name,eta_cutoff_min,cutoff_source;
+GO
+-- [NEW] Compare entire sets rather than choosing the largest single rate gap.
+-- Selected set provisionally retains existing dashboard 3/6/12; see verified findings.
+-- Unknown is retained for matched requests with missing/negative ETA.
+-- result: eta_group_set_evaluation
+WITH grouped AS (
+ SELECT s.scope_type,s.scope_name,v.group_set,v.eta_band_order,v.eta_band,r.status
+ FROM #eta_request r CROSS APPLY(VALUES('Overall','All'),('Service',r.service_type),('Pickup Zone',r.pickup_zone),('Peak Period',r.peak_period),('Month',r.request_month),('Zone Service Peak',CONCAT(r.pickup_zone,' | ',r.service_type,' | ',r.peak_period))) s(scope_type,scope_name)
+ CROSS APPLY(VALUES
+ ('Selected Power BI 3/6/12',CASE WHEN r.eta_min IS NULL OR r.eta_min<0 THEN 99 WHEN r.eta_min<3 THEN 1 WHEN r.eta_min<6 THEN 2 WHEN r.eta_min<12 THEN 3 ELSE 4 END,
+ CASE WHEN r.eta_min IS NULL OR r.eta_min<0 THEN 'Unknown' WHEN r.eta_min<3 THEN '01 | <3 min' WHEN r.eta_min<6 THEN '02 | 3-<6 min' WHEN r.eta_min<12 THEN '03 | 6-<12 min' ELSE '04 | 12+ min' END),
+ ('Previous SQL 3/5/8/12',CASE WHEN r.eta_min IS NULL OR r.eta_min<0 THEN 99 WHEN r.eta_min<3 THEN 1 WHEN r.eta_min<5 THEN 2 WHEN r.eta_min<8 THEN 3 WHEN r.eta_min<12 THEN 4 ELSE 5 END,
+ CASE WHEN r.eta_min IS NULL OR r.eta_min<0 THEN 'Unknown' WHEN r.eta_min<3 THEN '01 | <3 min' WHEN r.eta_min<5 THEN '02 | 3-<5 min' WHEN r.eta_min<8 THEN '03 | 5-<8 min' WHEN r.eta_min<12 THEN '04 | 8-<12 min' ELSE '05 | 12+ min' END)) v(group_set,eta_band_order,eta_band)
+ WHERE r.accepted_at IS NOT NULL
+)
+SELECT scope_type,scope_name,group_set,eta_band_order,eta_band,COUNT(*) AS matched_requests,
+ SUM(CASE WHEN status IN(5,6) THEN 1 ELSE 0 END) AS post_match_cancellations,
+ SUM(CASE WHEN status=5 THEN 1 ELSE 0 END) AS customer_cancellations,
+ SUM(CASE WHEN status=6 THEN 1 ELSE 0 END) AS driver_cancellations,
+ SUM(CASE WHEN status IN(1,2,3) THEN 1 ELSE 0 END) AS open_requests,
+ SUM(CASE WHEN status IN(5,6) THEN 1 ELSE 0 END)*100.0/COUNT(*) AS post_match_cancellation_rate_pct,
+ SUM(CASE WHEN status=5 THEN 1 ELSE 0 END)*100.0/COUNT(*) AS customer_cancellation_rate_pct,
+ SUM(CASE WHEN status=6 THEN 1 ELSE 0 END)*100.0/COUNT(*) AS driver_cancellation_rate_pct,
+ CASE WHEN COUNT(*)<30 THEN 1 ELSE 0 END AS small_sample_flag
+FROM grouped GROUP BY scope_type,scope_name,group_set,eta_band_order,eta_band
+ORDER BY scope_type,scope_name,group_set,eta_band_order;
+GO
+-- [NEW] Quality checks distinguish missing stages from overall valid pickups.
+-- result: eta_waiting_quality
+SELECT COUNT(*) AS requests,COUNT(DISTINCT r.trip_id) AS distinct_requests,
+ SUM(CASE WHEN r.accepted_at IS NOT NULL THEN 1 ELSE 0 END) AS matched_requests,
+ SUM(CASE WHEN r.pickup_at IS NOT NULL THEN 1 ELSE 0 END) AS pickup_requests,
+ COUNT(r.total_wait_min) AS waiting_sample_size,SUM(r.complete_stage_flag) AS breakdown_sample_size,
+ SUM(CASE WHEN r.status IN(1,2,3) THEN 1 ELSE 0 END) AS open_requests,
+ SUM(CASE WHEN r.accepted_at IS NOT NULL AND r.eta_min IS NULL THEN 1 ELSE 0 END) AS matched_missing_eta,
+ SUM(CASE WHEN r.eta_min<0 THEN 1 ELSE 0 END) AS negative_eta,
+ SUM(CASE WHEN e.allocation_sec<0 OR e.approach_sec<0 OR e.pickup_dwell_sec<0 OR e.total_wait_sec<0 THEN 1 ELSE 0 END) AS negative_duration_requests,
+ SUM(CASE WHEN r.total_wait_min IS NOT NULL AND r.complete_stage_flag=0 THEN 1 ELSE 0 END) AS valid_wait_missing_or_invalid_stages,
+ SUM(CASE WHEN e.total_wait_sec<>e.allocation_sec+e.approach_sec+e.pickup_dwell_sec THEN 1 ELSE 0 END) AS stage_identity_violations,
+ SUM(CASE WHEN t.accepted_at>='20261001' OR t.arrived_at>='20261001' OR t.pickup_at>='20261001' OR t.finished_at>='20261001' THEN 1 ELSE 0 END) AS events_at_or_after_cutoff
+FROM #eta_request r JOIN dbo.v_trip_enriched e ON e.trip_id=r.trip_id JOIN dbo.trip_table t ON t.trip_id=r.trip_id;
 GO

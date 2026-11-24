@@ -1,0 +1,1520 @@
+{
+  "date": "2026-11-24",
+  "period_start": "2026-04-01",
+  "cutoff_exclusive": "2026-10-01",
+  "timezone": "UTC+7",
+  "method": "Actual SQL Server execution; verified existing database, no CSV import",
+  "checks": [
+    {
+      "check": "preserved_legacy_batch_2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_14",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preserved_legacy_batch_16",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "demand_before_after_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "peak_top5_each_day_type",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "calendar_exposure_131_weekdays_52_weekends",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "request_grain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "waiting_population",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_invalid_durations_or_timeline_violations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_requests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_unique_requests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_matched",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_pickups",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_completed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_failed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_open_requests",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "snapshot_post_match_cancelled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "database_offer_acceptance_timestamp_reconciles",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Overall_All",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Peak Period_evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Peak Period_morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Peak Period_off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Pickup Zone_Airport_access",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Pickup Zone_Central",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Pickup Zone_East",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Pickup Zone_North",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Pickup Zone_Northeast",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Pickup Zone_South",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Pickup Zone_West",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Service_BIKE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Service_CAR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Airport_access | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Airport_access | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Airport_access | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Airport_access | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Airport_access | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Airport_access | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Central | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Central | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Central | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Central | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Central | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Central | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_East | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_East | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_East | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_East | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_East | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_East | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_North | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_North | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_North | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_North | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_North | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_North | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Northeast | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Northeast | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Northeast | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Northeast | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Northeast | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_Northeast | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_South | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_South | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_South | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_South | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_South | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_South | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_West | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_West | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_West | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_West | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_West | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stage_additivity_Zone Service Peak_West | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Month_2026-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Month_2026-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Month_2026-04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Month_2026-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Month_2026-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Month_2026-05",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Month_2026-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Month_2026-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Month_2026-06",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Month_2026-07",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Month_2026-07",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Month_2026-07",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Month_2026-08",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Month_2026-08",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Month_2026-08",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Month_2026-09",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Month_2026-09",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Month_2026-09",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Overall_All",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Overall_All",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Overall_All",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Peak Period_evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Peak Period_evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Peak Period_evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Peak Period_morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Peak Period_morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Peak Period_morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Peak Period_off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Peak Period_off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Peak Period_off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Pickup Zone_Airport_access",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Pickup Zone_Airport_access",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Pickup Zone_Airport_access",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Pickup Zone_Central",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Pickup Zone_Central",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Pickup Zone_Central",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Pickup Zone_East",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Pickup Zone_East",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Pickup Zone_East",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Pickup Zone_North",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Pickup Zone_North",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Pickup Zone_North",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Pickup Zone_Northeast",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Pickup Zone_Northeast",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Pickup Zone_Northeast",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Pickup Zone_South",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Pickup Zone_South",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Pickup Zone_South",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Pickup Zone_West",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Pickup Zone_West",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Pickup Zone_West",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Service_BIKE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Service_BIKE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Service_BIKE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Service_CAR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Service_CAR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Service_CAR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Airport_access | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Airport_access | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Airport_access | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Airport_access | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Airport_access | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Airport_access | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Airport_access | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Airport_access | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Airport_access | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Airport_access | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Airport_access | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Airport_access | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Airport_access | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Airport_access | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Airport_access | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Airport_access | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Airport_access | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Airport_access | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Central | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Central | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Central | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Central | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Central | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Central | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Central | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Central | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Central | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Central | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Central | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Central | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Central | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Central | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Central | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Central | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Central | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Central | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_East | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_East | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_East | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_East | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_East | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_East | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_East | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_East | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_East | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_East | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_East | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_East | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_East | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_East | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_East | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_East | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_East | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_East | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_North | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_North | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_North | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_North | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_North | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_North | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_North | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_North | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_North | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_North | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_North | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_North | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_North | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_North | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_North | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_North | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_North | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_North | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Northeast | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Northeast | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Northeast | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Northeast | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Northeast | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Northeast | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Northeast | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Northeast | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Northeast | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Northeast | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Northeast | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Northeast | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Northeast | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Northeast | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Northeast | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_Northeast | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_Northeast | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_Northeast | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_South | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_South | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_South | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_South | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_South | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_South | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_South | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_South | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_South | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_South | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_South | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_South | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_South | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_South | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_South | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_South | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_South | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_South | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_West | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_West | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_West | BIKE | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_West | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_West | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_West | BIKE | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_West | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_West | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_West | BIKE | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_West | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_West | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_West | CAR | evening_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_West | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_West | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_West | CAR | morning_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "21_buckets_Zone Service Peak_West | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Selected Power BI 3/6/12_Zone Service Peak_West | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "group_set_Previous SQL 3/5/8/12_Zone Service Peak_West | CAR | off_peak",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all_actor_counts_add_up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "known_csv_provenance_boundary",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "quality": {
+    "requests": 125923,
+    "distinct_requests": 125923,
+    "matched_requests": 111471,
+    "pickup_requests": 102936,
+    "waiting_sample_size": 102936,
+    "breakdown_sample_size": 102936,
+    "open_requests": 9,
+    "matched_missing_eta": 0,
+    "negative_eta": 0,
+    "negative_duration_requests": 0,
+    "valid_wait_missing_or_invalid_stages": 0,
+    "stage_identity_violations": 0,
+    "events_at_or_after_cutoff": 0
+  },
+  "snapshot": {
+    "requests": 125923,
+    "unique_requests": 125923,
+    "matched": 111471,
+    "pickups": 102936,
+    "completed": 102931,
+    "failed": 22983,
+    "open_requests": 9,
+    "post_match_cancelled": 8532
+  },
+  "csv_provenance": [
+    {
+      "file": "data/date_table.csv",
+      "recorded_sha256": "64e9dbfd2a8349bb17d780a0283cae902a6287dd4500a5a8eb82d4739d6fc609",
+      "current_sha256": "64e9dbfd2a8349bb17d780a0283cae902a6287dd4500a5a8eb82d4739d6fc609",
+      "matches": true
+    },
+    {
+      "file": "data/dispatch_offer_table.csv",
+      "recorded_sha256": "a211a6707177e2406fb63d92a0106378ba01bcebea4630c9863f09978f766fb1",
+      "current_sha256": "a211a6707177e2406fb63d92a0106378ba01bcebea4630c9863f09978f766fb1",
+      "matches": true
+    },
+    {
+      "file": "data/driver_session_table.csv",
+      "recorded_sha256": "56a73edd231c4e1bbe4b1df5be569d30e11daad65d97dc9ce271ad129cc72065",
+      "current_sha256": "56a73edd231c4e1bbe4b1df5be569d30e11daad65d97dc9ce271ad129cc72065",
+      "matches": true
+    },
+    {
+      "file": "data/driver_state_interval_table.csv",
+      "recorded_sha256": "58c275291ca32651d53e96c987fce3b36ccc281b4af2e75cb982d14604212148",
+      "current_sha256": "58c275291ca32651d53e96c987fce3b36ccc281b4af2e75cb982d14604212148",
+      "matches": true
+    },
+    {
+      "file": "data/driver_table.csv",
+      "recorded_sha256": "ef81b824956054fbd3b9cdb60482084588a09b9ac85c476af992c77e6c0080ed",
+      "current_sha256": "ef81b824956054fbd3b9cdb60482084588a09b9ac85c476af992c77e6c0080ed",
+      "matches": true
+    },
+    {
+      "file": "data/service_table.csv",
+      "recorded_sha256": "3b69d76bac79ebf0dd8755b2e848694ac894d33af08c0196ddde5c64e550536c",
+      "current_sha256": "3b69d76bac79ebf0dd8755b2e848694ac894d33af08c0196ddde5c64e550536c",
+      "matches": true
+    },
+    {
+      "file": "data/supply_15min_table.csv",
+      "recorded_sha256": "7de58adcd23c20eed0a13fd09cda1dd530cb03bf03ff5c7032d50e7ba8eb1cdd",
+      "current_sha256": "7de58adcd23c20eed0a13fd09cda1dd530cb03bf03ff5c7032d50e7ba8eb1cdd",
+      "matches": true
+    },
+    {
+      "file": "data/trip_table.csv",
+      "recorded_sha256": "b84cadd505c6bfc7020b23d4a0a020367ac3cf0aa11028e5e79b73d89669743a",
+      "current_sha256": "228d29a4b33b74067087d5c3bdb5e4fe2097d2f9bfc6b8f6442b6c974461ef62",
+      "matches": false
+    },
+    {
+      "file": "data/user_table.csv",
+      "recorded_sha256": "cd02273bdd4550245c8b111892723af8ef89214c8ed3380d5a0d4f047d4b0bec",
+      "current_sha256": "cd02273bdd4550245c8b111892723af8ef89214c8ed3380d5a0d4f047d4b0bec",
+      "matches": true
+    },
+    {
+      "file": "data/weather_hourly_table.csv",
+      "recorded_sha256": "67702660ed0592635ffc4b46418f59e54aa27140a381abf74ed08ec545523e1c",
+      "current_sha256": "67702660ed0592635ffc4b46418f59e54aa27140a381abf74ed08ec545523e1c",
+      "matches": true
+    },
+    {
+      "file": "data/zone_table.csv",
+      "recorded_sha256": "d33b2e335243cae6697022498ea0aedf31cbcee51a7ab0c7b110fbefeaaa40eb",
+      "current_sha256": "d33b2e335243cae6697022498ea0aedf31cbcee51a7ab0c7b110fbefeaaa40eb",
+      "matches": true
+    }
+  ],
+  "batches_executed": {
+    "demand_before": 9,
+    "demand_after": 9,
+    "fulfillment_before": 16,
+    "fulfillment_after": 20
+  },
+  "result_sets": [
+    {
+      "name": "batch_2_1",
+      "batch": 2,
+      "row_count": 1
+    },
+    {
+      "name": "batch_3_1",
+      "batch": 3,
+      "row_count": 336
+    },
+    {
+      "name": "batch_4_1",
+      "batch": 4,
+      "row_count": 7
+    },
+    {
+      "name": "batch_5_1",
+      "batch": 5,
+      "row_count": 2
+    },
+    {
+      "name": "batch_6_1",
+      "batch": 6,
+      "row_count": 8
+    },
+    {
+      "name": "batch_7_1",
+      "batch": 7,
+      "row_count": 42
+    },
+    {
+      "name": "batch_8_1",
+      "batch": 8,
+      "row_count": 14
+    },
+    {
+      "name": "batch_9_1",
+      "batch": 9,
+      "row_count": 4
+    },
+    {
+      "name": "batch_10_1",
+      "batch": 10,
+      "row_count": 336
+    },
+    {
+      "name": "batch_11_1",
+      "batch": 11,
+      "row_count": 157
+    },
+    {
+      "name": "batch_12_1",
+      "batch": 12,
+      "row_count": 2
+    },
+    {
+      "name": "waiting_summary",
+      "batch": 14,
+      "row_count": 55
+    },
+    {
+      "name": "eta_distribution",
+      "batch": 16,
+      "row_count": 61
+    },
+    {
+      "name": "eta_cancellation_by_minute",
+      "batch": 17,
+      "row_count": 1281
+    },
+    {
+      "name": "proposed_eta_cutoff_comparison",
+      "batch": 18,
+      "row_count": 1525
+    },
+    {
+      "name": "eta_group_set_evaluation",
+      "batch": 19,
+      "row_count": 466
+    },
+    {
+      "name": "eta_waiting_quality",
+      "batch": 20,
+      "row_count": 1
+    }
+  ]
+}

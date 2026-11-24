@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-24",
+  "source_pdf_sha256": "385e0a0e4155b6bad7745edf541a06967903a543a2c5ae772a6d6e1328f5cff3",
+  "source_pdf_pages": 6,
+  "method": "Native Power BI Desktop PDF export after full SQL source refresh, followed by PDF canvas rendering. No generated or invented dashboard content.",
+  "outputs": [
+    {
+      "file": "dashboard/02_fulfillment.png",
+      "pdf_page_one_based": 2,
+      "width": 2880,
+      "height": 1620,
+      "pdf_export_zoom_ratio": 1.0,
+      "sha256": "15a6dd07a13f6dcb87e4db2192182739ec7c4f51d79c58760f254dd1490c8a0d",
+      "source": "Native Power BI Desktop Export to PDF; actual vector report canvas rendered at 2880px width, unused export margins excluded. No raster screenshot enlargement."
+    },
+    {
+      "file": "dashboard/05_eta_waiting_experience.png",
+      "pdf_page_one_based": 3,
+      "width": 2880,
+      "height": 2592,
+      "pdf_export_zoom_ratio": 0.2714029902115187,
+      "sha256": "e1e9dfc6dfdc56d7871e1846dfb9ed72229a143d3a7d6e204f243d558903b757",
+      "source": "Native Power BI Desktop Export to PDF; actual vector report canvas rendered at 2880px width, unused export margins excluded. No raster screenshot enlargement."
+    }
+  ],
+  "source_pbix_backup_sha256": "0B55D7F4EF8E7C15EC34A631E7A154863E5BC260A911FF9370DD8C23A45F89BA",
+  "demand_visuals_changed": false,
+  "existing_pages_preserved": true
+}

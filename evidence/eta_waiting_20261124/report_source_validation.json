@@ -1,0 +1,52 @@
+{
+  "schemas_validated": 179,
+  "schemas_unavailable_locally": [
+    {
+      "file": "report.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json"
+    },
+    {
+      "file": "pages\\demand\\visuals\\v4e9ded5f40b94a5f\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\demand\\visuals\\v72295a6d9b5f45ef\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\demand\\visuals\\vf866a5fed02b4753\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\fulfillment\\visuals\\vde2fb3adf26342db\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\drivers\\visuals\\ved35756664634e51\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\request_explorer\\visuals\\v46b75106a48b4d92\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\request_explorer\\visuals\\v4bd0571cefa54e49\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\request_explorer\\visuals\\v9eaacdb9ae964ee2\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\request_explorer\\visuals\\vdfa6731a4bee4190\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    },
+    {
+      "file": "pages\\request_explorer\\visuals\\vf48d51fb16964919\\visual.json",
+      "schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json"
+    }
+  ],
+  "six_existing_and_new_kpi_cards_equal_width_without_overlap": true,
+  "relationships_preserved": true,
+  "errors": []
+}

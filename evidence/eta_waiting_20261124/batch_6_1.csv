@@ -1,0 +1,9 @@
+cancelled_by,cancel_reason,cancellation_stage,cancelled_requests,cancellation_share,cancellation_rate
+CUSTOMER,WAIT_TOO_LONG,cancel_after_match_before_arrival,1885,16.22,1.5
+CUSTOMER,WRONG_PICKUP,cancel_after_match_before_arrival,1884,16.21,1.5
+CUSTOMER,CHANGED_PLAN,cancel_after_match_before_arrival,1835,15.79,1.46
+CUSTOMER,CHANGED_PLAN,cancel_before_match,1564,13.45,1.24
+CUSTOMER,WAIT_TOO_LONG,cancel_before_match,1528,13.15,1.21
+DRIVER,VEHICLE_ISSUE,cancel_after_match_before_arrival,1079,9.28,0.86
+DRIVER,PICKUP_TOO_FAR,cancel_after_match_before_arrival,1024,8.81,0.81
+DRIVER,PASSENGER_NO_SHOW,cancel_at_pickup,825,7.1,0.66

@@ -6,7 +6,7 @@
 
 Operation teams must balance booking demand, nearby driver availability, pickup waiting time, and customer experience. This project examines where requests fail and which operational problems deserve a controlled test.
 
-I used SQL Server to validate and prepare data, define KPIs, analyze demand and fulfillment, measure driver exposure, and compare customer return patterns. Power BI brings these analyses together in four core report pages. The focus is practical analytical work: preserving table grain, choosing clear denominators, handling incomplete follow-up, and turning evidence into testable recommendations.
+I used SQL Server to validate and prepare data, define KPIs, analyze demand and fulfillment, measure driver exposure, and compare customer return patterns. Power BI brings these analyses together in four core report pages and a dedicated ETA/waiting page. The focus is practical analytical work: preserving table grain, choosing clear denominators, handling incomplete follow-up, and turning evidence into testable recommendations.
 
 The dataset is entirely synthetic. Results describe this simulation and are not Grab operating statistics.
 
@@ -52,7 +52,18 @@ Data Validation → Data Preparation → Demand Analysis → Fulfillment Analysi
 
 Technical examples include CTEs, conditional aggregation, window functions, percentile calculations, calendar exposure, interval splitting, and observation-window eligibility. Reusable view definitions are separate from analytical SELECT queries.
 
+## ETA and waiting update — 24 November 2026
+
+The existing report now includes **ETA & Waiting Experience** and an Average Total Wait card on Booking Fulfillment. SQL execution verifies **7.41 min** average actual wait on **102,936 pickups**; approach contributes **6.08 min**. Matched quoted ETA averages **6.70 min** on **111,471 requests**. SQL and report grouping both use **3/6/12 min**, retained after distribution, minute behavior and subgroup evaluation.
+
+See [detailed findings](key_findings.md#eta-and-waiting-experience--verified-sql-update-24-november-2026), [implementation and population rules](dashboard/eta_waiting_update_guide.md), [actual SQL outputs and checks](evidence/eta_waiting_20261124/sql_validation.json), and [change log](CHANGELOG_20261124.md). These are descriptive results from synthetic data, not causal operational guarantees.
+
+![ETA & Waiting Experience](dashboard/05_eta_waiting_experience.png)
+
 ## Dashboard Preview
+
+Booking Fulfillment and ETA & Waiting Experience were exported from the refreshed native report on **24 November 2026**. Demand, Driver Operations and Customer Retention retain their earlier captures because their visuals were preserved. See [latest capture evidence](evidence/eta_waiting_20261124/dashboard_capture.json) and [saved PBIX/reopen verification](evidence/eta_waiting_20261124/pbix_reopen_validation.json).
+
 
 These 4 pages were exported directly from the updated PBIX through Power BI Desktop All 4 previews use synthetic data; see [capture evidence](evidence/dashboard_capture.json).
 
@@ -115,3 +126,4 @@ The simulation uses approximate locations, synthetic weather, simplified dispatc
 ## Disclaimer
 
 **This is an independent case study using synthetic ride-hailing data. It is not affiliated with, endorsed by, or based on proprietary data from Grab.**
+

@@ -1,255 +1,319 @@
-// Operations | #,0
+// #,0
 Requests =
 COUNTROWS(FactTrips)
 
-// Operations | #,0
+// #,0
 Active Requesters =
 DISTINCTCOUNT(FactTrips[user_id])
 
-// Operations | #,0
+// #,0
 Completed Requests =
 CALCULATE([Requests], FactTrips[status] = 4)
 
-// Operations | #,0
+// #,0
 Matched Requests =
 COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at])))
 
-// Operations | #,0
+// #,0
 Picked-up Requests =
 COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at])))
 
-// Operations | #,0
+// #,0
 Failed Requests =
 CALCULATE([Requests], FactTrips[status] IN {5,6,7})
 
-// Operations | #,0
+// #,0
 Open Requests =
 CALCULATE([Requests], FactTrips[status] IN {1,2,3})
 
-// Operations | 0.0%
+// 0.0%
 Completion Rate =
 DIVIDE([Completed Requests], [Requests])
 
-// Operations | 0.0%
+// 0.0%
 Match Rate =
 DIVIDE([Matched Requests], [Requests])
 
-// Operations | 0.0%
+// 0.0%
 Failure Rate =
 DIVIDE([Failed Requests], [Requests])
 
-// Operations | 0.0%
+// 0.0%
 Closed Completion Rate =
 DIVIDE([Completed Requests], [Completed Requests] + [Failed Requests])
 
-// [NEW] Operations | 0.00" min"
-Average Total Wait Min =
-AVERAGEX(
-    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
-        && FactTrips[total_wait_sec] >= 0),
-    FactTrips[total_wait_sec] / 60.0
-)
-
-// [NEW] Operations | 0.00" min"
-Median Total Wait Min =
-MEDIANX(
-    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
-        && FactTrips[total_wait_sec] >= 0),
-    FactTrips[total_wait_sec] / 60.0
-)
-
-// [NEW] Operations | 0.00" min"
-// Use the same valid pickup cohort for all three stage measures.
-Average Allocation Min =
-AVERAGEX(
-    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
-        && NOT ISBLANK(FactTrips[allocation_sec])
-        && NOT ISBLANK(FactTrips[approach_sec])
-        && NOT ISBLANK(FactTrips[pickup_dwell_sec])
-        && FactTrips[total_wait_sec] >= 0
-        && FactTrips[allocation_sec] >= 0
-        && FactTrips[approach_sec] >= 0
-        && FactTrips[pickup_dwell_sec] >= 0),
-    FactTrips[allocation_sec] / 60.0
-)
-
-// [NEW] Operations | 0.00" min"
-Average Approach Min =
-AVERAGEX(
-    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
-        && NOT ISBLANK(FactTrips[allocation_sec])
-        && NOT ISBLANK(FactTrips[approach_sec])
-        && NOT ISBLANK(FactTrips[pickup_dwell_sec])
-        && FactTrips[total_wait_sec] >= 0
-        && FactTrips[allocation_sec] >= 0
-        && FactTrips[approach_sec] >= 0
-        && FactTrips[pickup_dwell_sec] >= 0),
-    FactTrips[approach_sec] / 60.0
-)
-
-// [NEW] Operations | 0.00" min"
-Average Pickup Dwell Min =
-AVERAGEX(
-    FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])
-        && NOT ISBLANK(FactTrips[allocation_sec])
-        && NOT ISBLANK(FactTrips[approach_sec])
-        && NOT ISBLANK(FactTrips[pickup_dwell_sec])
-        && FactTrips[total_wait_sec] >= 0
-        && FactTrips[allocation_sec] >= 0
-        && FactTrips[approach_sec] >= 0
-        && FactTrips[pickup_dwell_sec] >= 0),
-    FactTrips[pickup_dwell_sec] / 60.0
-)
-
-// [NEW] Operations | 0.00" min"
-Average Quoted ETA Min =
-AVERAGEX(
-    FILTER(FactTrips, NOT ISBLANK(FactTrips[quoted_pickup_eta_min])
-        && FactTrips[quoted_pickup_eta_min] >= 0
-        && NOT ISBLANK(FactTrips[accepted_at])),
-    FactTrips[quoted_pickup_eta_min]
-)
-
-// Operations | 0.00" min"
+// [MODIFIED] 0.00" min"
 P90 Total Wait Min =
-PERCENTILEX.INC(FILTER(FactTrips, NOT ISBLANK(FactTrips[total_wait_sec])), FactTrips[total_wait_sec] / 60.0, 0.9)
+PERCENTILEX.INC(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0), FactTrips[total_wait_sec] / 60.0, 0.9)
 
-// Operations | 0.00" min"
+// [MODIFIED] 0.00" min"
 Median Allocation Min =
-MEDIANX(FILTER(FactTrips, NOT ISBLANK(FactTrips[allocation_sec])), FactTrips[allocation_sec] / 60.0)
+MEDIANX(FILTER(FactTrips, NOT ISBLANK(FactTrips[allocation_sec]) && FactTrips[allocation_sec]>=0), FactTrips[allocation_sec]/60.0)
 
-// Supply | #,0.0" h"
+// #,0.0" h"
 Online Hours =
 DIVIDE(SUM(FactSupply[online_driver_minutes]), 60.0)
 
-// Supply | #,0.0" h"
+// #,0.0" h"
 Available Hours =
 DIVIDE(SUM(FactSupply[available_driver_minutes]), 60.0)
 
-// Supply | 0.0%
+// 0.0%
 Occupied Utilization =
 DIVIDE(SUM(FactSupply[occupied_driver_minutes]), SUM(FactSupply[online_driver_minutes]))
 
-// Supply | 0.0%
+// 0.0%
 On-trip Utilization =
 DIVIDE(SUM(FactSupply[on_trip_driver_minutes]), SUM(FactSupply[online_driver_minutes]))
 
-// Dispatch | #,0
+// #,0
 Offers =
 COUNTROWS(FactOffers)
 
-// Dispatch | #,0
+// #,0
 Offers Accepted =
 CALCULATE([Offers], FactOffers[outcome] = "ACCEPTED")
 
-// Dispatch | #,0
+// #,0
 Offers Decided =
 CALCULATE([Offers], FactOffers[outcome] IN {"ACCEPTED", "REJECTED", "TIMEOUT"})
 
-// Dispatch | 0.0%
+// 0.0%
 Offer Acceptance Rate =
 DIVIDE([Offers Accepted], [Offers Decided])
 
-// Drivers | #,0.0" h"
+// #,0.0" h"
 Driver Online Hours =
 DIVIDE(SUM(FactDriverDay[online_minutes]), 60.0)
 
-// Drivers | #,0
+// #,0
 Driver Completed Trips =
 SUM(FactDriverDay[completed_trips])
 
-// Drivers | 0.00
+// 0.00
 Trips per Online Hour =
 DIVIDE([Driver Completed Trips], [Driver Online Hours])
 
-// Retention | #,0
+// #,0
 Eligible Customers 30d =
 CALCULATE(COUNTROWS(FactRetention30), FactRetention30[eligible_30d] = 1)
 
-// Retention | #,0
+// #,0
 Returned Customers 30d =
 CALCULATE(COUNTROWS(FactRetention30), FactRetention30[eligible_30d] = 1, FactRetention30[returned_30d_new_journey] = 1)
 
-// Retention | 0.0%
+// 0.0%
 Return Rate 30d =
 DIVIDE([Returned Customers 30d], [Eligible Customers 30d])
 
-// Demand | #,0
+// [MODIFIED] #,0
 Observed Calendar Days =
-COUNTROWS(DimDate)
+COUNTROWS(FILTER(DimDate, DimDate[date] >= DATE(2026,4,1) && DimDate[date] < DATE(2026,10,1)))
 
-// Demand | 0.0
+// 0.0
 Average Requests per Day =
 DIVIDE(COALESCE([Requests], 0), [Observed Calendar Days])
 
-// Operations | @
+// @
 Sample Size Flag =
 IF([Requests] < 30, "Small sample: n<30", "n>=30")
 
-// Operations | #,0
+// #,0
 Post-match Cancellations =
 CALCULATE([Requests], FactTrips[status] IN {5,6}, NOT ISBLANK(FactTrips[accepted_at]))
 
-// Operations | #,0
+// #,0
 Cancelled Requests =
 CALCULATE([Requests], FactTrips[status] IN {5,6})
 
-// Operations | 0.0%
+// 0.0%
 Post-match Cancellation Rate =
 DIVIDE([Post-match Cancellations], [Matched Requests])
 
-// Operations | #,0
+// #,0
 Funnel Requests =
 SWITCH(SELECTEDVALUE(FunnelStage[Stage]), "Requested", [Requests], "Matched", [Matched Requests], "Picked Up", [Picked-up Requests], "Completed", [Completed Requests])
 
-// Supply | #,0.0" h"
+// #,0.0" h"
 State Hours =
 DIVIDE(SWITCH(SELECTEDVALUE(DriverState[State]), "Available", SUM(FactSupply[available_driver_minutes]), "Offer Pending", SUM(FactSupply[offer_pending_driver_minutes]), "To Pickup", SUM(FactSupply[to_pickup_driver_minutes]), "Waiting Pickup", SUM(FactSupply[waiting_pickup_driver_minutes]), "On Trip", SUM(FactSupply[on_trip_driver_minutes])), 60.0)
 
-// Supply | #,0.0
+// #,0.0
 Available Driver Minutes =
 SUM(FactSupply[available_driver_minutes])
 
-// Supply | #,0
+// #,0
 Supply Requests =
 SUM(FactSupply[requests])
 
-// Supply | 0.0%
+// 0.0%
 Supply Match Rate =
 DIVIDE(SUM(FactSupply[matched]), [Supply Requests])
 
-// Supply | @
+// @
 Zero Supply Flag =
 IF([Available Driver Minutes] = 0, "Zero available supply", "Available supply observed")
 
-// Retention | 0.0%
+// 0.0%
 Cohort Retention =
 IF(ISINSCOPE(FactCohort[cohort_month]) && ISINSCOPE(FactCohort[age_month]), DIVIDE(SUM(FactCohort[active_users]), MAX(FactCohort[cohort_size])))
 
-// Formatting | @
+// @
 Cohort Cell Color =
 VAR r=[Cohort Retention] RETURN IF(ISBLANK(r), "#FFFFFF", SWITCH(TRUE(), r>=0.8,"#BCE8CE",r>=0.6,"#D0EEDD",r>=0.4,"#E0F3E7","#F0F8F3"))
 
-// Formatting | @
+// @
 Heatmap Cell Color =
 VAR r=[Average Requests per Day] RETURN SWITCH(TRUE(),r>=20,"#BCE8CE",r>=10,"#D0EEDD",r>=3,"#E0F3E7","#F0F8F3")
 
-// Customer Profile | #,0
+// #,0
 Profile Customers =
 COUNTROWS(CustomerProfile)
 
-// Report | @
+// @
 Reporting Period =
 FORMAT(MIN(DimDate[date]), "dd MMM yyyy") & " – " & FORMAT(MAX(DimDate[date]), "dd MMM yyyy")
 
-// Scenario | #,0.00
+// #,0.00
 Avoided Failures Scenario =
 [Failed Requests] * SELECTEDVALUE(Scenario[Reduction])
 
-// Drillthrough | #,0
+// #,0
 Trip Detail Offers =
 CALCULATE([Offers], TREATAS(VALUES(FactTrips[trip_id]), FactOffers[trip_id]))
 
-// Drillthrough | #,0
+// #,0
 Trip Detail Attempts =
 IF(CALCULATE(COUNTROWS(FactOffers), TREATAS(VALUES(FactTrips[trip_id]), FactOffers[trip_id])) > 0, 1, BLANK())
+
+// [MODIFIED] 0.00" min"
+Average Total Wait Min =
+AVERAGEX(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0), FactTrips[total_wait_sec] / 60.0)
+
+// [MODIFIED] 0.00" min"
+Median Total Wait Min =
+MEDIANX(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0), FactTrips[total_wait_sec] / 60.0)
+
+// [MODIFIED] #,0
+Waiting Sample Size =
+COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0))
+
+// [MODIFIED] #,0
+Breakdown Sample Size =
+COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0 && NOT ISBLANK(FactTrips[allocation_sec]) && FactTrips[allocation_sec] >= 0 && NOT ISBLANK(FactTrips[approach_sec]) && FactTrips[approach_sec] >= 0 && NOT ISBLANK(FactTrips[pickup_dwell_sec]) && FactTrips[pickup_dwell_sec] >= 0 && NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[arrived_at]) && FactTrips[created_at] <= FactTrips[accepted_at] && FactTrips[accepted_at] <= FactTrips[arrived_at] && FactTrips[arrived_at] <= FactTrips[pickup_at] && FactTrips[total_wait_sec] = FactTrips[allocation_sec]+FactTrips[approach_sec]+FactTrips[pickup_dwell_sec]))
+
+// [MODIFIED] 0.00" min"
+Average Allocation Min =
+AVERAGEX(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0 && NOT ISBLANK(FactTrips[allocation_sec]) && FactTrips[allocation_sec] >= 0 && NOT ISBLANK(FactTrips[approach_sec]) && FactTrips[approach_sec] >= 0 && NOT ISBLANK(FactTrips[pickup_dwell_sec]) && FactTrips[pickup_dwell_sec] >= 0 && NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[arrived_at]) && FactTrips[created_at] <= FactTrips[accepted_at] && FactTrips[accepted_at] <= FactTrips[arrived_at] && FactTrips[arrived_at] <= FactTrips[pickup_at] && FactTrips[total_wait_sec] = FactTrips[allocation_sec]+FactTrips[approach_sec]+FactTrips[pickup_dwell_sec]), FactTrips[allocation_sec]/60.0)
+
+// [MODIFIED] 0.00" min"
+Average Approach Min =
+AVERAGEX(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0 && NOT ISBLANK(FactTrips[allocation_sec]) && FactTrips[allocation_sec] >= 0 && NOT ISBLANK(FactTrips[approach_sec]) && FactTrips[approach_sec] >= 0 && NOT ISBLANK(FactTrips[pickup_dwell_sec]) && FactTrips[pickup_dwell_sec] >= 0 && NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[arrived_at]) && FactTrips[created_at] <= FactTrips[accepted_at] && FactTrips[accepted_at] <= FactTrips[arrived_at] && FactTrips[arrived_at] <= FactTrips[pickup_at] && FactTrips[total_wait_sec] = FactTrips[allocation_sec]+FactTrips[approach_sec]+FactTrips[pickup_dwell_sec]), FactTrips[approach_sec]/60.0)
+
+// [MODIFIED] 0.00" min"
+Average Pickup Dwell Min =
+AVERAGEX(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0 && NOT ISBLANK(FactTrips[allocation_sec]) && FactTrips[allocation_sec] >= 0 && NOT ISBLANK(FactTrips[approach_sec]) && FactTrips[approach_sec] >= 0 && NOT ISBLANK(FactTrips[pickup_dwell_sec]) && FactTrips[pickup_dwell_sec] >= 0 && NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[arrived_at]) && FactTrips[created_at] <= FactTrips[accepted_at] && FactTrips[accepted_at] <= FactTrips[arrived_at] && FactTrips[arrived_at] <= FactTrips[pickup_at] && FactTrips[total_wait_sec] = FactTrips[allocation_sec]+FactTrips[approach_sec]+FactTrips[pickup_dwell_sec]), FactTrips[pickup_dwell_sec]/60.0)
+
+// [MODIFIED] 0.00" min"
+Breakdown Total Wait Min =
+AVERAGEX(FILTER(FactTrips, NOT ISBLANK(FactTrips[pickup_at]) && NOT ISBLANK(FactTrips[total_wait_sec]) && FactTrips[total_wait_sec] >= 0 && NOT ISBLANK(FactTrips[allocation_sec]) && FactTrips[allocation_sec] >= 0 && NOT ISBLANK(FactTrips[approach_sec]) && FactTrips[approach_sec] >= 0 && NOT ISBLANK(FactTrips[pickup_dwell_sec]) && FactTrips[pickup_dwell_sec] >= 0 && NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[arrived_at]) && FactTrips[created_at] <= FactTrips[accepted_at] && FactTrips[accepted_at] <= FactTrips[arrived_at] && FactTrips[arrived_at] <= FactTrips[pickup_at] && FactTrips[total_wait_sec] = FactTrips[allocation_sec]+FactTrips[approach_sec]+FactTrips[pickup_dwell_sec]), FactTrips[total_wait_sec]/60.0)
+
+// [MODIFIED] 0.00" min"
+Average Quoted ETA Min =
+AVERAGEX(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0), FactTrips[quoted_pickup_eta_min])
+
+// [MODIFIED] #,0
+ETA Sample Size =
+COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0))
+
+// [MODIFIED] @
+ETA Small Sample Flag =
+IF([ETA Sample Size] < 30, "Small sample: n<30", "n>=30; screening only")
+
+// [MODIFIED] 0.00" min"
+ETA P25 =
+PERCENTILEX.INC(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0), FactTrips[quoted_pickup_eta_min], 0.25)
+
+// [MODIFIED] 0.00" min"
+ETA P50 =
+PERCENTILEX.INC(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0), FactTrips[quoted_pickup_eta_min], 0.5)
+
+// [MODIFIED] 0.00" min"
+ETA P75 =
+PERCENTILEX.INC(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0), FactTrips[quoted_pickup_eta_min], 0.75)
+
+// [MODIFIED] 0.00" min"
+ETA P90 =
+PERCENTILEX.INC(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0), FactTrips[quoted_pickup_eta_min], 0.9)
+
+// [MODIFIED] #,0
+ETA Post-match Cancellations =
+COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[status] IN {5,6}))
+
+// [MODIFIED] #,0
+Customer Post-match Cancellations =
+COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[status] = 5))
+
+// [MODIFIED] #,0
+Driver Post-match Cancellations =
+COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[status] = 6))
+
+// [MODIFIED] #,0
+ETA Open Requests =
+COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[status] IN {1,2,3}))
+
+// [MODIFIED] 0.00%
+ETA Post-match Cancellation Rate =
+DIVIDE([ETA Post-match Cancellations], [ETA Sample Size])
+
+// [MODIFIED] 0.00%
+Customer Post-match Cancellation Rate =
+DIVIDE([Customer Post-match Cancellations], [ETA Sample Size])
+
+// [MODIFIED] 0.00%
+Driver Post-match Cancellation Rate =
+DIVIDE([Driver Post-match Cancellations], [ETA Sample Size])
+
+// [MODIFIED] 0.00" min"
+Waiting Stage Average Min =
+SWITCH(SELECTEDVALUE(WaitStage[Stage]), "Allocation", [Average Allocation Min], "Approach", [Average Approach Min], "Pickup dwell", [Average Pickup Dwell Min])
+
+// [MODIFIED] @
+ETA Heatmap Color =
+VAR r=[ETA Post-match Cancellation Rate] RETURN IF(ISBLANK(r), "#FFFFFF", SWITCH(TRUE(),r>=0.15,"#F3C4C4",r>=0.08,"#F9E5BD",r>=0.04,"#D0EEDD","#E8F7EE"))
+
+// [MODIFIED] 0.00" min"
+Proposed ETA Cutoff Min =
+SWITCH(SELECTEDVALUE(ETACutoff[cutoff_name]), "P25", [ETA P25], "P50", [ETA P50], "P75", [ETA P75], "P90", [ETA P90], SELECTEDVALUE(ETACutoff[fixed_cutoff_min]))
+
+// [MODIFIED] #,0
+Cutoff Requests Below =
+VAR c=[Proposed ETA Cutoff Min] RETURN IF(NOT ISBLANK(c), COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[quoted_pickup_eta_min] < c)))
+
+// [MODIFIED] #,0
+Cutoff Cancellations Below =
+VAR c=[Proposed ETA Cutoff Min] RETURN IF(NOT ISBLANK(c), COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[quoted_pickup_eta_min] < c && FactTrips[status] IN {5,6})))
+
+// [MODIFIED] 0.00%
+Cutoff Cancellation Rate Below =
+DIVIDE([Cutoff Cancellations Below], [Cutoff Requests Below])
+
+// [MODIFIED] #,0
+Cutoff Requests Above =
+VAR c=[Proposed ETA Cutoff Min] RETURN IF(NOT ISBLANK(c), COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[quoted_pickup_eta_min] >= c)))
+
+// [MODIFIED] #,0
+Cutoff Cancellations Above =
+VAR c=[Proposed ETA Cutoff Min] RETURN IF(NOT ISBLANK(c), COUNTROWS(FILTER(FactTrips, NOT ISBLANK(FactTrips[accepted_at]) && NOT ISBLANK(FactTrips[quoted_pickup_eta_min]) && FactTrips[quoted_pickup_eta_min] >= 0 && FactTrips[quoted_pickup_eta_min] >= c && FactTrips[status] IN {5,6})))
+
+// [MODIFIED] 0.00%
+Cutoff Cancellation Rate Above =
+DIVIDE([Cutoff Cancellations Above], [Cutoff Requests Above])
+
+// [MODIFIED] 0.00" pp"
+Cutoff Rate Difference pp =
+([Cutoff Cancellation Rate Above]-[Cutoff Cancellation Rate Below])*100
+
+// [MODIFIED] @
+Cutoff Sample Flag =
+IF(NOT HASONEVALUE(ETACutoff[cutoff_name]) || NOT HASONEVALUE(ETACutoff[cutoff_source]), BLANK(), IF([Cutoff Requests Below]>=30 && [Cutoff Requests Above]>=30, "n>=30; screening", "Small sample"))

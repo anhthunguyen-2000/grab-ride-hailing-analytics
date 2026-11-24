@@ -55,7 +55,7 @@ SELECT
         , 2) AS completion_rate
 FROM monthly_trip_comparison;
 GO
--- Identify peak booking hours on weekdays and weekends.
+-- [MODIFIED] Peak booking hours: same total-request ranking; full-calendar denominator.
 -- Keep ranking by total requests; add calendar-day-normalized demand for fair day-type comparison.
 -- Observed days include calendar dates without requests (date_table: UTC+7).
 WITH booking AS (
@@ -64,6 +64,7 @@ WITH booking AS (
         SUM(CASE WHEN is_weekend = 0 THEN 1 ELSE 0 END) AS weekdays_booking,
         SUM(CASE WHEN is_weekend = 1 THEN 1 ELSE 0 END) AS weekends_booking
     FROM v_trip_enriched
+    WHERE trip_date >= '20260401' AND trip_date < '20261001'
     GROUP BY trip_hour
 ),
 ranked_booking AS (
@@ -228,3 +229,4 @@ WHERE t.created_at >= '20260401' AND t.created_at < '20261001'
 GROUP BY te.trip_hour
 ORDER BY retry_requests DESC, te.trip_hour;
 GO
+

@@ -458,3 +458,22 @@ Source columns retain the raw definitions above. Types below are semantic model 
 ### Filter-scope notes
 
 FactCohort and CustomerProfile are disconnected full-period analyses. FunnelStage, DriverState and Scenario are disconnected selectors; Grab Measures stores calculations. Date/service/zone slicers do not silently recalculate those full-period populations. Pickup zone does not filter citywide FactDriverDay productivity. Offer detail uses TREATAS by request ID rather than a physical fact relationship. SQL analysis ETA groups (3/5/8/12) differ from report presentation groups (3/6/12); their labels must not be mixed.
+
+
+
+## ETA and waiting model additions — 24 November 2026
+
+`v_pbi_trip` and FactTrips retain **one row per booking request**. Four derived fields are added:
+
+| Field | Type | Definition |
+|---|---|---|
+| eta_band_order | integer | 1:<3, 2:3–<6, 3:6–<12, 4:12+, 99:Unknown |
+| eta_minute_order | integer | FLOOR(quoted ETA) for valid ETA <20; 20 for 20+; 99 for NULL/negative |
+| eta_minute_bucket | text | One-minute lower-inclusive/upper-exclusive label, 20+ or Unknown; sorted by eta_minute_order |
+| peak_period | text | Existing project definition: morning_peak hours 7–8, evening_peak 16–18, off_peak otherwise, UTC+7 |
+
+`eta_band` now treats negative ETA as Unknown and is sorted by eta_band_order. Its selected boundaries remain 3/6/12 minutes, consistently in SQL and DAX/report visuals.
+
+**WaitStage:** three rows, one per operational stage (Allocation, Approach, Pickup dwell), with integer sort order. **ETACutoff:** one row per cutoff name/source pair, with nullable fixed_cutoff_min. Percentile rows have no fixed value; measures calculate the percentile in current filter context. Behavior rows store only screened minute boundaries, not aggregated request or cancellation counts. These two helpers add no relationships. The model has 20 tables and the existing 23 active single-direction relationships; no booking rows are duplicated.
+
+The ETA & Waiting Experience page calculates all analytical values dynamically from FactTrips. SQL CSVs under evidence are independent full-period analytical outputs; they are not joined into FactTrips or presented as slicer-responsive imported aggregates.

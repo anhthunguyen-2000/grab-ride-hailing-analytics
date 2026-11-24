@@ -1,0 +1,15 @@
+pickup_zone_id,pickup_zone,service_type,eta_sample_size,average_quoted_eta_min,average_actual_approach_min,average_signed_error_min,average_absolute_error_min,median_signed_error_min,p90_absolute_error_min
+1,Central,BIKE,19369,7.43,7.42,-0.01,1.17,-0.05,3.71
+1,Central,CAR,8029,8.42,8.45,0.03,1.35,-0.06,4.11
+2,West,BIKE,13705,4.41,4.4,-0.02,0.7,-0.05,1.62
+2,West,CAR,5550,5.72,5.68,-0.04,0.93,-0.06,2.72
+3,North,BIKE,7462,6.55,6.49,-0.07,1.05,-0.07,2.71
+3,North,CAR,2674,6.47,6.53,0.06,1.03,-0.06,2.59
+4,Airport_access,BIKE,12039,5.69,5.7,0.0,0.92,-0.05,2.52
+4,Airport_access,CAR,5041,6.72,6.69,-0.03,1.07,-0.08,2.9
+5,East,BIKE,10754,3.62,3.6,-0.02,0.56,-0.05,0.89
+5,East,CAR,4062,5.21,5.2,0.0,0.84,-0.07,2.18
+6,South,BIKE,6696,8.24,8.17,-0.07,1.32,-0.07,4.22
+6,South,CAR,2491,9.26,9.21,-0.05,1.49,-0.07,4.44
+7,Northeast,BIKE,4303,3.85,3.85,0.0,0.61,-0.06,0.94
+7,Northeast,CAR,1587,3.49,3.46,-0.03,0.57,-0.07,0.95

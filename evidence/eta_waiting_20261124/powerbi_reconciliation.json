@@ -1,0 +1,6190 @@
+{
+  "date": "2026-11-24",
+  "method": "Actual ADOMD DAX execution against the updated Power BI Desktop model, reconciled with actual SQL Server outputs",
+  "numeric_tolerance_minutes": 1e-05,
+  "checks_passed": 1029,
+  "checks": [
+    {
+      "check": "All | Waiting Sample Size",
+      "passed": true,
+      "dax": 102936,
+      "sql": 102936
+    },
+    {
+      "check": "All | Breakdown Sample Size",
+      "passed": true,
+      "dax": 102936,
+      "sql": 102936
+    },
+    {
+      "check": "All | Average Total Wait Min",
+      "passed": true,
+      "dax": 7.405487228310151,
+      "sql": 7.405486
+    },
+    {
+      "check": "All | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.55,
+      "sql": 3.55
+    },
+    {
+      "check": "All | P90 Total Wait Min",
+      "passed": true,
+      "dax": 20.45,
+      "sql": 20.45
+    },
+    {
+      "check": "All | Average Allocation Min",
+      "passed": true,
+      "dax": 0.32236179114530433,
+      "sql": 0.322361
+    },
+    {
+      "check": "All | Average Approach Min",
+      "passed": true,
+      "dax": 6.083806280925358,
+      "sql": 6.083805
+    },
+    {
+      "check": "All | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9993191562394761,
+      "sql": 0.999318
+    },
+    {
+      "check": "All | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 7.405487228310159,
+      "sql": 7.405486
+    },
+    {
+      "check": "All | ETA Sample Size",
+      "passed": true,
+      "dax": 111471,
+      "sql": 111471
+    },
+    {
+      "check": "All | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 6.702746992491311,
+      "sql": 6.702746
+    },
+    {
+      "check": "All | ETA P25",
+      "passed": true,
+      "dax": 1.64,
+      "sql": 1.64
+    },
+    {
+      "check": "All | ETA P50",
+      "passed": true,
+      "dax": 2.29,
+      "sql": 2.29
+    },
+    {
+      "check": "All | ETA P75",
+      "passed": true,
+      "dax": 10.66,
+      "sql": 10.66
+    },
+    {
+      "check": "All | ETA P90",
+      "passed": true,
+      "dax": 20.37,
+      "sql": 20.37
+    },
+    {
+      "check": "All | stage identity",
+      "passed": true,
+      "dax": 7.405487228310139,
+      "sql": 7.405487228310159
+    },
+    {
+      "check": "Central | BIKE | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 11023,
+      "sql": 11023
+    },
+    {
+      "check": "Central | BIKE | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 11023,
+      "sql": 11023
+    },
+    {
+      "check": "Central | BIKE | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.55622637515498,
+      "sql": 6.556226
+    },
+    {
+      "check": "Central | BIKE | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.1666666666666665,
+      "sql": 3.166666
+    },
+    {
+      "check": "Central | BIKE | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 18.85,
+      "sql": 18.85
+    },
+    {
+      "check": "Central | BIKE | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2710181741207764,
+      "sql": 0.271017
+    },
+    {
+      "check": "Central | BIKE | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.280025099035352,
+      "sql": 5.280024
+    },
+    {
+      "check": "Central | BIKE | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0051831019988504,
+      "sql": 1.005182
+    },
+    {
+      "check": "Central | BIKE | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.55622637515498,
+      "sql": 6.556226
+    },
+    {
+      "check": "Central | BIKE | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 11875,
+      "sql": 11875
+    },
+    {
+      "check": "Central | BIKE | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.766058947368422,
+      "sql": 5.766058
+    },
+    {
+      "check": "Central | BIKE | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.44,
+      "sql": 1.44
+    },
+    {
+      "check": "Central | BIKE | off_peak | ETA P50",
+      "passed": true,
+      "dax": 1.89,
+      "sql": 1.89
+    },
+    {
+      "check": "Central | BIKE | off_peak | ETA P75",
+      "passed": true,
+      "dax": 11.91,
+      "sql": 11.91
+    },
+    {
+      "check": "Central | BIKE | off_peak | ETA P90",
+      "passed": true,
+      "dax": 18.28,
+      "sql": 18.28
+    },
+    {
+      "check": "Central | BIKE | off_peak | stage identity",
+      "passed": true,
+      "dax": 6.556226375154978,
+      "sql": 6.55622637515498
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 6335,
+      "sql": 6335
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 6335,
+      "sql": 6335
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 13.718024204156814,
+      "sql": 13.718023
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 5.383333333333334,
+      "sql": 5.383333
+    },
+    {
+      "check": "Central | BIKE | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 30.116666666666667,
+      "sql": 30.116666
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.4051960010523544,
+      "sql": 0.405195
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 12.320973428045257,
+      "sql": 12.320973
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9918547750591942,
+      "sql": 0.991854
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 13.718024204156814,
+      "sql": 13.718023
+    },
+    {
+      "check": "Central | BIKE | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 7405,
+      "sql": 7405
+    },
+    {
+      "check": "Central | BIKE | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 13.703936529372028,
+      "sql": 13.703936
+    },
+    {
+      "check": "Central | BIKE | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 2.19,
+      "sql": 2.19
+    },
+    {
+      "check": "Central | BIKE | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 18.41,
+      "sql": 18.41
+    },
+    {
+      "check": "Central | BIKE | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 24.07,
+      "sql": 24.07
+    },
+    {
+      "check": "Central | BIKE | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 26.586000000000002,
+      "sql": 26.586000000000002
+    },
+    {
+      "check": "Central | BIKE | evening_peak | stage identity",
+      "passed": true,
+      "dax": 13.718024204156805,
+      "sql": 13.718024204156814
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1855,
+      "sql": 1855
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1855,
+      "sql": 1855
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 4.64106019766397,
+      "sql": 4.641059
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.066666666666667,
+      "sql": 3.066666
+    },
+    {
+      "check": "Central | BIKE | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 5.160000000000003,
+      "sql": 5.159999600000003
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2505750224618146,
+      "sql": 0.250574
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.3998921832884026,
+      "sql": 3.399891
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9905929919137466,
+      "sql": 0.990592
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 4.64106019766397,
+      "sql": 4.641059
+    },
+    {
+      "check": "Central | BIKE | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1948,
+      "sql": 1948
+    },
+    {
+      "check": "Central | BIKE | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 3.737926078028749,
+      "sql": 3.737926
+    },
+    {
+      "check": "Central | BIKE | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.46,
+      "sql": 1.46
+    },
+    {
+      "check": "Central | BIKE | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 1.84,
+      "sql": 1.84
+    },
+    {
+      "check": "Central | BIKE | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 2.44,
+      "sql": 2.44
+    },
+    {
+      "check": "Central | BIKE | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 3.7819999999999983,
+      "sql": 3.7819999999999983
+    },
+    {
+      "check": "Central | BIKE | morning_peak | stage identity",
+      "passed": true,
+      "dax": 4.641060197663964,
+      "sql": 4.64106019766397
+    },
+    {
+      "check": "West | BIKE | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 8174,
+      "sql": 8174
+    },
+    {
+      "check": "West | BIKE | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 8174,
+      "sql": 8174
+    },
+    {
+      "check": "West | BIKE | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 5.473356577766896,
+      "sql": 5.473356
+    },
+    {
+      "check": "West | BIKE | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.183333333333333,
+      "sql": 3.183333
+    },
+    {
+      "check": "West | BIKE | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 15.52833333333333,
+      "sql": 15.528332899999999
+    },
+    {
+      "check": "West | BIKE | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.30168420194111356,
+      "sql": 0.301683
+    },
+    {
+      "check": "West | BIKE | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 4.17370728325585,
+      "sql": 4.173706
+    },
+    {
+      "check": "West | BIKE | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9979650925699375,
+      "sql": 0.997964
+    },
+    {
+      "check": "West | BIKE | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 5.473356577766896,
+      "sql": 5.473356
+    },
+    {
+      "check": "West | BIKE | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 8690,
+      "sql": 8690
+    },
+    {
+      "check": "West | BIKE | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 4.4896168009205715,
+      "sql": 4.489616
+    },
+    {
+      "check": "West | BIKE | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.5,
+      "sql": 1.5
+    },
+    {
+      "check": "West | BIKE | off_peak | ETA P50",
+      "passed": true,
+      "dax": 1.92,
+      "sql": 1.92
+    },
+    {
+      "check": "West | BIKE | off_peak | ETA P75",
+      "passed": true,
+      "dax": 2.76,
+      "sql": 2.76
+    },
+    {
+      "check": "West | BIKE | off_peak | ETA P90",
+      "passed": true,
+      "dax": 15.13,
+      "sql": 15.13
+    },
+    {
+      "check": "West | BIKE | off_peak | stage identity",
+      "passed": true,
+      "dax": 5.473356577766901,
+      "sql": 5.473356577766896
+    },
+    {
+      "check": "West | BIKE | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 3127,
+      "sql": 3127
+    },
+    {
+      "check": "West | BIKE | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 3127,
+      "sql": 3127
+    },
+    {
+      "check": "West | BIKE | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.883152115979107,
+      "sql": 6.883151
+    },
+    {
+      "check": "West | BIKE | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.65,
+      "sql": 3.65
+    },
+    {
+      "check": "West | BIKE | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 21.833333333333332,
+      "sql": 21.833333
+    },
+    {
+      "check": "West | BIKE | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.5144654088050321,
+      "sql": 0.514465
+    },
+    {
+      "check": "West | BIKE | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.362349429698321,
+      "sql": 5.362349
+    },
+    {
+      "check": "West | BIKE | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0063372774757486,
+      "sql": 1.006336
+    },
+    {
+      "check": "West | BIKE | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.883152115979107,
+      "sql": 6.883151
+    },
+    {
+      "check": "West | BIKE | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 3370,
+      "sql": 3370
+    },
+    {
+      "check": "West | BIKE | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.975311572700296,
+      "sql": 5.975311
+    },
+    {
+      "check": "West | BIKE | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.74,
+      "sql": 1.74
+    },
+    {
+      "check": "West | BIKE | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.35,
+      "sql": 2.35
+    },
+    {
+      "check": "West | BIKE | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 3.4775,
+      "sql": 3.4775
+    },
+    {
+      "check": "West | BIKE | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 21.9,
+      "sql": 21.9
+    },
+    {
+      "check": "West | BIKE | evening_peak | stage identity",
+      "passed": true,
+      "dax": 6.883152115979102,
+      "sql": 6.883152115979107
+    },
+    {
+      "check": "West | BIKE | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 2271,
+      "sql": 2271
+    },
+    {
+      "check": "West | BIKE | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 2271,
+      "sql": 2271
+    },
+    {
+      "check": "West | BIKE | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 5.15732423308381,
+      "sql": 5.157323
+    },
+    {
+      "check": "West | BIKE | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.216666666666667,
+      "sql": 3.216666
+    },
+    {
+      "check": "West | BIKE | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 14.033333333333333,
+      "sql": 14.033333
+    },
+    {
+      "check": "West | BIKE | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.27551005430794095,
+      "sql": 0.275509
+    },
+    {
+      "check": "West | BIKE | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.893211507412298,
+      "sql": 3.893211
+    },
+    {
+      "check": "West | BIKE | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.98860267136357,
+      "sql": 0.988602
+    },
+    {
+      "check": "West | BIKE | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 5.15732423308381,
+      "sql": 5.157323
+    },
+    {
+      "check": "West | BIKE | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 2399,
+      "sql": 2399
+    },
+    {
+      "check": "West | BIKE | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 4.222596915381413,
+      "sql": 4.222596
+    },
+    {
+      "check": "West | BIKE | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.57,
+      "sql": 1.57
+    },
+    {
+      "check": "West | BIKE | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2,
+      "sql": 2
+    },
+    {
+      "check": "West | BIKE | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 2.75,
+      "sql": 2.75
+    },
+    {
+      "check": "West | BIKE | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 18.492,
+      "sql": 18.492
+    },
+    {
+      "check": "West | BIKE | morning_peak | stage identity",
+      "passed": true,
+      "dax": 5.157324233083809,
+      "sql": 5.15732423308381
+    },
+    {
+      "check": "North | BIKE | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 4971,
+      "sql": 4971
+    },
+    {
+      "check": "North | BIKE | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 4971,
+      "sql": 4971
+    },
+    {
+      "check": "North | BIKE | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.82035472406624,
+      "sql": 6.820354
+    },
+    {
+      "check": "North | BIKE | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.966666666666667,
+      "sql": 3.966666
+    },
+    {
+      "check": "North | BIKE | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 13.366666666666667,
+      "sql": 13.366666
+    },
+    {
+      "check": "North | BIKE | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2985515992758028,
+      "sql": 0.298551
+    },
+    {
+      "check": "North | BIKE | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.522027761013883,
+      "sql": 5.522027
+    },
+    {
+      "check": "North | BIKE | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.999775363776573,
+      "sql": 0.999775
+    },
+    {
+      "check": "North | BIKE | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.82035472406624,
+      "sql": 6.820354
+    },
+    {
+      "check": "North | BIKE | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 5300,
+      "sql": 5300
+    },
+    {
+      "check": "North | BIKE | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.8382075471698185,
+      "sql": 5.838207
+    },
+    {
+      "check": "North | BIKE | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.75,
+      "sql": 1.75
+    },
+    {
+      "check": "North | BIKE | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.58,
+      "sql": 2.58
+    },
+    {
+      "check": "North | BIKE | off_peak | ETA P75",
+      "passed": true,
+      "dax": 8.48,
+      "sql": 8.48
+    },
+    {
+      "check": "North | BIKE | off_peak | ETA P90",
+      "passed": true,
+      "dax": 11.44,
+      "sql": 11.44
+    },
+    {
+      "check": "North | BIKE | off_peak | stage identity",
+      "passed": true,
+      "dax": 6.8203547240662585,
+      "sql": 6.82035472406624
+    },
+    {
+      "check": "North | BIKE | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 549,
+      "sql": 549
+    },
+    {
+      "check": "North | BIKE | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 549,
+      "sql": 549
+    },
+    {
+      "check": "North | BIKE | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.597389192471157,
+      "sql": 6.597388
+    },
+    {
+      "check": "North | BIKE | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.7666666666666666,
+      "sql": 3.766666
+    },
+    {
+      "check": "North | BIKE | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 13.626666666666665,
+      "sql": 13.626666599999997
+    },
+    {
+      "check": "North | BIKE | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2953855494839101,
+      "sql": 0.295385
+    },
+    {
+      "check": "North | BIKE | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.309441408621735,
+      "sql": 5.309441
+    },
+    {
+      "check": "North | BIKE | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9925622343655132,
+      "sql": 0.992561
+    },
+    {
+      "check": "North | BIKE | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.597389192471157,
+      "sql": 6.597388
+    },
+    {
+      "check": "North | BIKE | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 603,
+      "sql": 603
+    },
+    {
+      "check": "North | BIKE | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.994792703150912,
+      "sql": 5.994792
+    },
+    {
+      "check": "North | BIKE | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.83,
+      "sql": 1.83
+    },
+    {
+      "check": "North | BIKE | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.61,
+      "sql": 2.61
+    },
+    {
+      "check": "North | BIKE | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 9.18,
+      "sql": 9.18
+    },
+    {
+      "check": "North | BIKE | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 12.892000000000003,
+      "sql": 12.892000000000003
+    },
+    {
+      "check": "North | BIKE | evening_peak | stage identity",
+      "passed": true,
+      "dax": 6.597389192471159,
+      "sql": 6.597389192471157
+    },
+    {
+      "check": "North | BIKE | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1884,
+      "sql": 1884
+    },
+    {
+      "check": "North | BIKE | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1884,
+      "sql": 1884
+    },
+    {
+      "check": "North | BIKE | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 10.732439844302904,
+      "sql": 10.732439
+    },
+    {
+      "check": "North | BIKE | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 9.899999999999999,
+      "sql": 9.8999995
+    },
+    {
+      "check": "North | BIKE | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 23.841666666666672,
+      "sql": 23.8416661
+    },
+    {
+      "check": "North | BIKE | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.3633404104741686,
+      "sql": 0.36334
+    },
+    {
+      "check": "North | BIKE | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 9.386173036093437,
+      "sql": 9.386172
+    },
+    {
+      "check": "North | BIKE | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9829263977353145,
+      "sql": 0.982926
+    },
+    {
+      "check": "North | BIKE | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 10.732439844302904,
+      "sql": 10.732439
+    },
+    {
+      "check": "North | BIKE | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 2110,
+      "sql": 2110
+    },
+    {
+      "check": "North | BIKE | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 10.277999999999992,
+      "sql": 10.278
+    },
+    {
+      "check": "North | BIKE | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 2.64,
+      "sql": 2.64
+    },
+    {
+      "check": "North | BIKE | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 10.15,
+      "sql": 10.15
+    },
+    {
+      "check": "North | BIKE | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 12.1175,
+      "sql": 12.1175
+    },
+    {
+      "check": "North | BIKE | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 27.34,
+      "sql": 27.34
+    },
+    {
+      "check": "North | BIKE | morning_peak | stage identity",
+      "passed": true,
+      "dax": 10.73243984430292,
+      "sql": 10.732439844302904
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 7162,
+      "sql": 7162
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 7162,
+      "sql": 7162
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.213162059015167,
+      "sql": 6.213161
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.533333333333333,
+      "sql": 3.533333
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 15.01500000000001,
+      "sql": 15.01499940000001
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2727752955412853,
+      "sql": 0.272774
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 4.947754351670847,
+      "sql": 4.947754
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9926324118030333,
+      "sql": 0.992632
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.213162059015167,
+      "sql": 6.213161
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 7647,
+      "sql": 7647
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.246555511965465,
+      "sql": 5.246555
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.64,
+      "sql": 1.64
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.27,
+      "sql": 2.27
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | ETA P75",
+      "passed": true,
+      "dax": 8.1,
+      "sql": 8.1
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | ETA P90",
+      "passed": true,
+      "dax": 15.544000000000006,
+      "sql": 15.544000000000006
+    },
+    {
+      "check": "Airport_access | BIKE | off_peak | stage identity",
+      "passed": true,
+      "dax": 6.213162059015165,
+      "sql": 6.213162059015167
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 3532,
+      "sql": 3532
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 3532,
+      "sql": 3532
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 8.601255190637977,
+      "sql": 8.601254
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 5.3,
+      "sql": 5.2999995
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 16.683333333333334,
+      "sql": 16.683333
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.337212155530389,
+      "sql": 0.337211
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 7.261211778029447,
+      "sql": 7.261211
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0028312570781448,
+      "sql": 1.00283
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 8.601255190637977,
+      "sql": 8.601254
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 3833,
+      "sql": 3833
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.647297156274475,
+      "sql": 7.647297
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 2.16,
+      "sql": 2.16
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 3.96,
+      "sql": 3.96
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 11.62,
+      "sql": 11.62
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 14.21,
+      "sql": 14.21
+    },
+    {
+      "check": "Airport_access | BIKE | evening_peak | stage identity",
+      "passed": true,
+      "dax": 8.60125519063798,
+      "sql": 8.601255190637977
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1246,
+      "sql": 1246
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1246,
+      "sql": 1246
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.80053504547887,
+      "sql": 6.800534
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.6,
+      "sql": 3.6
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 21.316666666666666,
+      "sql": 21.316666
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2710807918673085,
+      "sql": 0.27108
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.541037988229005,
+      "sql": 5.541037
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9884162653825566,
+      "sql": 0.988415
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.80053504547887,
+      "sql": 6.800534
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1346,
+      "sql": 1346
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 6.164903417533434,
+      "sql": 6.164903
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.79,
+      "sql": 1.79
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.375,
+      "sql": 2.375
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 3.75,
+      "sql": 3.75
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 23,
+      "sql": 23
+    },
+    {
+      "check": "Airport_access | BIKE | morning_peak | stage identity",
+      "passed": true,
+      "dax": 6.8005350454788696,
+      "sql": 6.80053504547887
+    },
+    {
+      "check": "East | BIKE | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 5725,
+      "sql": 5725
+    },
+    {
+      "check": "East | BIKE | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 5725,
+      "sql": 5725
+    },
+    {
+      "check": "East | BIKE | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 4.431819505094609,
+      "sql": 4.431819
+    },
+    {
+      "check": "East | BIKE | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3,
+      "sql": 3
+    },
+    {
+      "check": "East | BIKE | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 5.116666666666666,
+      "sql": 5.116666
+    },
+    {
+      "check": "East | BIKE | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.276899563318779,
+      "sql": 0.276899
+    },
+    {
+      "check": "East | BIKE | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.1538893740902463,
+      "sql": 3.153889
+    },
+    {
+      "check": "East | BIKE | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0010305676855884,
+      "sql": 1.00103
+    },
+    {
+      "check": "East | BIKE | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 4.431819505094609,
+      "sql": 4.431819
+    },
+    {
+      "check": "East | BIKE | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 6010,
+      "sql": 6010
+    },
+    {
+      "check": "East | BIKE | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 3.445821963394344,
+      "sql": 3.445821
+    },
+    {
+      "check": "East | BIKE | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.4,
+      "sql": 1.4
+    },
+    {
+      "check": "East | BIKE | off_peak | ETA P50",
+      "passed": true,
+      "dax": 1.73,
+      "sql": 1.73
+    },
+    {
+      "check": "East | BIKE | off_peak | ETA P75",
+      "passed": true,
+      "dax": 2.27,
+      "sql": 2.27
+    },
+    {
+      "check": "East | BIKE | off_peak | ETA P90",
+      "passed": true,
+      "dax": 3.3010000000000033,
+      "sql": 3.3010000000000037
+    },
+    {
+      "check": "East | BIKE | off_peak | stage identity",
+      "passed": true,
+      "dax": 4.431819505094614,
+      "sql": 4.431819505094609
+    },
+    {
+      "check": "East | BIKE | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 3043,
+      "sql": 3043
+    },
+    {
+      "check": "East | BIKE | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 3043,
+      "sql": 3043
+    },
+    {
+      "check": "East | BIKE | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 5.379428195859354,
+      "sql": 5.379427
+    },
+    {
+      "check": "East | BIKE | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.316666666666667,
+      "sql": 3.316666
+    },
+    {
+      "check": "East | BIKE | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 6.480000000000003,
+      "sql": 6.479999600000003
+    },
+    {
+      "check": "East | BIKE | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.37684302771387973,
+      "sql": 0.376842
+    },
+    {
+      "check": "East | BIKE | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 4.0032424142841485,
+      "sql": 4.003242
+    },
+    {
+      "check": "East | BIKE | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9993427538613211,
+      "sql": 0.999342
+    },
+    {
+      "check": "East | BIKE | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 5.379428195859354,
+      "sql": 5.379427
+    },
+    {
+      "check": "East | BIKE | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 3223,
+      "sql": 3223
+    },
+    {
+      "check": "East | BIKE | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 4.536006825938564,
+      "sql": 4.536006
+    },
+    {
+      "check": "East | BIKE | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.5950000000000002,
+      "sql": 1.5950000000000002
+    },
+    {
+      "check": "East | BIKE | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.08,
+      "sql": 2.08
+    },
+    {
+      "check": "East | BIKE | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 2.84,
+      "sql": 2.84
+    },
+    {
+      "check": "East | BIKE | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 4.35,
+      "sql": 4.35
+    },
+    {
+      "check": "East | BIKE | evening_peak | stage identity",
+      "passed": true,
+      "dax": 5.37942819585935,
+      "sql": 5.379428195859354
+    },
+    {
+      "check": "East | BIKE | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1908,
+      "sql": 1908
+    },
+    {
+      "check": "East | BIKE | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1908,
+      "sql": 1908
+    },
+    {
+      "check": "East | BIKE | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 5.565120545073372,
+      "sql": 5.56512
+    },
+    {
+      "check": "East | BIKE | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.3,
+      "sql": 3.3
+    },
+    {
+      "check": "East | BIKE | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 6.383333333333334,
+      "sql": 6.383333
+    },
+    {
+      "check": "East | BIKE | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.28302760307477226,
+      "sql": 0.283027
+    },
+    {
+      "check": "East | BIKE | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 4.289107267644999,
+      "sql": 4.289106
+    },
+    {
+      "check": "East | BIKE | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9929856743535962,
+      "sql": 0.992985
+    },
+    {
+      "check": "East | BIKE | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 5.565120545073372,
+      "sql": 5.56512
+    },
+    {
+      "check": "East | BIKE | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 2027,
+      "sql": 2027
+    },
+    {
+      "check": "East | BIKE | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 4.760646275283671,
+      "sql": 4.760646
+    },
+    {
+      "check": "East | BIKE | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.61,
+      "sql": 1.61
+    },
+    {
+      "check": "East | BIKE | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.05,
+      "sql": 2.05
+    },
+    {
+      "check": "East | BIKE | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 2.87,
+      "sql": 2.87
+    },
+    {
+      "check": "East | BIKE | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 23.8,
+      "sql": 23.8
+    },
+    {
+      "check": "East | BIKE | morning_peak | stage identity",
+      "passed": true,
+      "dax": 5.565120545073367,
+      "sql": 5.565120545073372
+    },
+    {
+      "check": "South | BIKE | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 4642,
+      "sql": 4642
+    },
+    {
+      "check": "South | BIKE | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 4642,
+      "sql": 4642
+    },
+    {
+      "check": "South | BIKE | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 8.27535904064341,
+      "sql": 8.275358
+    },
+    {
+      "check": "South | BIKE | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.6,
+      "sql": 3.6
+    },
+    {
+      "check": "South | BIKE | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 21.216666666666665,
+      "sql": 21.216666
+    },
+    {
+      "check": "South | BIKE | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.32947723682320984,
+      "sql": 0.329476
+    },
+    {
+      "check": "South | BIKE | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 6.936988367083144,
+      "sql": 6.936988
+    },
+    {
+      "check": "South | BIKE | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.008893436737039,
+      "sql": 1.008893
+    },
+    {
+      "check": "South | BIKE | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 8.27535904064341,
+      "sql": 8.275358
+    },
+    {
+      "check": "South | BIKE | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 5111,
+      "sql": 5111
+    },
+    {
+      "check": "South | BIKE | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.599561729602813,
+      "sql": 7.599561
+    },
+    {
+      "check": "South | BIKE | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.68,
+      "sql": 1.68
+    },
+    {
+      "check": "South | BIKE | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.33,
+      "sql": 2.33
+    },
+    {
+      "check": "South | BIKE | off_peak | ETA P75",
+      "passed": true,
+      "dax": 17.55,
+      "sql": 17.55
+    },
+    {
+      "check": "South | BIKE | off_peak | ETA P90",
+      "passed": true,
+      "dax": 18.97,
+      "sql": 18.97
+    },
+    {
+      "check": "South | BIKE | off_peak | stage identity",
+      "passed": true,
+      "dax": 8.275359040643393,
+      "sql": 8.27535904064341
+    },
+    {
+      "check": "South | BIKE | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 474,
+      "sql": 474
+    },
+    {
+      "check": "South | BIKE | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 474,
+      "sql": 474
+    },
+    {
+      "check": "South | BIKE | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.224964838255972,
+      "sql": 6.224964
+    },
+    {
+      "check": "South | BIKE | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.5083333333333333,
+      "sql": 3.508333
+    },
+    {
+      "check": "South | BIKE | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 21.20333333333333,
+      "sql": 21.203332899999996
+    },
+    {
+      "check": "South | BIKE | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2892756680731363,
+      "sql": 0.289275
+    },
+    {
+      "check": "South | BIKE | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 4.95886075949367,
+      "sql": 4.95886
+    },
+    {
+      "check": "South | BIKE | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9768284106891711,
+      "sql": 0.976828
+    },
+    {
+      "check": "South | BIKE | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.224964838255972,
+      "sql": 6.224964
+    },
+    {
+      "check": "South | BIKE | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 513,
+      "sql": 513
+    },
+    {
+      "check": "South | BIKE | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 6.021539961013651,
+      "sql": 6.021539
+    },
+    {
+      "check": "South | BIKE | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.73,
+      "sql": 1.73
+    },
+    {
+      "check": "South | BIKE | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.29,
+      "sql": 2.29
+    },
+    {
+      "check": "South | BIKE | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 3.28,
+      "sql": 3.28
+    },
+    {
+      "check": "South | BIKE | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 23.842,
+      "sql": 23.842
+    },
+    {
+      "check": "South | BIKE | evening_peak | stage identity",
+      "passed": true,
+      "dax": 6.2249648382559775,
+      "sql": 6.224964838255972
+    },
+    {
+      "check": "South | BIKE | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1522,
+      "sql": 1522
+    },
+    {
+      "check": "South | BIKE | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1522,
+      "sql": 1522
+    },
+    {
+      "check": "South | BIKE | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 14.387965396408232,
+      "sql": 14.387965
+    },
+    {
+      "check": "South | BIKE | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 13.291666666666666,
+      "sql": 13.2916665
+    },
+    {
+      "check": "South | BIKE | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 29.415000000000003,
+      "sql": 29.4149994
+    },
+    {
+      "check": "South | BIKE | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.4133815155497157,
+      "sql": 0.413381
+    },
+    {
+      "check": "South | BIKE | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 12.982687253613642,
+      "sql": 12.982686
+    },
+    {
+      "check": "South | BIKE | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9918966272448533,
+      "sql": 0.991896
+    },
+    {
+      "check": "South | BIKE | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 14.387965396408232,
+      "sql": 14.387965
+    },
+    {
+      "check": "South | BIKE | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1749,
+      "sql": 1749
+    },
+    {
+      "check": "South | BIKE | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 14.299988564894244,
+      "sql": 14.299988
+    },
+    {
+      "check": "South | BIKE | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 2.34,
+      "sql": 2.34
+    },
+    {
+      "check": "South | BIKE | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 22.24,
+      "sql": 22.24
+    },
+    {
+      "check": "South | BIKE | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 24.09,
+      "sql": 24.09
+    },
+    {
+      "check": "South | BIKE | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 25.18,
+      "sql": 25.18
+    },
+    {
+      "check": "South | BIKE | morning_peak | stage identity",
+      "passed": true,
+      "dax": 14.387965396408212,
+      "sql": 14.387965396408232
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 3188,
+      "sql": 3188
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 3188,
+      "sql": 3188
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 4.7461574654956085,
+      "sql": 4.746157
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.0833333333333335,
+      "sql": 3.083333
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 5.7,
+      "sql": 5.7
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2933814303638653,
+      "sql": 0.293381
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.459091384358009,
+      "sql": 3.459091
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9936846507737335,
+      "sql": 0.993684
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 4.7461574654956085,
+      "sql": 4.746157
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 3391,
+      "sql": 3391
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 3.8971542317900334,
+      "sql": 3.897154
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.46,
+      "sql": 1.46
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | ETA P50",
+      "passed": true,
+      "dax": 1.85,
+      "sql": 1.85
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | ETA P75",
+      "passed": true,
+      "dax": 2.48,
+      "sql": 2.48
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | ETA P90",
+      "passed": true,
+      "dax": 17.75,
+      "sql": 17.75
+    },
+    {
+      "check": "Northeast | BIKE | off_peak | stage identity",
+      "passed": true,
+      "dax": 4.746157465495608,
+      "sql": 4.7461574654956085
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 398,
+      "sql": 398
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 398,
+      "sql": 398
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 5.162185929648242,
+      "sql": 5.162185
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.466666666666667,
+      "sql": 3.466666
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 5.793333333333334,
+      "sql": 5.7933329
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.28199329983249594,
+      "sql": 0.281992
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.8979899497487436,
+      "sql": 3.897989
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9822026800670012,
+      "sql": 0.982202
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 5.162185929648242,
+      "sql": 5.162185
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 419,
+      "sql": 419
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 4.337541766109787,
+      "sql": 4.337541
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.725,
+      "sql": 1.725
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.24,
+      "sql": 2.24
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 3.005,
+      "sql": 3.005
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 4.025999999999999,
+      "sql": 4.026
+    },
+    {
+      "check": "Northeast | BIKE | evening_peak | stage identity",
+      "passed": true,
+      "dax": 5.16218592964824,
+      "sql": 5.162185929648242
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 678,
+      "sql": 678
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 678,
+      "sql": 678
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 7.248426745329406,
+      "sql": 7.248426
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.8916666666666666,
+      "sql": 3.8916665
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 26.066666666666688,
+      "sql": 26.066666200000025
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.4752704031465091,
+      "sql": 0.47527
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.742133726646999,
+      "sql": 5.742133
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0310226155358888,
+      "sql": 1.031022
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 7.248426745329406,
+      "sql": 7.248426
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 743,
+      "sql": 743
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.016648721399732,
+      "sql": 7.016648
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.9849999999999999,
+      "sql": 1.9849999999999999
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.63,
+      "sql": 2.63
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 3.575,
+      "sql": 3.575
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 28.298000000000002,
+      "sql": 28.298000000000002
+    },
+    {
+      "check": "Northeast | BIKE | morning_peak | stage identity",
+      "passed": true,
+      "dax": 7.248426745329398,
+      "sql": 7.248426745329406
+    },
+    {
+      "check": "Central | CAR | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 4592,
+      "sql": 4592
+    },
+    {
+      "check": "Central | CAR | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 4592,
+      "sql": 4592
+    },
+    {
+      "check": "Central | CAR | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 8.14507476771196,
+      "sql": 8.145074
+    },
+    {
+      "check": "Central | CAR | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.6166666666666667,
+      "sql": 3.616666
+    },
+    {
+      "check": "Central | CAR | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 19.46166666666669,
+      "sql": 19.461666000000026
+    },
+    {
+      "check": "Central | CAR | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.29269744483159205,
+      "sql": 0.292697
+    },
+    {
+      "check": "Central | CAR | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 6.851074332171901,
+      "sql": 6.851074
+    },
+    {
+      "check": "Central | CAR | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0013029907084772,
+      "sql": 1.001302
+    },
+    {
+      "check": "Central | CAR | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 8.14507476771196,
+      "sql": 8.145074
+    },
+    {
+      "check": "Central | CAR | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 4995,
+      "sql": 4995
+    },
+    {
+      "check": "Central | CAR | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.2560920920920955,
+      "sql": 7.256092
+    },
+    {
+      "check": "Central | CAR | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.63,
+      "sql": 1.63
+    },
+    {
+      "check": "Central | CAR | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.31,
+      "sql": 2.31
+    },
+    {
+      "check": "Central | CAR | off_peak | ETA P75",
+      "passed": true,
+      "dax": 14.52,
+      "sql": 14.52
+    },
+    {
+      "check": "Central | CAR | off_peak | ETA P90",
+      "passed": true,
+      "dax": 17.77,
+      "sql": 17.77
+    },
+    {
+      "check": "Central | CAR | off_peak | stage identity",
+      "passed": true,
+      "dax": 8.145074767711971,
+      "sql": 8.14507476771196
+    },
+    {
+      "check": "Central | CAR | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 2562,
+      "sql": 2562
+    },
+    {
+      "check": "Central | CAR | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 2562,
+      "sql": 2562
+    },
+    {
+      "check": "Central | CAR | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 13.596487119437926,
+      "sql": 13.596486
+    },
+    {
+      "check": "Central | CAR | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 12.041666666666666,
+      "sql": 12.0416665
+    },
+    {
+      "check": "Central | CAR | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 28.24666666666667,
+      "sql": 28.246666600000005
+    },
+    {
+      "check": "Central | CAR | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.38863518084829524,
+      "sql": 0.388634
+    },
+    {
+      "check": "Central | CAR | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 12.215059849076251,
+      "sql": 12.215059
+    },
+    {
+      "check": "Central | CAR | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9927920895134014,
+      "sql": 0.992791
+    },
+    {
+      "check": "Central | CAR | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 13.596487119437926,
+      "sql": 13.596486
+    },
+    {
+      "check": "Central | CAR | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 2969,
+      "sql": 2969
+    },
+    {
+      "check": "Central | CAR | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 13.398588750420998,
+      "sql": 13.398588
+    },
+    {
+      "check": "Central | CAR | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 2.36,
+      "sql": 2.36
+    },
+    {
+      "check": "Central | CAR | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 17.75,
+      "sql": 17.75
+    },
+    {
+      "check": "Central | CAR | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 22.47,
+      "sql": 22.47
+    },
+    {
+      "check": "Central | CAR | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 25.312,
+      "sql": 25.312000000000005
+    },
+    {
+      "check": "Central | CAR | evening_peak | stage identity",
+      "passed": true,
+      "dax": 13.596487119437947,
+      "sql": 13.596487119437926
+    },
+    {
+      "check": "Central | CAR | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 818,
+      "sql": 818
+    },
+    {
+      "check": "Central | CAR | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 818,
+      "sql": 818
+    },
+    {
+      "check": "Central | CAR | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.89826813365933,
+      "sql": 6.898267
+    },
+    {
+      "check": "Central | CAR | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.45,
+      "sql": 3.45
+    },
+    {
+      "check": "Central | CAR | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 21.238333333333337,
+      "sql": 21.2383331
+    },
+    {
+      "check": "Central | CAR | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2931947840260795,
+      "sql": 0.293194
+    },
+    {
+      "check": "Central | CAR | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.622229013854937,
+      "sql": 5.622228
+    },
+    {
+      "check": "Central | CAR | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9828443357783214,
+      "sql": 0.982843
+    },
+    {
+      "check": "Central | CAR | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.89826813365933,
+      "sql": 6.898267
+    },
+    {
+      "check": "Central | CAR | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 871,
+      "sql": 871
+    },
+    {
+      "check": "Central | CAR | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 6.127818599311146,
+      "sql": 6.127818
+    },
+    {
+      "check": "Central | CAR | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.64,
+      "sql": 1.64
+    },
+    {
+      "check": "Central | CAR | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.19,
+      "sql": 2.19
+    },
+    {
+      "check": "Central | CAR | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 3.41,
+      "sql": 3.41
+    },
+    {
+      "check": "Central | CAR | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 21.27,
+      "sql": 21.27
+    },
+    {
+      "check": "Central | CAR | morning_peak | stage identity",
+      "passed": true,
+      "dax": 6.898268133659338,
+      "sql": 6.89826813365933
+    },
+    {
+      "check": "West | CAR | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 3294,
+      "sql": 3294
+    },
+    {
+      "check": "West | CAR | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 3294,
+      "sql": 3294
+    },
+    {
+      "check": "West | CAR | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.688155231734478,
+      "sql": 6.688154
+    },
+    {
+      "check": "West | CAR | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.45,
+      "sql": 3.45
+    },
+    {
+      "check": "West | CAR | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 16.7,
+      "sql": 16.7
+    },
+    {
+      "check": "West | CAR | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.320714430277271,
+      "sql": 0.320714
+    },
+    {
+      "check": "West | CAR | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.373426431896375,
+      "sql": 5.373426
+    },
+    {
+      "check": "West | CAR | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.994014369560816,
+      "sql": 0.994014
+    },
+    {
+      "check": "West | CAR | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.688155231734478,
+      "sql": 6.688154
+    },
+    {
+      "check": "West | CAR | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 3535,
+      "sql": 3535
+    },
+    {
+      "check": "West | CAR | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.768817538896742,
+      "sql": 5.768817
+    },
+    {
+      "check": "West | CAR | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.64,
+      "sql": 1.64
+    },
+    {
+      "check": "West | CAR | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.21,
+      "sql": 2.21
+    },
+    {
+      "check": "West | CAR | off_peak | ETA P75",
+      "passed": true,
+      "dax": 12.65,
+      "sql": 12.65
+    },
+    {
+      "check": "West | CAR | off_peak | ETA P90",
+      "passed": true,
+      "dax": 15.067999999999998,
+      "sql": 15.067999999999998
+    },
+    {
+      "check": "West | CAR | off_peak | stage identity",
+      "passed": true,
+      "dax": 6.688155231734462,
+      "sql": 6.688155231734478
+    },
+    {
+      "check": "West | CAR | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1299,
+      "sql": 1299
+    },
+    {
+      "check": "West | CAR | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1299,
+      "sql": 1299
+    },
+    {
+      "check": "West | CAR | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 8.362753400051313,
+      "sql": 8.362753
+    },
+    {
+      "check": "West | CAR | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.9,
+      "sql": 3.9
+    },
+    {
+      "check": "West | CAR | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 23.110000000000003,
+      "sql": 23.110000000000007
+    },
+    {
+      "check": "West | CAR | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.47432640492686584,
+      "sql": 0.474326
+    },
+    {
+      "check": "West | CAR | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 6.9015139851167655,
+      "sql": 6.901513
+    },
+    {
+      "check": "West | CAR | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9869130100076995,
+      "sql": 0.986912
+    },
+    {
+      "check": "West | CAR | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 8.362753400051313,
+      "sql": 8.362753
+    },
+    {
+      "check": "West | CAR | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1401,
+      "sql": 1401
+    },
+    {
+      "check": "West | CAR | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.3643326195574526,
+      "sql": 7.364332
+    },
+    {
+      "check": "West | CAR | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.94,
+      "sql": 1.94
+    },
+    {
+      "check": "West | CAR | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.64,
+      "sql": 2.64
+    },
+    {
+      "check": "West | CAR | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 17.2,
+      "sql": 17.2
+    },
+    {
+      "check": "West | CAR | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 21.48,
+      "sql": 21.48
+    },
+    {
+      "check": "West | CAR | evening_peak | stage identity",
+      "passed": true,
+      "dax": 8.36275340005133,
+      "sql": 8.362753400051313
+    },
+    {
+      "check": "West | CAR | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 925,
+      "sql": 925
+    },
+    {
+      "check": "West | CAR | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 925,
+      "sql": 925
+    },
+    {
+      "check": "West | CAR | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.416306306306309,
+      "sql": 6.416305
+    },
+    {
+      "check": "West | CAR | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.466666666666667,
+      "sql": 3.466666
+    },
+    {
+      "check": "West | CAR | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 18.46,
+      "sql": 18.4599996
+    },
+    {
+      "check": "West | CAR | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.3265045045045045,
+      "sql": 0.326504
+    },
+    {
+      "check": "West | CAR | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.0890810810810825,
+      "sql": 5.08908
+    },
+    {
+      "check": "West | CAR | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0007207207207218,
+      "sql": 1.00072
+    },
+    {
+      "check": "West | CAR | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.416306306306309,
+      "sql": 6.416305
+    },
+    {
+      "check": "West | CAR | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 971,
+      "sql": 971
+    },
+    {
+      "check": "West | CAR | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.708630278063851,
+      "sql": 5.70863
+    },
+    {
+      "check": "West | CAR | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.72,
+      "sql": 1.72
+    },
+    {
+      "check": "West | CAR | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.27,
+      "sql": 2.27
+    },
+    {
+      "check": "West | CAR | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 3.3899999999999997,
+      "sql": 3.3899999999999997
+    },
+    {
+      "check": "West | CAR | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 18.59,
+      "sql": 18.59
+    },
+    {
+      "check": "West | CAR | morning_peak | stage identity",
+      "passed": true,
+      "dax": 6.416306306306309,
+      "sql": 6.416306306306309
+    },
+    {
+      "check": "North | CAR | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1747,
+      "sql": 1747
+    },
+    {
+      "check": "North | CAR | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1747,
+      "sql": 1747
+    },
+    {
+      "check": "North | CAR | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 7.121131463461181,
+      "sql": 7.121131
+    },
+    {
+      "check": "North | CAR | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 4.566666666666666,
+      "sql": 4.566666
+    },
+    {
+      "check": "North | CAR | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 13.206666666666667,
+      "sql": 13.206666400000001
+    },
+    {
+      "check": "North | CAR | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.3182789543980152,
+      "sql": 0.318278
+    },
+    {
+      "check": "North | CAR | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.785155504674682,
+      "sql": 5.785155
+    },
+    {
+      "check": "North | CAR | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0176970043884754,
+      "sql": 1.017696
+    },
+    {
+      "check": "North | CAR | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 7.121131463461181,
+      "sql": 7.121131
+    },
+    {
+      "check": "North | CAR | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1886,
+      "sql": 1886
+    },
+    {
+      "check": "North | CAR | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 6.121951219512195,
+      "sql": 6.121951
+    },
+    {
+      "check": "North | CAR | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.92,
+      "sql": 1.92
+    },
+    {
+      "check": "North | CAR | off_peak | ETA P50",
+      "passed": true,
+      "dax": 3.4000000000000004,
+      "sql": 3.4000000000000004
+    },
+    {
+      "check": "North | CAR | off_peak | ETA P75",
+      "passed": true,
+      "dax": 8.285,
+      "sql": 8.285
+    },
+    {
+      "check": "North | CAR | off_peak | ETA P90",
+      "passed": true,
+      "dax": 15.675,
+      "sql": 15.675
+    },
+    {
+      "check": "North | CAR | off_peak | stage identity",
+      "passed": true,
+      "dax": 7.121131463461173,
+      "sql": 7.121131463461181
+    },
+    {
+      "check": "North | CAR | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 217,
+      "sql": 217
+    },
+    {
+      "check": "North | CAR | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 217,
+      "sql": 217
+    },
+    {
+      "check": "North | CAR | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.301766513056835,
+      "sql": 6.301766
+    },
+    {
+      "check": "North | CAR | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.75,
+      "sql": 3.75
+    },
+    {
+      "check": "North | CAR | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 13.853333333333333,
+      "sql": 13.853333000000001
+    },
+    {
+      "check": "North | CAR | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2806451612903227,
+      "sql": 0.280644
+    },
+    {
+      "check": "North | CAR | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.02373271889401,
+      "sql": 5.023732
+    },
+    {
+      "check": "North | CAR | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9973886328725039,
+      "sql": 0.997388
+    },
+    {
+      "check": "North | CAR | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.301766513056835,
+      "sql": 6.301766
+    },
+    {
+      "check": "North | CAR | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 230,
+      "sql": 230
+    },
+    {
+      "check": "North | CAR | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.128869565217391,
+      "sql": 5.128869
+    },
+    {
+      "check": "North | CAR | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.8924999999999998,
+      "sql": 1.8925
+    },
+    {
+      "check": "North | CAR | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.5949999999999998,
+      "sql": 2.5949999999999998
+    },
+    {
+      "check": "North | CAR | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 8.7175,
+      "sql": 8.7175
+    },
+    {
+      "check": "North | CAR | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 11.316,
+      "sql": 11.315999999999999
+    },
+    {
+      "check": "North | CAR | evening_peak | stage identity",
+      "passed": true,
+      "dax": 6.301766513056837,
+      "sql": 6.301766513056835
+    },
+    {
+      "check": "North | CAR | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 692,
+      "sql": 692
+    },
+    {
+      "check": "North | CAR | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 692,
+      "sql": 692
+    },
+    {
+      "check": "North | CAR | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 10.238391136801539,
+      "sql": 10.23839
+    },
+    {
+      "check": "North | CAR | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 8.958333333333332,
+      "sql": 8.958333
+    },
+    {
+      "check": "North | CAR | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 23.09,
+      "sql": 23.09
+    },
+    {
+      "check": "North | CAR | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.32105009633911347,
+      "sql": 0.321049
+    },
+    {
+      "check": "North | CAR | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 8.914812138728324,
+      "sql": 8.914811
+    },
+    {
+      "check": "North | CAR | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0025289017341035,
+      "sql": 1.002528
+    },
+    {
+      "check": "North | CAR | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 10.238391136801539,
+      "sql": 10.23839
+    },
+    {
+      "check": "North | CAR | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 761,
+      "sql": 761
+    },
+    {
+      "check": "North | CAR | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 9.38421813403417,
+      "sql": 9.384218
+    },
+    {
+      "check": "North | CAR | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 2.66,
+      "sql": 2.66
+    },
+    {
+      "check": "North | CAR | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 9.32,
+      "sql": 9.32
+    },
+    {
+      "check": "North | CAR | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 11.23,
+      "sql": 11.23
+    },
+    {
+      "check": "North | CAR | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 25.17,
+      "sql": 25.17
+    },
+    {
+      "check": "North | CAR | morning_peak | stage identity",
+      "passed": true,
+      "dax": 10.238391136801543,
+      "sql": 10.238391136801539
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 3049,
+      "sql": 3049
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 3049,
+      "sql": 3049
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 7.518148026675423,
+      "sql": 7.518147
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 4.033333333333333,
+      "sql": 4.033333
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 17.83666666666667,
+      "sql": 17.836666400000006
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.31916475347108453,
+      "sql": 0.319164
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 6.191303159505847,
+      "sql": 6.191302
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0076801136984805,
+      "sql": 1.007679
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 7.518148026675423,
+      "sql": 7.518147
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 3252,
+      "sql": 3252
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 6.524720172201716,
+      "sql": 6.52472
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.78,
+      "sql": 1.78
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.65,
+      "sql": 2.65
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | ETA P75",
+      "passed": true,
+      "dax": 9.2425,
+      "sql": 9.2425
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | ETA P90",
+      "passed": true,
+      "dax": 16.979000000000003,
+      "sql": 16.979000000000003
+    },
+    {
+      "check": "Airport_access | CAR | off_peak | stage identity",
+      "passed": true,
+      "dax": 7.518148026675412,
+      "sql": 7.518148026675423
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1443,
+      "sql": 1443
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1443,
+      "sql": 1443
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 9.217428967428969,
+      "sql": 9.217428
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 7.516666666666667,
+      "sql": 7.516666
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 19.409999999999997,
+      "sql": 19.409999599999995
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.35659505659505647,
+      "sql": 0.356594
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 7.859632709632707,
+      "sql": 7.859632
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0012012012012035,
+      "sql": 1.0012
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 9.217428967428969,
+      "sql": 9.217428
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1589,
+      "sql": 1589
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 8.362146003775955,
+      "sql": 8.362146
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 2.33,
+      "sql": 2.33
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 8.76,
+      "sql": 8.76
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 11.28,
+      "sql": 11.28
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 21.078000000000003,
+      "sql": 21.078000000000003
+    },
+    {
+      "check": "Airport_access | CAR | evening_peak | stage identity",
+      "passed": true,
+      "dax": 9.217428967428967,
+      "sql": 9.217428967428969
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 512,
+      "sql": 512
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 512,
+      "sql": 512
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 7.5856445312500025,
+      "sql": 7.585644
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.783333333333333,
+      "sql": 3.783333
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 22.05,
+      "sql": 22.05
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.2840494791666665,
+      "sql": 0.284049
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 6.280371093749999,
+      "sql": 6.28037
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0212239583333333,
+      "sql": 1.021223
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 7.5856445312500025,
+      "sql": 7.585644
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 559,
+      "sql": 559
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 6.762075134168159,
+      "sql": 6.762075
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.87,
+      "sql": 1.87
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.55,
+      "sql": 2.55
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 10.11,
+      "sql": 10.11
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 21.624000000000002,
+      "sql": 21.624000000000002
+    },
+    {
+      "check": "Airport_access | CAR | morning_peak | stage identity",
+      "passed": true,
+      "dax": 7.585644531249999,
+      "sql": 7.5856445312500025
+    },
+    {
+      "check": "East | CAR | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 2283,
+      "sql": 2283
+    },
+    {
+      "check": "East | CAR | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 2283,
+      "sql": 2283
+    },
+    {
+      "check": "East | CAR | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.173127463863336,
+      "sql": 6.173127
+    },
+    {
+      "check": "East | CAR | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.25,
+      "sql": 3.25
+    },
+    {
+      "check": "East | CAR | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 18.813333333333336,
+      "sql": 18.813332800000005
+    },
+    {
+      "check": "East | CAR | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.30913272010512494,
+      "sql": 0.309132
+    },
+    {
+      "check": "East | CAR | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 4.857957366038838,
+      "sql": 4.857957
+    },
+    {
+      "check": "East | CAR | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.006037377719374,
+      "sql": 1.006037
+    },
+    {
+      "check": "East | CAR | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.173127463863336,
+      "sql": 6.173127
+    },
+    {
+      "check": "East | CAR | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 2432,
+      "sql": 2432
+    },
+    {
+      "check": "East | CAR | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.313852796052637,
+      "sql": 5.313852
+    },
+    {
+      "check": "East | CAR | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.57,
+      "sql": 1.57
+    },
+    {
+      "check": "East | CAR | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.01,
+      "sql": 2.01
+    },
+    {
+      "check": "East | CAR | off_peak | ETA P75",
+      "passed": true,
+      "dax": 2.83,
+      "sql": 2.83
+    },
+    {
+      "check": "East | CAR | off_peak | ETA P90",
+      "passed": true,
+      "dax": 18.28,
+      "sql": 18.28
+    },
+    {
+      "check": "East | CAR | off_peak | stage identity",
+      "passed": true,
+      "dax": 6.173127463863337,
+      "sql": 6.173127463863336
+    },
+    {
+      "check": "East | CAR | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1079,
+      "sql": 1079
+    },
+    {
+      "check": "East | CAR | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1079,
+      "sql": 1079
+    },
+    {
+      "check": "East | CAR | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 6.574745134383687,
+      "sql": 6.574744
+    },
+    {
+      "check": "East | CAR | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.566666666666667,
+      "sql": 3.566666
+    },
+    {
+      "check": "East | CAR | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 21.460000000000026,
+      "sql": 21.46000000000003
+    },
+    {
+      "check": "East | CAR | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.4067037380290388,
+      "sql": 0.406703
+    },
+    {
+      "check": "East | CAR | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 5.17803521779425,
+      "sql": 5.178034
+    },
+    {
+      "check": "East | CAR | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9900061785603953,
+      "sql": 0.990005
+    },
+    {
+      "check": "East | CAR | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 6.574745134383687,
+      "sql": 6.574744
+    },
+    {
+      "check": "East | CAR | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1167,
+      "sql": 1167
+    },
+    {
+      "check": "East | CAR | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 5.996366752356475,
+      "sql": 5.996366
+    },
+    {
+      "check": "East | CAR | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.75,
+      "sql": 1.75
+    },
+    {
+      "check": "East | CAR | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.32,
+      "sql": 2.32
+    },
+    {
+      "check": "East | CAR | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 3.315,
+      "sql": 3.315
+    },
+    {
+      "check": "East | CAR | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 23.874000000000002,
+      "sql": 23.874000000000002
+    },
+    {
+      "check": "East | CAR | evening_peak | stage identity",
+      "passed": true,
+      "dax": 6.574745134383684,
+      "sql": 6.574745134383687
+    },
+    {
+      "check": "East | CAR | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 674,
+      "sql": 674
+    },
+    {
+      "check": "East | CAR | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 674,
+      "sql": 674
+    },
+    {
+      "check": "East | CAR | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 7.6977250247279905,
+      "sql": 7.697724
+    },
+    {
+      "check": "East | CAR | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.7083333333333335,
+      "sql": 3.708333
+    },
+    {
+      "check": "East | CAR | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 23.930000000000003,
+      "sql": 23.929999900000002
+    },
+    {
+      "check": "East | CAR | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.3229970326409496,
+      "sql": 0.322996
+    },
+    {
+      "check": "East | CAR | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 6.370029673590502,
+      "sql": 6.370029
+    },
+    {
+      "check": "East | CAR | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0046983184965395,
+      "sql": 1.004697
+    },
+    {
+      "check": "East | CAR | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 7.6977250247279905,
+      "sql": 7.697724
+    },
+    {
+      "check": "East | CAR | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 744,
+      "sql": 744
+    },
+    {
+      "check": "East | CAR | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.350349462365589,
+      "sql": 7.350349
+    },
+    {
+      "check": "East | CAR | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.84,
+      "sql": 1.84
+    },
+    {
+      "check": "East | CAR | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.49,
+      "sql": 2.49
+    },
+    {
+      "check": "East | CAR | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 3.7925,
+      "sql": 3.7925000000000004
+    },
+    {
+      "check": "East | CAR | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 24.031000000000002,
+      "sql": 24.031000000000002
+    },
+    {
+      "check": "East | CAR | morning_peak | stage identity",
+      "passed": true,
+      "dax": 7.697725024727991,
+      "sql": 7.6977250247279905
+    },
+    {
+      "check": "South | CAR | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1675,
+      "sql": 1675
+    },
+    {
+      "check": "South | CAR | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1675,
+      "sql": 1675
+    },
+    {
+      "check": "South | CAR | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 9.377064676616913,
+      "sql": 9.377064
+    },
+    {
+      "check": "South | CAR | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 4.016666666666667,
+      "sql": 4.016666
+    },
+    {
+      "check": "South | CAR | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 20.616666666666667,
+      "sql": 20.616666
+    },
+    {
+      "check": "South | CAR | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.32449751243781044,
+      "sql": 0.324497
+    },
+    {
+      "check": "South | CAR | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 8.026477611940303,
+      "sql": 8.026477
+    },
+    {
+      "check": "South | CAR | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0260895522388083,
+      "sql": 1.026089
+    },
+    {
+      "check": "South | CAR | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 9.377064676616913,
+      "sql": 9.377064
+    },
+    {
+      "check": "South | CAR | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1856,
+      "sql": 1856
+    },
+    {
+      "check": "South | CAR | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 8.653238146551725,
+      "sql": 8.653238
+    },
+    {
+      "check": "South | CAR | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.79,
+      "sql": 1.79
+    },
+    {
+      "check": "South | CAR | off_peak | ETA P50",
+      "passed": true,
+      "dax": 2.685,
+      "sql": 2.685
+    },
+    {
+      "check": "South | CAR | off_peak | ETA P75",
+      "passed": true,
+      "dax": 16.93,
+      "sql": 16.93
+    },
+    {
+      "check": "South | CAR | off_peak | ETA P90",
+      "passed": true,
+      "dax": 18.04,
+      "sql": 18.04
+    },
+    {
+      "check": "South | CAR | off_peak | stage identity",
+      "passed": true,
+      "dax": 9.377064676616921,
+      "sql": 9.377064676616913
+    },
+    {
+      "check": "South | CAR | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 199,
+      "sql": 199
+    },
+    {
+      "check": "South | CAR | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 199,
+      "sql": 199
+    },
+    {
+      "check": "South | CAR | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 8.397822445561138,
+      "sql": 8.397822
+    },
+    {
+      "check": "South | CAR | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.7333333333333334,
+      "sql": 3.733333
+    },
+    {
+      "check": "South | CAR | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 25.69,
+      "sql": 25.6899996
+    },
+    {
+      "check": "South | CAR | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.289028475711893,
+      "sql": 0.289028
+    },
+    {
+      "check": "South | CAR | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 7.105276381909548,
+      "sql": 7.105276
+    },
+    {
+      "check": "South | CAR | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0035175879396978,
+      "sql": 1.003517
+    },
+    {
+      "check": "South | CAR | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 8.397822445561138,
+      "sql": 8.397822
+    },
+    {
+      "check": "South | CAR | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 219,
+      "sql": 219
+    },
+    {
+      "check": "South | CAR | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.618904109589042,
+      "sql": 7.618904
+    },
+    {
+      "check": "South | CAR | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.875,
+      "sql": 1.875
+    },
+    {
+      "check": "South | CAR | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.57,
+      "sql": 2.57
+    },
+    {
+      "check": "South | CAR | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 20.23,
+      "sql": 20.23
+    },
+    {
+      "check": "South | CAR | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 22.642000000000003,
+      "sql": 22.642000000000003
+    },
+    {
+      "check": "South | CAR | evening_peak | stage identity",
+      "passed": true,
+      "dax": 8.39782244556114,
+      "sql": 8.397822445561138
+    },
+    {
+      "check": "South | CAR | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 595,
+      "sql": 595
+    },
+    {
+      "check": "South | CAR | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 595,
+      "sql": 595
+    },
+    {
+      "check": "South | CAR | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 14.76240896358543,
+      "sql": 14.762408
+    },
+    {
+      "check": "South | CAR | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 18.233333333333334,
+      "sql": 18.233333
+    },
+    {
+      "check": "South | CAR | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 28.22666666666667,
+      "sql": 28.226666400000006
+    },
+    {
+      "check": "South | CAR | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.3991036414565824,
+      "sql": 0.399103
+    },
+    {
+      "check": "South | CAR | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 13.335098039215685,
+      "sql": 13.335097
+    },
+    {
+      "check": "South | CAR | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 1.0282072829131652,
+      "sql": 1.028206
+    },
+    {
+      "check": "South | CAR | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 14.76240896358543,
+      "sql": 14.762408
+    },
+    {
+      "check": "South | CAR | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 668,
+      "sql": 668
+    },
+    {
+      "check": "South | CAR | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 14.076676646706586,
+      "sql": 14.076676
+    },
+    {
+      "check": "South | CAR | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 2.4075,
+      "sql": 2.4075
+    },
+    {
+      "check": "South | CAR | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 20.9,
+      "sql": 20.9
+    },
+    {
+      "check": "South | CAR | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 22.5025,
+      "sql": 22.5025
+    },
+    {
+      "check": "South | CAR | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 23.469,
+      "sql": 23.469000000000005
+    },
+    {
+      "check": "South | CAR | morning_peak | stage identity",
+      "passed": true,
+      "dax": 14.762408963585433,
+      "sql": 14.76240896358543
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 1152,
+      "sql": 1152
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 1152,
+      "sql": 1152
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 4.621990740740733,
+      "sql": 4.62199
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.1,
+      "sql": 3.1
+    },
+    {
+      "check": "Northeast | CAR | off_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 5.580000000000003,
+      "sql": 5.579999700000003
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.29334490740740704,
+      "sql": 0.293344
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.336906828703702,
+      "sql": 3.336906
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9917390046296285,
+      "sql": 0.991738
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 4.621990740740733,
+      "sql": 4.62199
+    },
+    {
+      "check": "Northeast | CAR | off_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 1209,
+      "sql": 1209
+    },
+    {
+      "check": "Northeast | CAR | off_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 3.644160463192724,
+      "sql": 3.64416
+    },
+    {
+      "check": "Northeast | CAR | off_peak | ETA P25",
+      "passed": true,
+      "dax": 1.53,
+      "sql": 1.53
+    },
+    {
+      "check": "Northeast | CAR | off_peak | ETA P50",
+      "passed": true,
+      "dax": 1.91,
+      "sql": 1.91
+    },
+    {
+      "check": "Northeast | CAR | off_peak | ETA P75",
+      "passed": true,
+      "dax": 2.43,
+      "sql": 2.43
+    },
+    {
+      "check": "Northeast | CAR | off_peak | ETA P90",
+      "passed": true,
+      "dax": 3.644000000000001,
+      "sql": 3.644000000000001
+    },
+    {
+      "check": "Northeast | CAR | off_peak | stage identity",
+      "passed": true,
+      "dax": 4.6219907407407375,
+      "sql": 4.621990740740733
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 147,
+      "sql": 147
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 147,
+      "sql": 147
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 4.724943310657598,
+      "sql": 4.724942
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.5,
+      "sql": 3.5
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 6.036666666666669,
+      "sql": 6.036666000000002
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.34637188208616776,
+      "sql": 0.346371
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.392970521541951,
+      "sql": 3.39297
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9856009070294788,
+      "sql": 0.9856
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 4.724943310657598,
+      "sql": 4.724942
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 150,
+      "sql": 150
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 3.562466666666666,
+      "sql": 3.562466
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | ETA P25",
+      "passed": true,
+      "dax": 1.75,
+      "sql": 1.75
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | ETA P50",
+      "passed": true,
+      "dax": 2.37,
+      "sql": 2.37
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | ETA P75",
+      "passed": true,
+      "dax": 3.02,
+      "sql": 3.02
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | ETA P90",
+      "passed": true,
+      "dax": 3.581999999999999,
+      "sql": 3.581999999999999
+    },
+    {
+      "check": "Northeast | CAR | evening_peak | stage identity",
+      "passed": true,
+      "dax": 4.724943310657597,
+      "sql": 4.724943310657598
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Waiting Sample Size",
+      "passed": true,
+      "dax": 275,
+      "sql": 275
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Breakdown Sample Size",
+      "passed": true,
+      "dax": 275,
+      "sql": 275
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Average Total Wait Min",
+      "passed": true,
+      "dax": 5.26678787878788,
+      "sql": 5.266787
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.5166666666666666,
+      "sql": 3.516666
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | P90 Total Wait Min",
+      "passed": true,
+      "dax": 5.296666666666666,
+      "sql": 5.296665999999999
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Average Allocation Min",
+      "passed": true,
+      "dax": 0.3502424242424241,
+      "sql": 0.350242
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Average Approach Min",
+      "passed": true,
+      "dax": 3.932787878787877,
+      "sql": 3.932787
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Average Pickup Dwell Min",
+      "passed": true,
+      "dax": 0.9837575757575753,
+      "sql": 0.983757
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Breakdown Total Wait Min",
+      "passed": true,
+      "dax": 5.26678787878788,
+      "sql": 5.266787
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | ETA Sample Size",
+      "passed": true,
+      "dax": 295,
+      "sql": 295
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 4.335016949152543,
+      "sql": 4.335016
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | ETA P25",
+      "passed": true,
+      "dax": 1.78,
+      "sql": 1.78
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | ETA P50",
+      "passed": true,
+      "dax": 2.33,
+      "sql": 2.33
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | ETA P75",
+      "passed": true,
+      "dax": 3.035,
+      "sql": 3.035
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | ETA P90",
+      "passed": true,
+      "dax": 3.6880000000000006,
+      "sql": 3.6880000000000006
+    },
+    {
+      "check": "Northeast | CAR | morning_peak | stage identity",
+      "passed": true,
+      "dax": 5.266787878787877,
+      "sql": 5.26678787878788
+    },
+    {
+      "check": "minute 1 | ETA Sample Size",
+      "passed": true,
+      "dax": 44854,
+      "sql": 44854
+    },
+    {
+      "check": "minute 1 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 1549,
+      "sql": 1549
+    },
+    {
+      "check": "minute 1 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 859,
+      "sql": 859
+    },
+    {
+      "check": "minute 1 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 690,
+      "sql": 690
+    },
+    {
+      "check": "minute 1 | ETA Open Requests",
+      "passed": true,
+      "dax": 5,
+      "sql": 5
+    },
+    {
+      "check": "minute 2 | ETA Sample Size",
+      "passed": true,
+      "dax": 26120,
+      "sql": 26120
+    },
+    {
+      "check": "minute 2 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 909,
+      "sql": 909
+    },
+    {
+      "check": "minute 2 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 499,
+      "sql": 499
+    },
+    {
+      "check": "minute 2 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 410,
+      "sql": 410
+    },
+    {
+      "check": "minute 2 | ETA Open Requests",
+      "passed": true,
+      "dax": 1,
+      "sql": 1
+    },
+    {
+      "check": "minute 20 | ETA Sample Size",
+      "passed": true,
+      "dax": 11745,
+      "sql": 11745
+    },
+    {
+      "check": "minute 20 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 2790,
+      "sql": 2790
+    },
+    {
+      "check": "minute 20 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 1975,
+      "sql": 1975
+    },
+    {
+      "check": "minute 20 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 815,
+      "sql": 815
+    },
+    {
+      "check": "minute 20 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 18 | ETA Sample Size",
+      "passed": true,
+      "dax": 2717,
+      "sql": 2717
+    },
+    {
+      "check": "minute 18 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 458,
+      "sql": 458
+    },
+    {
+      "check": "minute 18 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 328,
+      "sql": 328
+    },
+    {
+      "check": "minute 18 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 130,
+      "sql": 130
+    },
+    {
+      "check": "minute 18 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 19 | ETA Sample Size",
+      "passed": true,
+      "dax": 1937,
+      "sql": 1937
+    },
+    {
+      "check": "minute 19 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 379,
+      "sql": 379
+    },
+    {
+      "check": "minute 19 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 271,
+      "sql": 271
+    },
+    {
+      "check": "minute 19 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 108,
+      "sql": 108
+    },
+    {
+      "check": "minute 19 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 16 | ETA Sample Size",
+      "passed": true,
+      "dax": 1658,
+      "sql": 1658
+    },
+    {
+      "check": "minute 16 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 286,
+      "sql": 286
+    },
+    {
+      "check": "minute 16 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 217,
+      "sql": 217
+    },
+    {
+      "check": "minute 16 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 69,
+      "sql": 69
+    },
+    {
+      "check": "minute 16 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 17 | ETA Sample Size",
+      "passed": true,
+      "dax": 2362,
+      "sql": 2362
+    },
+    {
+      "check": "minute 17 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 394,
+      "sql": 394
+    },
+    {
+      "check": "minute 17 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 266,
+      "sql": 266
+    },
+    {
+      "check": "minute 17 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 128,
+      "sql": 128
+    },
+    {
+      "check": "minute 17 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 15 | ETA Sample Size",
+      "passed": true,
+      "dax": 1592,
+      "sql": 1592
+    },
+    {
+      "check": "minute 15 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 225,
+      "sql": 225
+    },
+    {
+      "check": "minute 15 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 164,
+      "sql": 164
+    },
+    {
+      "check": "minute 15 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 61,
+      "sql": 61
+    },
+    {
+      "check": "minute 15 | ETA Open Requests",
+      "passed": true,
+      "dax": 1,
+      "sql": 1
+    },
+    {
+      "check": "minute 14 | ETA Sample Size",
+      "passed": true,
+      "dax": 1633,
+      "sql": 1633
+    },
+    {
+      "check": "minute 14 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 239,
+      "sql": 239
+    },
+    {
+      "check": "minute 14 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 169,
+      "sql": 169
+    },
+    {
+      "check": "minute 14 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 70,
+      "sql": 70
+    },
+    {
+      "check": "minute 14 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 13 | ETA Sample Size",
+      "passed": true,
+      "dax": 1155,
+      "sql": 1155
+    },
+    {
+      "check": "minute 13 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 160,
+      "sql": 160
+    },
+    {
+      "check": "minute 13 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 111,
+      "sql": 111
+    },
+    {
+      "check": "minute 13 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 49,
+      "sql": 49
+    },
+    {
+      "check": "minute 13 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 12 | ETA Sample Size",
+      "passed": true,
+      "dax": 1260,
+      "sql": 1260
+    },
+    {
+      "check": "minute 12 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 156,
+      "sql": 156
+    },
+    {
+      "check": "minute 12 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 104,
+      "sql": 104
+    },
+    {
+      "check": "minute 12 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 52,
+      "sql": 52
+    },
+    {
+      "check": "minute 12 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 9 | ETA Sample Size",
+      "passed": true,
+      "dax": 1587,
+      "sql": 1587
+    },
+    {
+      "check": "minute 9 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 145,
+      "sql": 145
+    },
+    {
+      "check": "minute 9 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 102,
+      "sql": 102
+    },
+    {
+      "check": "minute 9 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 43,
+      "sql": 43
+    },
+    {
+      "check": "minute 9 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 7 | ETA Sample Size",
+      "passed": true,
+      "dax": 1284,
+      "sql": 1284
+    },
+    {
+      "check": "minute 7 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 81,
+      "sql": 81
+    },
+    {
+      "check": "minute 7 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 51,
+      "sql": 51
+    },
+    {
+      "check": "minute 7 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 30,
+      "sql": 30
+    },
+    {
+      "check": "minute 7 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 11 | ETA Sample Size",
+      "passed": true,
+      "dax": 1341,
+      "sql": 1341
+    },
+    {
+      "check": "minute 11 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 140,
+      "sql": 140
+    },
+    {
+      "check": "minute 11 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 94,
+      "sql": 94
+    },
+    {
+      "check": "minute 11 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 46,
+      "sql": 46
+    },
+    {
+      "check": "minute 11 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 8 | ETA Sample Size",
+      "passed": true,
+      "dax": 1672,
+      "sql": 1672
+    },
+    {
+      "check": "minute 8 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 136,
+      "sql": 136
+    },
+    {
+      "check": "minute 8 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 82,
+      "sql": 82
+    },
+    {
+      "check": "minute 8 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 54,
+      "sql": 54
+    },
+    {
+      "check": "minute 8 | ETA Open Requests",
+      "passed": true,
+      "dax": 1,
+      "sql": 1
+    },
+    {
+      "check": "minute 6 | ETA Sample Size",
+      "passed": true,
+      "dax": 512,
+      "sql": 512
+    },
+    {
+      "check": "minute 6 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 28,
+      "sql": 28
+    },
+    {
+      "check": "minute 6 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 17,
+      "sql": 17
+    },
+    {
+      "check": "minute 6 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 11,
+      "sql": 11
+    },
+    {
+      "check": "minute 6 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 10 | ETA Sample Size",
+      "passed": true,
+      "dax": 1392,
+      "sql": 1392
+    },
+    {
+      "check": "minute 10 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 159,
+      "sql": 159
+    },
+    {
+      "check": "minute 10 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 115,
+      "sql": 115
+    },
+    {
+      "check": "minute 10 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 44,
+      "sql": 44
+    },
+    {
+      "check": "minute 10 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 3 | ETA Sample Size",
+      "passed": true,
+      "dax": 6023,
+      "sql": 6023
+    },
+    {
+      "check": "minute 3 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 261,
+      "sql": 261
+    },
+    {
+      "check": "minute 3 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 156,
+      "sql": 156
+    },
+    {
+      "check": "minute 3 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 105,
+      "sql": 105
+    },
+    {
+      "check": "minute 3 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 5 | ETA Sample Size",
+      "passed": true,
+      "dax": 99,
+      "sql": 99
+    },
+    {
+      "check": "minute 5 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 7,
+      "sql": 7
+    },
+    {
+      "check": "minute 5 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 5,
+      "sql": 5
+    },
+    {
+      "check": "minute 5 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 2,
+      "sql": 2
+    },
+    {
+      "check": "minute 5 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "minute 4 | ETA Sample Size",
+      "passed": true,
+      "dax": 528,
+      "sql": 528
+    },
+    {
+      "check": "minute 4 | ETA Post-match Cancellations",
+      "passed": true,
+      "dax": 30,
+      "sql": 30
+    },
+    {
+      "check": "minute 4 | Customer Post-match Cancellations",
+      "passed": true,
+      "dax": 19,
+      "sql": 19
+    },
+    {
+      "check": "minute 4 | Driver Post-match Cancellations",
+      "passed": true,
+      "dax": 11,
+      "sql": 11
+    },
+    {
+      "check": "minute 4 | ETA Open Requests",
+      "passed": true,
+      "dax": 0,
+      "sql": 0
+    },
+    {
+      "check": "Distribution P25 | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 1.64,
+      "sql": 1.64
+    },
+    {
+      "check": "Distribution P25 | Cutoff Requests Below",
+      "passed": true,
+      "dax": 27433,
+      "sql": 27433
+    },
+    {
+      "check": "Distribution P25 | Cutoff Requests Above",
+      "passed": true,
+      "dax": 84038,
+      "sql": 84038
+    },
+    {
+      "check": "Distribution P25 | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 907,
+      "sql": 907
+    },
+    {
+      "check": "Distribution P25 | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 7625,
+      "sql": 7625
+    },
+    {
+      "check": "Distribution P25 | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 5.767039361157749,
+      "sql": 5.767039361158
+    },
+    {
+      "check": "Distribution P25 | rate Below",
+      "passed": true,
+      "dax": 3.306237013815478,
+      "sql": 3.306237013815
+    },
+    {
+      "check": "Distribution P25 | rate Above",
+      "passed": true,
+      "dax": 9.073276374973227,
+      "sql": 9.073276374973
+    },
+    {
+      "check": "Distribution P50 | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 2.29,
+      "sql": 2.29
+    },
+    {
+      "check": "Distribution P50 | Cutoff Requests Below",
+      "passed": true,
+      "dax": 55524,
+      "sql": 55524
+    },
+    {
+      "check": "Distribution P50 | Cutoff Requests Above",
+      "passed": true,
+      "dax": 55947,
+      "sql": 55947
+    },
+    {
+      "check": "Distribution P50 | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 1919,
+      "sql": 1919
+    },
+    {
+      "check": "Distribution P50 | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 6613,
+      "sql": 6613
+    },
+    {
+      "check": "Distribution P50 | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 8.363952365782415,
+      "sql": 8.363952365782
+    },
+    {
+      "check": "Distribution P50 | rate Below",
+      "passed": true,
+      "dax": 3.4561631006411644,
+      "sql": 3.456163100641
+    },
+    {
+      "check": "Distribution P50 | rate Above",
+      "passed": true,
+      "dax": 11.82011546642358,
+      "sql": 11.820115466423
+    },
+    {
+      "check": "Distribution P75 | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 10.66,
+      "sql": 10.66
+    },
+    {
+      "check": "Distribution P75 | Cutoff Requests Below",
+      "passed": true,
+      "dax": 83600,
+      "sql": 83600
+    },
+    {
+      "check": "Distribution P75 | Cutoff Requests Above",
+      "passed": true,
+      "dax": 27871,
+      "sql": 27871
+    },
+    {
+      "check": "Distribution P75 | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 3247,
+      "sql": 3247
+    },
+    {
+      "check": "Distribution P75 | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5285,
+      "sql": 5285
+    },
+    {
+      "check": "Distribution P75 | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 15.07839102021463,
+      "sql": 15.078391020214
+    },
+    {
+      "check": "Distribution P75 | rate Below",
+      "passed": true,
+      "dax": 3.8839712918660285,
+      "sql": 3.883971291866
+    },
+    {
+      "check": "Distribution P75 | rate Above",
+      "passed": true,
+      "dax": 18.962362312080657,
+      "sql": 18.96236231208
+    },
+    {
+      "check": "Distribution P90 | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 20.37,
+      "sql": 20.37
+    },
+    {
+      "check": "Distribution P90 | Cutoff Requests Below",
+      "passed": true,
+      "dax": 100318,
+      "sql": 100318
+    },
+    {
+      "check": "Distribution P90 | Cutoff Requests Above",
+      "passed": true,
+      "dax": 11153,
+      "sql": 11153
+    },
+    {
+      "check": "Distribution P90 | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 5853,
+      "sql": 5853
+    },
+    {
+      "check": "Distribution P90 | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 2679,
+      "sql": 2679
+    },
+    {
+      "check": "Distribution P90 | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 18.185996469896935,
+      "sql": 18.185996469897
+    },
+    {
+      "check": "Distribution P90 | rate Below",
+      "passed": true,
+      "dax": 5.834446460256385,
+      "sql": 5.834446460256
+    },
+    {
+      "check": "Distribution P90 | rate Above",
+      "passed": true,
+      "dax": 24.020442930153322,
+      "sql": 24.020442930153
+    },
+    {
+      "check": "Existing Power BI 3 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 3,
+      "sql": 3
+    },
+    {
+      "check": "Existing Power BI 3 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 70974,
+      "sql": 70974
+    },
+    {
+      "check": "Existing Power BI 3 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 40497,
+      "sql": 40497
+    },
+    {
+      "check": "Existing Power BI 3 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2458,
+      "sql": 2458
+    },
+    {
+      "check": "Existing Power BI 3 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 6074,
+      "sql": 6074
+    },
+    {
+      "check": "Existing Power BI 3 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 11.535401814966583,
+      "sql": 11.535401814966
+    },
+    {
+      "check": "Existing Power BI 3 min | rate Below",
+      "passed": true,
+      "dax": 3.4632400597401864,
+      "sql": 3.46324005974
+    },
+    {
+      "check": "Existing Power BI 3 min | rate Above",
+      "passed": true,
+      "dax": 14.99864187470677,
+      "sql": 14.998641874706
+    },
+    {
+      "check": "Existing Power BI 6 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 6,
+      "sql": 6
+    },
+    {
+      "check": "Existing Power BI 6 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 77624,
+      "sql": 77624
+    },
+    {
+      "check": "Existing Power BI 6 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 33847,
+      "sql": 33847
+    },
+    {
+      "check": "Existing Power BI 6 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2756,
+      "sql": 2756
+    },
+    {
+      "check": "Existing Power BI 6 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5776,
+      "sql": 5776
+    },
+    {
+      "check": "Existing Power BI 6 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 13.514579604802412,
+      "sql": 13.514579604802
+    },
+    {
+      "check": "Existing Power BI 6 min | rate Below",
+      "passed": true,
+      "dax": 3.5504483149541377,
+      "sql": 3.550448314954
+    },
+    {
+      "check": "Existing Power BI 6 min | rate Above",
+      "passed": true,
+      "dax": 17.065027919756552,
+      "sql": 17.065027919756
+    },
+    {
+      "check": "Existing Power BI 12 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 12,
+      "sql": 12
+    },
+    {
+      "check": "Existing Power BI 12 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 85412,
+      "sql": 85412
+    },
+    {
+      "check": "Existing Power BI 12 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 26059,
+      "sql": 26059
+    },
+    {
+      "check": "Existing Power BI 12 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 3445,
+      "sql": 3445
+    },
+    {
+      "check": "Existing Power BI 12 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5087,
+      "sql": 5087
+    },
+    {
+      "check": "Existing Power BI 12 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 15.487695672062928,
+      "sql": 15.487695672063
+    },
+    {
+      "check": "Existing Power BI 12 min | rate Below",
+      "passed": true,
+      "dax": 4.0333910925865215,
+      "sql": 4.033391092586
+    },
+    {
+      "check": "Existing Power BI 12 min | rate Above",
+      "passed": true,
+      "dax": 19.52108676464945,
+      "sql": 19.521086764649
+    },
+    {
+      "check": "Existing SQL 3 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 3,
+      "sql": 3
+    },
+    {
+      "check": "Existing SQL 3 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 70974,
+      "sql": 70974
+    },
+    {
+      "check": "Existing SQL 3 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 40497,
+      "sql": 40497
+    },
+    {
+      "check": "Existing SQL 3 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2458,
+      "sql": 2458
+    },
+    {
+      "check": "Existing SQL 3 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 6074,
+      "sql": 6074
+    },
+    {
+      "check": "Existing SQL 3 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 11.535401814966583,
+      "sql": 11.535401814966
+    },
+    {
+      "check": "Existing SQL 3 min | rate Below",
+      "passed": true,
+      "dax": 3.4632400597401864,
+      "sql": 3.46324005974
+    },
+    {
+      "check": "Existing SQL 3 min | rate Above",
+      "passed": true,
+      "dax": 14.99864187470677,
+      "sql": 14.998641874706
+    },
+    {
+      "check": "Existing SQL 12 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 12,
+      "sql": 12
+    },
+    {
+      "check": "Existing SQL 12 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 85412,
+      "sql": 85412
+    },
+    {
+      "check": "Existing SQL 12 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 26059,
+      "sql": 26059
+    },
+    {
+      "check": "Existing SQL 12 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 3445,
+      "sql": 3445
+    },
+    {
+      "check": "Existing SQL 12 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5087,
+      "sql": 5087
+    },
+    {
+      "check": "Existing SQL 12 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 15.487695672062928,
+      "sql": 15.487695672063
+    },
+    {
+      "check": "Existing SQL 12 min | rate Below",
+      "passed": true,
+      "dax": 4.0333910925865215,
+      "sql": 4.033391092586
+    },
+    {
+      "check": "Existing SQL 12 min | rate Above",
+      "passed": true,
+      "dax": 19.52108676464945,
+      "sql": 19.521086764649
+    },
+    {
+      "check": "Existing SQL 5 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 5,
+      "sql": 5
+    },
+    {
+      "check": "Existing SQL 5 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 77525,
+      "sql": 77525
+    },
+    {
+      "check": "Existing SQL 5 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 33946,
+      "sql": 33946
+    },
+    {
+      "check": "Existing SQL 5 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2749,
+      "sql": 2749
+    },
+    {
+      "check": "Existing SQL 5 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5783,
+      "sql": 5783
+    },
+    {
+      "check": "Existing SQL 5 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 13.489927597700413,
+      "sql": 13.4899275977
+    },
+    {
+      "check": "Existing SQL 5 min | rate Below",
+      "passed": true,
+      "dax": 3.545952918413415,
+      "sql": 3.545952918413
+    },
+    {
+      "check": "Existing SQL 5 min | rate Above",
+      "passed": true,
+      "dax": 17.035880516113828,
+      "sql": 17.035880516113
+    },
+    {
+      "check": "Existing SQL 8 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 8,
+      "sql": 8
+    },
+    {
+      "check": "Existing SQL 8 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 79420,
+      "sql": 79420
+    },
+    {
+      "check": "Existing SQL 8 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 32051,
+      "sql": 32051
+    },
+    {
+      "check": "Existing SQL 8 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2865,
+      "sql": 2865
+    },
+    {
+      "check": "Existing SQL 8 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5667,
+      "sql": 5667
+    },
+    {
+      "check": "Existing SQL 8 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 14.073791917865478,
+      "sql": 14.073791917866
+    },
+    {
+      "check": "Existing SQL 8 min | rate Below",
+      "passed": true,
+      "dax": 3.6074036766557542,
+      "sql": 3.607403676655
+    },
+    {
+      "check": "Existing SQL 8 min | rate Above",
+      "passed": true,
+      "dax": 17.68119559452123,
+      "sql": 17.681195594521
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 3,
+      "sql": 3
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 70974,
+      "sql": 70974
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 40497,
+      "sql": 40497
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2458,
+      "sql": 2458
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 6074,
+      "sql": 6074
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 11.535401814966583,
+      "sql": 11.535401814966
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | rate Below",
+      "passed": true,
+      "dax": 3.4632400597401864,
+      "sql": 3.46324005974
+    },
+    {
+      "check": "Behavior: adjacent rise 3 min | rate Above",
+      "passed": true,
+      "dax": 14.99864187470677,
+      "sql": 14.998641874706
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 12,
+      "sql": 12
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 85412,
+      "sql": 85412
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 26059,
+      "sql": 26059
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 3445,
+      "sql": 3445
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5087,
+      "sql": 5087
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 15.487695672062928,
+      "sql": 15.487695672063
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | rate Below",
+      "passed": true,
+      "dax": 4.0333910925865215,
+      "sql": 4.033391092586
+    },
+    {
+      "check": "Behavior: adjacent rise 12 min | rate Above",
+      "passed": true,
+      "dax": 19.52108676464945,
+      "sql": 19.521086764649
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 5,
+      "sql": 5
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 77525,
+      "sql": 77525
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 33946,
+      "sql": 33946
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2749,
+      "sql": 2749
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5783,
+      "sql": 5783
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 13.489927597700413,
+      "sql": 13.4899275977
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | rate Below",
+      "passed": true,
+      "dax": 3.545952918413415,
+      "sql": 3.545952918413
+    },
+    {
+      "check": "Behavior: adjacent rise 5 min | rate Above",
+      "passed": true,
+      "dax": 17.035880516113828,
+      "sql": 17.035880516113
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 8,
+      "sql": 8
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 79420,
+      "sql": 79420
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 32051,
+      "sql": 32051
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2865,
+      "sql": 2865
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5667,
+      "sql": 5667
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 14.073791917865478,
+      "sql": 14.073791917866
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | rate Below",
+      "passed": true,
+      "dax": 3.6074036766557542,
+      "sql": 3.607403676655
+    },
+    {
+      "check": "Behavior: adjacent rise 8 min | rate Above",
+      "passed": true,
+      "dax": 17.68119559452123,
+      "sql": 17.681195594521
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 4,
+      "sql": 4
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 76997,
+      "sql": 76997
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 34474,
+      "sql": 34474
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2719,
+      "sql": 2719
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5813,
+      "sql": 5813
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 13.33067652913206,
+      "sql": 13.330676529132
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | rate Below",
+      "passed": true,
+      "dax": 3.5313064145356314,
+      "sql": 3.531306414535
+    },
+    {
+      "check": "Behavior: adjacent rise 4 min | rate Above",
+      "passed": true,
+      "dax": 16.86198294366769,
+      "sql": 16.861982943667
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 7,
+      "sql": 7
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 78136,
+      "sql": 78136
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 33335,
+      "sql": 33335
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 2784,
+      "sql": 2784
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5748,
+      "sql": 5748
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 13.68011951608829,
+      "sql": 13.680119516088
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | rate Below",
+      "passed": true,
+      "dax": 3.5630183270195555,
+      "sql": 3.563018327019
+    },
+    {
+      "check": "Behavior: adjacent rise 7 min | rate Above",
+      "passed": true,
+      "dax": 17.243137843107846,
+      "sql": 17.243137843107
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 9,
+      "sql": 9
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 81092,
+      "sql": 81092
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 30379,
+      "sql": 30379
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 3001,
+      "sql": 3001
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5531,
+      "sql": 5531
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 14.505920945933525,
+      "sql": 14.505920945933
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | rate Below",
+      "passed": true,
+      "dax": 3.7007349676910177,
+      "sql": 3.700734967691
+    },
+    {
+      "check": "Behavior: adjacent rise 9 min | rate Above",
+      "passed": true,
+      "dax": 18.20665591362454,
+      "sql": 18.206655913624
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 10,
+      "sql": 10
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 82679,
+      "sql": 82679
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 28792,
+      "sql": 28792
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 3146,
+      "sql": 3146
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 5386,
+      "sql": 5386
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 14.901507694264208,
+      "sql": 14.901507694265
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | rate Below",
+      "passed": true,
+      "dax": 3.8050774682809423,
+      "sql": 3.80507746828
+    },
+    {
+      "check": "Behavior: adjacent rise 10 min | rate Above",
+      "passed": true,
+      "dax": 18.70658516254515,
+      "sql": 18.706585162545
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 13,
+      "sql": 13
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 86672,
+      "sql": 86672
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 24799,
+      "sql": 24799
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 3601,
+      "sql": 3601
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 4931,
+      "sql": 4931
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 15.72912196150459,
+      "sql": 15.729121961504
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | rate Below",
+      "passed": true,
+      "dax": 4.154744323426251,
+      "sql": 4.154744323426
+    },
+    {
+      "check": "Behavior: adjacent rise 13 min | rate Above",
+      "passed": true,
+      "dax": 19.883866284930843,
+      "sql": 19.88386628493
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 16,
+      "sql": 16
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 91052,
+      "sql": 91052
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 20419,
+      "sql": 20419
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 4225,
+      "sql": 4225
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 4307,
+      "sql": 4307
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 16.45289396732962,
+      "sql": 16.45289396733
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | rate Below",
+      "passed": true,
+      "dax": 4.640205596801827,
+      "sql": 4.640205596801
+    },
+    {
+      "check": "Behavior: adjacent rise 16 min | rate Above",
+      "passed": true,
+      "dax": 21.093099564131446,
+      "sql": 21.093099564131
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 17,
+      "sql": 17
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 92710,
+      "sql": 92710
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 18761,
+      "sql": 18761
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 4511,
+      "sql": 4511
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 4021,
+      "sql": 4021
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 16.567049168424866,
+      "sql": 16.567049168425
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | rate Below",
+      "passed": true,
+      "dax": 4.865710279365764,
+      "sql": 4.865710279365
+    },
+    {
+      "check": "Behavior: adjacent rise 17 min | rate Above",
+      "passed": true,
+      "dax": 21.43275944779063,
+      "sql": 21.43275944779
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 18,
+      "sql": 18
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 95072,
+      "sql": 95072
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 16399,
+      "sql": 16399
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 4905,
+      "sql": 4905
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 3627,
+      "sql": 3627
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 16.957954540393306,
+      "sql": 16.957954540394
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | rate Below",
+      "passed": true,
+      "dax": 5.159247728037697,
+      "sql": 5.159247728037
+    },
+    {
+      "check": "Behavior: adjacent rise 18 min | rate Above",
+      "passed": true,
+      "dax": 22.117202268431,
+      "sql": 22.117202268431
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 19,
+      "sql": 19
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 97789,
+      "sql": 97789
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 13682,
+      "sql": 13682
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 5363,
+      "sql": 5363
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 3169,
+      "sql": 3169
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 17.67756152708285,
+      "sql": 17.677561527083
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | rate Below",
+      "passed": true,
+      "dax": 5.484256920512532,
+      "sql": 5.484256920512
+    },
+    {
+      "check": "Behavior: adjacent rise 19 min | rate Above",
+      "passed": true,
+      "dax": 23.16181844759538,
+      "sql": 23.161818447595
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | Proposed ETA Cutoff Min",
+      "passed": true,
+      "dax": 20,
+      "sql": 20
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | Cutoff Requests Below",
+      "passed": true,
+      "dax": 99726,
+      "sql": 99726
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | Cutoff Requests Above",
+      "passed": true,
+      "dax": 11745,
+      "sql": 11745
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | Cutoff Cancellations Below",
+      "passed": true,
+      "dax": 5742,
+      "sql": 5742
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | Cutoff Cancellations Above",
+      "passed": true,
+      "dax": 2790,
+      "sql": 2790
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | Cutoff Rate Difference pp",
+      "passed": true,
+      "dax": 17.99701296494925,
+      "sql": 17.997012964949
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | rate Below",
+      "passed": true,
+      "dax": 5.757776307081404,
+      "sql": 5.757776307081
+    },
+    {
+      "check": "Behavior: adjacent rise 20 min | rate Above",
+      "passed": true,
+      "dax": 23.754789272030653,
+      "sql": 23.75478927203
+    },
+    {
+      "check": "Weekdays17 requests",
+      "passed": true,
+      "dax": 8841,
+      "sql": 8841
+    },
+    {
+      "check": "Weekdays17 calendar days",
+      "passed": true,
+      "dax": 131,
+      "sql": 131
+    },
+    {
+      "check": "Weekdays17 avg/day",
+      "passed": true,
+      "dax": 67.4885496183206,
+      "sql": 67.49
+    },
+    {
+      "check": "Weekdays18 requests",
+      "passed": true,
+      "dax": 7917,
+      "sql": 7917
+    },
+    {
+      "check": "Weekdays18 calendar days",
+      "passed": true,
+      "dax": 131,
+      "sql": 131
+    },
+    {
+      "check": "Weekdays18 avg/day",
+      "passed": true,
+      "dax": 60.43511450381679,
+      "sql": 60.44
+    },
+    {
+      "check": "Weekdays7 requests",
+      "passed": true,
+      "dax": 7794,
+      "sql": 7794
+    },
+    {
+      "check": "Weekdays7 calendar days",
+      "passed": true,
+      "dax": 131,
+      "sql": 131
+    },
+    {
+      "check": "Weekdays7 avg/day",
+      "passed": true,
+      "dax": 59.49618320610687,
+      "sql": 59.5
+    },
+    {
+      "check": "Weekdays8 requests",
+      "passed": true,
+      "dax": 6840,
+      "sql": 6840
+    },
+    {
+      "check": "Weekdays8 calendar days",
+      "passed": true,
+      "dax": 131,
+      "sql": 131
+    },
+    {
+      "check": "Weekdays8 avg/day",
+      "passed": true,
+      "dax": 52.213740458015266,
+      "sql": 52.21
+    },
+    {
+      "check": "Weekdays16 requests",
+      "passed": true,
+      "dax": 5929,
+      "sql": 5929
+    },
+    {
+      "check": "Weekdays16 calendar days",
+      "passed": true,
+      "dax": 131,
+      "sql": 131
+    },
+    {
+      "check": "Weekdays16 avg/day",
+      "passed": true,
+      "dax": 45.25954198473283,
+      "sql": 45.26
+    },
+    {
+      "check": "Weekends17 requests",
+      "passed": true,
+      "dax": 3031,
+      "sql": 3031
+    },
+    {
+      "check": "Weekends17 calendar days",
+      "passed": true,
+      "dax": 52,
+      "sql": 52
+    },
+    {
+      "check": "Weekends17 avg/day",
+      "passed": true,
+      "dax": 58.28846153846154,
+      "sql": 58.29
+    },
+    {
+      "check": "Weekends7 requests",
+      "passed": true,
+      "dax": 2764,
+      "sql": 2764
+    },
+    {
+      "check": "Weekends7 calendar days",
+      "passed": true,
+      "dax": 52,
+      "sql": 52
+    },
+    {
+      "check": "Weekends7 avg/day",
+      "passed": true,
+      "dax": 53.15384615384615,
+      "sql": 53.15
+    },
+    {
+      "check": "Weekends18 requests",
+      "passed": true,
+      "dax": 2672,
+      "sql": 2672
+    },
+    {
+      "check": "Weekends18 calendar days",
+      "passed": true,
+      "dax": 52,
+      "sql": 52
+    },
+    {
+      "check": "Weekends18 avg/day",
+      "passed": true,
+      "dax": 51.38461538461539,
+      "sql": 51.38
+    },
+    {
+      "check": "Weekends8 requests",
+      "passed": true,
+      "dax": 2497,
+      "sql": 2497
+    },
+    {
+      "check": "Weekends8 calendar days",
+      "passed": true,
+      "dax": 52,
+      "sql": 52
+    },
+    {
+      "check": "Weekends8 avg/day",
+      "passed": true,
+      "dax": 48.01923076923077,
+      "sql": 48.02
+    },
+    {
+      "check": "Weekends16 requests",
+      "passed": true,
+      "dax": 2062,
+      "sql": 2062
+    },
+    {
+      "check": "Weekends16 calendar days",
+      "passed": true,
+      "dax": 52,
+      "sql": 52
+    },
+    {
+      "check": "Weekends16 avg/day",
+      "passed": true,
+      "dax": 39.65384615384615,
+      "sql": 39.65
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | Waiting Sample Size",
+      "passed": true,
+      "dax": 630,
+      "sql": 630
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | Average Total Wait Min",
+      "passed": true,
+      "dax": 8.25238095238095,
+      "sql": 8.25238
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | Median Total Wait Min",
+      "passed": true,
+      "dax": 3.408333333333333,
+      "sql": 3.408333
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | P90 Total Wait Min",
+      "passed": true,
+      "dax": 23.926666666666673,
+      "sql": 23.926666600000004
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | ETA Sample Size",
+      "passed": true,
+      "dax": 688,
+      "sql": 688
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | Average Quoted ETA Min",
+      "passed": true,
+      "dax": 7.980959302325579,
+      "sql": 7.980959
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | ETA P25",
+      "passed": true,
+      "dax": 1.5875000000000001,
+      "sql": 1.5875000000000001
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | ETA P50",
+      "passed": true,
+      "dax": 2.165,
+      "sql": 2.165
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | ETA P75",
+      "passed": true,
+      "dax": 16.475,
+      "sql": 16.475
+    },
+    {
+      "check": "Apr 1–7 BIKE Zone 1 | ETA P90",
+      "passed": true,
+      "dax": 24.293,
+      "sql": 24.293
+    },
+    {
+      "check": "Apr 1–7 calendar denominator",
+      "passed": true,
+      "dax": 7,
+      "sql": 7
+    }
+  ],
+  "scopes": [
+    "Overall",
+    "42 Zone × Service × Peak cells",
+    "20 populated ETA minute buckets",
+    "25 exact cutoff alternatives",
+    "10 peak-hour calendar denominators",
+    "Apr 1–7 BIKE Zone 1 date/service/zone context"
+  ]
+}

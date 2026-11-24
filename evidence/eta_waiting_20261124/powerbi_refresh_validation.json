@@ -1,0 +1,156 @@
+{
+  "date": "2026-11-24",
+  "full_sql_source_refresh_completed": true,
+  "all_tables_ready_after_reopen": true,
+  "tables": [
+    {
+      "name": "FactTrips",
+      "state": "Ready",
+      "columns": 35,
+      "measures": 0
+    },
+    {
+      "name": "FactOffers",
+      "state": "Ready",
+      "columns": 19,
+      "measures": 0
+    },
+    {
+      "name": "FactSupply",
+      "state": "Ready",
+      "columns": 17,
+      "measures": 0
+    },
+    {
+      "name": "FactDriverDay",
+      "state": "Ready",
+      "columns": 12,
+      "measures": 0
+    },
+    {
+      "name": "FactRetention30",
+      "state": "Ready",
+      "columns": 11,
+      "measures": 0
+    },
+    {
+      "name": "FactCohort",
+      "state": "Ready",
+      "columns": 5,
+      "measures": 0
+    },
+    {
+      "name": "DimDate",
+      "state": "Ready",
+      "columns": 10,
+      "measures": 0
+    },
+    {
+      "name": "DimUser",
+      "state": "Ready",
+      "columns": 4,
+      "measures": 0
+    },
+    {
+      "name": "DimDriver",
+      "state": "Ready",
+      "columns": 3,
+      "measures": 0
+    },
+    {
+      "name": "DimPickupZone",
+      "state": "Ready",
+      "columns": 4,
+      "measures": 0
+    },
+    {
+      "name": "DimDropoffZone",
+      "state": "Ready",
+      "columns": 4,
+      "measures": 0
+    },
+    {
+      "name": "DimService",
+      "state": "Ready",
+      "columns": 3,
+      "measures": 0
+    },
+    {
+      "name": "CustomerProfile",
+      "state": "Ready",
+      "columns": 8,
+      "measures": 0
+    },
+    {
+      "name": "DimHour",
+      "state": "Ready",
+      "columns": 2,
+      "measures": 0
+    },
+    {
+      "name": "FunnelStage",
+      "state": "Ready",
+      "columns": 3,
+      "measures": 0
+    },
+    {
+      "name": "DriverState",
+      "state": "Ready",
+      "columns": 3,
+      "measures": 0
+    },
+    {
+      "name": "Scenario",
+      "state": "Ready",
+      "columns": 2,
+      "measures": 0
+    },
+    {
+      "name": "Grab Measures",
+      "state": "Ready",
+      "columns": 2,
+      "measures": 80
+    },
+    {
+      "name": "WaitStage",
+      "state": "Ready",
+      "columns": 3,
+      "measures": 0
+    },
+    {
+      "name": "ETACutoff",
+      "state": "Ready",
+      "columns": 4,
+      "measures": 0
+    }
+  ],
+  "relationships": 23,
+  "measures": 80,
+  "overall_kpis_after_full_refresh_match_pre_refresh_sql_reconciled_model": true,
+  "kpis_after_full_refresh": {
+    "[Requests]": 125923,
+    "[Matched Requests]": 111471,
+    "[Waiting Sample Size]": 102936,
+    "[Breakdown Sample Size]": 102936,
+    "[Average Total Wait Min]": 7.405487228310151,
+    "[Median Total Wait Min]": 3.55,
+    "[P90 Total Wait Min]": 20.45,
+    "[Average Allocation Min]": 0.32236179114530433,
+    "[Average Approach Min]": 6.083806280925358,
+    "[Average Pickup Dwell Min]": 0.9993191562394761,
+    "[Breakdown Total Wait Min]": 7.405487228310159,
+    "[ETA Sample Size]": 111471,
+    "[Average Quoted ETA Min]": 6.702746992491311,
+    "[ETA P25]": 1.64,
+    "[ETA P50]": 2.29,
+    "[ETA P75]": 10.66,
+    "[ETA P90]": 20.37,
+    "[ETA Post-match Cancellations]": 8532,
+    "[Customer Post-match Cancellations]": 5604,
+    "[Driver Post-match Cancellations]": 2928,
+    "[ETA Open Requests]": 8,
+    "[Observed Calendar Days]": 183,
+    "[Average Requests per Day]": 688.103825136612
+  },
+  "refresh_remediation": "Retained SELECT semantics; capped source query grants at MAX_GRANT_PERCENT=1, MAXDOP 1, to avoid RESOURCE_SEMAPHORE waits under SQL Express memory pressure. Desktop native SELECT approvals were completed. Four helper columns and two helper tables use native DAX calculations; SQL view exposes equivalent derived columns."
+}
